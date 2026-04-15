@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: mobile-developer
+  category: engineering
+  title:
+    en: "Mobile Developer"
+    zh: "移动开发工程师"
+  description:
+    en: "Cross-platform mobile development, native performance optimization, and app lifecycle management."
+    zh: "跨平台移动开发、原生性能优化与应用生命周期管理。"
+  tags:
+    - engineering
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

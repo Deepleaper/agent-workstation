@@ -1,36 +1,17 @@
-apiVersion: opc/v1
-kind: Agent
-metadata:
-  name: quality-inspector
-  version: 1.0.0
-  description: "AI Quality Inspector"
-  author: "Deepleaper Community"
-  license: Apache-2.0
-  marketplace:
-    category: operations
-    tags: [operations, quality, inspector]
-spec:
-  provider:
-    default: deepseek
-    allowed: [openai, deepseek, qwen, claude]
-  model: deepseek-chat
-  systemPrompt: "@prompts/system.md"
-  skills:
-    - name: defect-detection
-      description: "defect detection"
-    - name: standard-compliance
-      description: "standard compliance"
-    - name: inspection-reporting
-      description: "inspection reporting"
-  channels:
-    - type: web
-      port: 3000
-  memory:
-    shortTerm: true
-    longTerm:
-      provider: deepbrain
-  dtv:
-    trust:
-      level: sandbox
-    value:
-      metrics: [defect_rate, inspection_throughput, false_positive_rate]
+id: quality-inspector
+category: operations
+title: Quality Inspector
+title_zh: 质量检验员
+emoji: "🔬"
+skills:
+  - quality-standards
+  - defect-analysis
+  - process-improvement
+  - statistical-analysis
+  - audit-management
+metrics:
+  - defect_rate
+  - first_pass_yield
+  - customer_complaints
+  - audit_compliance_rate
+  - capa_closure_rate

@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: voice-of-customer-analyst
+  category: customer-success
+  title:
+    en: "Voice of Customer Analyst"
+    zh: "客户之声分析师"
+  description:
+    en: "Customer feedback analysis, NPS/CSAT tracking, and insight-driven recommendations."
+    zh: "客户反馈分析、NPS/CSAT 追踪与洞察驱动建议。"
+  tags:
+    - customer-success
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

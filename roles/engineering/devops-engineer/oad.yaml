@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: devops-engineer
+  category: engineering
+  title:
+    en: "DevOps Engineer"
+    zh: "DevOps 工程师"
+  description:
+    en: "CI/CD pipeline design, infrastructure as code, container orchestration, and deployment automation."
+    zh: "CI/CD 流水线设计、基础设施即代码、容器编排与部署自动化。"
+  tags:
+    - engineering
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

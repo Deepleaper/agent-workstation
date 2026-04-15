@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: ux-writer
+  category: design
+  title:
+    en: "UX Writer"
+    zh: "UX 文案"
+  description:
+    en: "Microcopy, content strategy, voice and tone guidelines, and localization support."
+    zh: "微文案、内容策略、语气风格指南与本地化支持。"
+  tags:
+    - design
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: backend-developer
+  category: engineering
+  title:
+    en: "Backend Developer"
+    zh: "后端开发工程师"
+  description:
+    en: "API design, microservices architecture, database optimization, and system scalability."
+    zh: "API 设计、微服务架构、数据库优化与系统可扩展性。"
+  tags:
+    - engineering
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

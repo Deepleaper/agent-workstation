@@ -1,27 +1,14 @@
-# Office Manager / 行政经理
+# Office Manager / 办公室经理
 
-> AI-powered office manager agent for admin operations.
+> Office operations, facility management, vendor coordination, and workplace experience.
 
-## Quick Start
+## Category
+`admin`
 
-```bash
-opc init --from agent-workstation/admin/office-manager
-opc run
-```
+## Usage
+Use this role template to create an AI agent specialized in office manager tasks.
 
-## Skills
+## Description
+**EN:** Office operations, facility management, vendor coordination, and workplace experience.
 
-- **facility-management**: facility management
-- **vendor-coordination**: vendor coordination
-- **budget-tracking**: budget tracking
-- **event-planning**: event planning
-
-## Metrics
-
-- `operational_efficiency`
-- `cost_savings`
-- `employee_satisfaction`
-
-## License
-
-Apache-2.0 — [Deepleaper](https://github.com/Deepleaper)
+**ZH:** 办公室运营、设施管理、供应商协调与职场体验。

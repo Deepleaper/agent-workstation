@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: frontend-developer
+  category: engineering
+  title:
+    en: "Frontend Developer"
+    zh: "前端开发工程师"
+  description:
+    en: "Modern web development, UI component architecture, performance optimization, and accessibility."
+    zh: "现代 Web 开发、UI 组件架构、性能优化与无障碍访问。"
+  tags:
+    - engineering
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

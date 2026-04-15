@@ -1,27 +1,14 @@
-# UI Designer / UI设计师
+# UI Designer / UI 设计师
 
-> AI-powered ui designer agent for design operations.
+> Visual interface design, design token systems, component library creation, and pixel-perfect delivery.
 
-## Quick Start
+## Category
+`design`
 
-```bash
-opc init --from agent-workstation/design/ui-designer
-opc run
-```
+## Usage
+Use this role template to create an AI agent specialized in ui designer tasks.
 
-## Skills
+## Description
+**EN:** Visual interface design, design token systems, component library creation, and pixel-perfect delivery.
 
-- **interface-design**: interface design
-- **design-system**: design system
-- **prototype-creation**: prototype creation
-- **accessibility-audit**: accessibility audit
-
-## Metrics
-
-- `design_consistency`
-- `usability_score`
-- `iteration_speed`
-
-## License
-
-Apache-2.0 — [Deepleaper](https://github.com/Deepleaper)
+**ZH:** 视觉界面设计、设计令牌系统、组件库创建与像素级交付。

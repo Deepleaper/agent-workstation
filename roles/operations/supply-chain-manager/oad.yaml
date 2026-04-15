@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: supply-chain-manager
+  category: operations
+  title:
+    en: "Supply Chain Manager"
+    zh: "供应链经理"
+  description:
+    en: "End-to-end supply chain optimization, supplier relationship management, and logistics strategy."
+    zh: "端到端供应链优化、供应商关系管理与物流策略制定。"
+  tags:
+    - operations
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

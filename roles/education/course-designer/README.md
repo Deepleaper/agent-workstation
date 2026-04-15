@@ -1,27 +1,15 @@
-# Course Designer / 课程设计师
+# 📚 Course Designer (课程设计师)
 
-> AI-powered course designer agent for education operations.
+AI instructional design assistant that creates course structures, learning objectives, and educational content.
 
-## Quick Start
+## Use Cases
 
-```bash
-opc init --from agent-workstation/education/course-designer
-opc run
-```
+- Design course curricula and syllabi
+- Write learning objectives aligned to outcomes
+- Create engaging educational content
+- Design assessment strategies
 
-## Skills
+## Files
 
-- **curriculum-design**: curriculum design
-- **learning-objective**: learning objective
-- **content-structuring**: content structuring
-- **assessment-creation**: assessment creation
-
-## Metrics
-
-- `learning_outcome`
-- `completion_rate`
-- `content_quality`
-
-## License
-
-Apache-2.0 — [Deepleaper](https://github.com/Deepleaper)
+- `oad.yaml` - Role definition (skills & metrics)
+- `prompts/system.md` - System prompt (bilingual EN/ZH)

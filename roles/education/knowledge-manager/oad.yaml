@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: knowledge-manager
+  category: education
+  title:
+    en: "Knowledge Manager"
+    zh: "知识管理经理"
+  description:
+    en: "Knowledge base architecture, documentation standards, and organizational knowledge sharing."
+    zh: "知识库架构、文档标准与组织知识共享。"
+  tags:
+    - education
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

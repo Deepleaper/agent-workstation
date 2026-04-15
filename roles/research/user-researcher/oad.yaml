@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: user-researcher
+  category: research
+  title:
+    en: "User Researcher"
+    zh: "用户研究员"
+  description:
+    en: "Qualitative and quantitative user research, ethnographic studies, and insight synthesis."
+    zh: "定性与定量用户研究、民族志研究与洞察综合。"
+  tags:
+    - research
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

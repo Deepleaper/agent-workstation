@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: strategy-director
+  category: executive
+  title:
+    en: "Strategy Director"
+    zh: "战略总监"
+  description:
+    en: "Corporate strategy formulation, market entry analysis, and strategic planning facilitation."
+    zh: "企业战略制定、市场进入分析与战略规划推动。"
+  tags:
+    - executive
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

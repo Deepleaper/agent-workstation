@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: growth-product-manager
+  category: product
+  title:
+    en: "Growth Product Manager"
+    zh: "增长产品经理"
+  description:
+    en: "Growth experimentation, funnel optimization, A/B testing, and activation strategy."
+    zh: "增长实验、漏斗优化、A/B 测试与激活策略。"
+  tags:
+    - product
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

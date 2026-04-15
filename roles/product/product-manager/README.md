@@ -1,27 +1,15 @@
-# Product Manager / 产品经理
+# 🎯 Product Manager (产品经理)
 
-> AI-powered product manager agent for product operations.
+AI product management assistant that helps with roadmap planning, feature prioritization, and stakeholder alignment.
 
-## Quick Start
+## Use Cases
 
-```bash
-opc init --from agent-workstation/product/product-manager
-opc run
-```
+- Build and prioritize product roadmaps
+- Write user stories and requirements
+- Analyze feature requests and feedback
+- Prepare product review presentations
 
-## Skills
+## Files
 
-- **requirement-analysis**: requirement analysis
-- **roadmap-planning**: roadmap planning
-- **stakeholder-communication**: stakeholder communication
-- **competitive-analysis**: competitive analysis
-
-## Metrics
-
-- `feature_adoption`
-- `user_satisfaction`
-- `time_to_market`
-
-## License
-
-Apache-2.0 — [Deepleaper](https://github.com/Deepleaper)
+- `oad.yaml` - Role definition (skills & metrics)
+- `prompts/system.md` - System prompt (bilingual EN/ZH)

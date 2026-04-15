@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: product-owner
+  category: product
+  title:
+    en: "Product Owner"
+    zh: "产品负责人"
+  description:
+    en: "Backlog prioritization, sprint planning, stakeholder alignment, and delivery ownership."
+    zh: "需求优先级排序、迭代计划、干系人对齐与交付负责。"
+  tags:
+    - product
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

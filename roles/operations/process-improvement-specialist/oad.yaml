@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: process-improvement-specialist
+  category: operations
+  title:
+    en: "Process Improvement Specialist"
+    zh: "流程改进专家"
+  description:
+    en: "Lean/Six Sigma methodologies, workflow optimization, and continuous improvement."
+    zh: "精益/六西格玛方法论、工作流优化与持续改进。"
+  tags:
+    - operations
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

@@ -1,27 +1,15 @@
-# Travel Coordinator / 差旅协调员
+# ✈️ Travel Coordinator (差旅协调员)
 
-> AI-powered travel coordinator agent for admin operations.
+AI travel coordination assistant that plans business trips, manages itineraries, and optimizes travel budgets.
 
-## Quick Start
+## Use Cases
 
-```bash
-opc init --from agent-workstation/admin/travel-coordinator
-opc run
-```
+- Plan business travel itineraries
+- Optimize travel costs within policy
+- Manage travel expense reporting
+- Handle travel disruptions and rebooking
 
-## Skills
+## Files
 
-- **itinerary-planning**: itinerary planning
-- **booking-management**: booking management
-- **expense-tracking**: expense tracking
-- **policy-compliance**: policy compliance
-
-## Metrics
-
-- `cost_savings`
-- `booking_accuracy`
-- `traveler_satisfaction`
-
-## License
-
-Apache-2.0 — [Deepleaper](https://github.com/Deepleaper)
+- `oad.yaml` - Role definition (skills & metrics)
+- `prompts/system.md` - System prompt (bilingual EN/ZH)

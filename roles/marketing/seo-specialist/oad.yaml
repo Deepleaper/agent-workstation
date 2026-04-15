@@ -1,26 +1,19 @@
-id: seo-specialist
-name: SEO Specialist
-name_zh: SEO专员
-category: marketing
-version: "1.0.0"
-
-skills:
-  - keyword-research
-  - on-page-optimization
-  - technical-seo-audit
-  - backlink-analysis
-  - rank-tracking
-
-metrics:
-  - organic-traffic-growth
-  - keyword-rankings
-  - domain-authority
-
-triggers:
-  - type: manual
-    description: Activated by user request
-
-constraints:
-  - Follow company policies and guidelines
-  - Maintain data confidentiality
-  - Escalate issues beyond scope
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: seo-specialist
+  category: marketing
+  title:
+    en: "SEO Specialist"
+    zh: "SEO 专家"
+  description:
+    en: "Search engine optimization, keyword strategy, technical SEO audits, and content optimization."
+    zh: "搜索引擎优化、关键词策略、技术 SEO 审计与内容优化。"
+  tags:
+    - marketing
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

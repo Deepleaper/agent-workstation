@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: executive-assistant
+  category: executive
+  title:
+    en: "Executive Assistant"
+    zh: "行政助理"
+  description:
+    en: "Calendar management, travel coordination, meeting preparation, and executive communication."
+    zh: "日程管理、差旅协调、会议准备与高管沟通。"
+  tags:
+    - executive
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: health-compliance-officer
+  category: healthcare
+  title:
+    en: "Health Compliance Officer"
+    zh: "医疗合规官"
+  description:
+    en: "Healthcare regulatory compliance (HIPAA), audit management, and risk mitigation."
+    zh: "医疗法规合规（HIPAA）、审计管理与风险缓解。"
+  tags:
+    - healthcare
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

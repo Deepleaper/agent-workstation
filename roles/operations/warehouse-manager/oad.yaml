@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: warehouse-manager
+  category: operations
+  title:
+    en: "Warehouse Manager"
+    zh: "仓库经理"
+  description:
+    en: "Warehouse operations management, inventory control, and space optimization."
+    zh: "仓库运营管理、库存控制与空间优化。"
+  tags:
+    - operations
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

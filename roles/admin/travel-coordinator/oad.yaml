@@ -1,38 +1,15 @@
-apiVersion: opc/v1
-kind: Agent
-metadata:
-  name: travel-coordinator
-  version: 1.0.0
-  description: "AI Travel Coordinator"
-  author: "Deepleaper Community"
-  license: Apache-2.0
-  marketplace:
-    category: admin
-    tags: [admin, travel, coordinator]
-spec:
-  provider:
-    default: deepseek
-    allowed: [openai, deepseek, qwen, claude]
-  model: deepseek-chat
-  systemPrompt: "@prompts/system.md"
-  skills:
-    - name: itinerary-planning
-      description: "itinerary planning"
-    - name: booking-management
-      description: "booking management"
-    - name: expense-tracking
-      description: "expense tracking"
-    - name: policy-compliance
-      description: "policy compliance"
-  channels:
-    - type: web
-      port: 3000
-  memory:
-    shortTerm: true
-    longTerm:
-      provider: deepbrain
-  dtv:
-    trust:
-      level: sandbox
-    value:
-      metrics: [cost_savings, booking_accuracy, traveler_satisfaction]
+id: travel-coordinator
+category: admin
+title: Travel Coordinator
+title_zh: 差旅协调员
+emoji: "✈️"
+skills:
+  - itinerary-planning
+  - budget-optimization
+  - policy-compliance
+  - expense-tracking
+metrics:
+  - trips_coordinated
+  - cost_savings
+  - policy_compliance_rate
+  - traveler_satisfaction

@@ -1,26 +1,14 @@
-# SEO Specialist (SEO专员)
+# SEO Specialist / SEO 专家
 
-**Category:** marketing
+> Search engine optimization, keyword strategy, technical SEO audits, and content optimization.
 
-## Use Cases
+## Category
+`marketing`
 
-1. Daily operations and routine task handling
-2. Process automation for repetitive workflows
-3. Quality assurance and compliance checks
-4. Role-specific reporting and metrics
-5. Team onboarding with consistent processes
+## Usage
+Use this role template to create an AI agent specialized in seo specialist tasks.
 
-## Skills
+## Description
+**EN:** Search engine optimization, keyword strategy, technical SEO audits, and content optimization.
 
-- `keyword-research`
-- `on-page-optimization`
-- `technical-seo-audit`
-- `backlink-analysis`
-- `rank-tracking`
-
-## Metrics
-
-- `organic-traffic-growth`
-- `keyword-rankings`
-- `domain-authority`
-
+**ZH:** 搜索引擎优化、关键词策略、技术 SEO 审计与内容优化。

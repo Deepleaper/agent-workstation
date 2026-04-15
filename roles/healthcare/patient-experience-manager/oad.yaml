@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: patient-experience-manager
+  category: healthcare
+  title:
+    en: "Patient Experience Manager"
+    zh: "患者体验经理"
+  description:
+    en: "Patient satisfaction improvement, care journey mapping, and service quality optimization."
+    zh: "患者满意度提升、护理旅程地图与服务质量优化。"
+  tags:
+    - healthcare
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: escalation-manager
+  category: customer-service
+  title:
+    en: "Escalation Manager"
+    zh: "升级处理经理"
+  description:
+    en: "Customer escalation handling, conflict resolution, and service recovery management."
+    zh: "客户升级处理、冲突解决与服务恢复管理。"
+  tags:
+    - customer-service
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

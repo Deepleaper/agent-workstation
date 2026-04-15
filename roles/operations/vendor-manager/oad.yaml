@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: vendor-manager
+  category: operations
+  title:
+    en: "Vendor Manager"
+    zh: "供应商管理经理"
+  description:
+    en: "Vendor lifecycle management, performance evaluation, and relationship building."
+    zh: "供应商全生命周期管理、绩效评估与关系维护。"
+  tags:
+    - operations
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

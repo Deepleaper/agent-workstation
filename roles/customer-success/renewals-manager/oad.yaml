@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: renewals-manager
+  category: customer-success
+  title:
+    en: "Renewals Manager"
+    zh: "续约经理"
+  description:
+    en: "Contract renewal strategy, retention forecasting, and negotiation management."
+    zh: "合同续约策略、留存预测与谈判管理。"
+  tags:
+    - customer-success
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

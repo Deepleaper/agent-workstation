@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: chief-of-staff
+  category: executive
+  title:
+    en: "Chief of Staff"
+    zh: "幕僚长"
+  description:
+    en: "Executive coordination, strategic initiative tracking, cross-functional alignment, and decision support."
+    zh: "高管协调、战略举措追踪、跨部门对齐与决策支持。"
+  tags:
+    - executive
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

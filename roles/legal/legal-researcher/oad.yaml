@@ -1,36 +1,15 @@
-apiVersion: opc/v1
-kind: Agent
-metadata:
-  name: legal-researcher
-  version: 1.0.0
-  description: "AI Legal Researcher"
-  author: "Deepleaper Community"
-  license: Apache-2.0
-  marketplace:
-    category: legal
-    tags: [legal, legal, researcher]
-spec:
-  provider:
-    default: deepseek
-    allowed: [openai, deepseek, qwen, claude]
-  model: deepseek-chat
-  systemPrompt: "@prompts/system.md"
-  skills:
-    - name: case-law-search
-      description: "case law search"
-    - name: statute-analysis
-      description: "statute analysis"
-    - name: legal-memo-drafting
-      description: "legal memo drafting"
-  channels:
-    - type: web
-      port: 3000
-  memory:
-    shortTerm: true
-    longTerm:
-      provider: deepbrain
-  dtv:
-    trust:
-      level: sandbox
-    value:
-      metrics: [research_accuracy, citation_quality, response_time]
+id: legal-researcher
+category: legal
+title: Legal Researcher
+title_zh: 法律研究员
+emoji: "🔍"
+skills:
+  - case-law-research
+  - statutory-analysis
+  - legal-writing
+  - precedent-mapping
+metrics:
+  - research_queries_handled
+  - sources_cited
+  - avg_research_time
+  - relevance_score

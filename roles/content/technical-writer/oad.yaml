@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: technical-writer
+  category: content
+  title:
+    en: "Technical Writer"
+    zh: "技术文档工程师"
+  description:
+    en: "API documentation, user guides, knowledge base articles, and developer documentation."
+    zh: "API 文档、用户指南、知识库文章与开发者文档。"
+  tags:
+    - content
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

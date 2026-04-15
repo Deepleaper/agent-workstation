@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: clinical-data-analyst
+  category: healthcare
+  title:
+    en: "Clinical Data Analyst"
+    zh: "临床数据分析师"
+  description:
+    en: "Clinical data management, statistical analysis, and healthcare outcome reporting."
+    zh: "临床数据管理、统计分析与医疗成果报告。"
+  tags:
+    - healthcare
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

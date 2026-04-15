@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: skills-assessor
+  category: education
+  title:
+    en: "Skills Assessor"
+    zh: "技能评估师"
+  description:
+    en: "Competency framework design, skills gap analysis, and development path planning."
+    zh: "能力框架设计、技能差距分析与发展路径规划。"
+  tags:
+    - education
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

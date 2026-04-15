@@ -1,38 +1,16 @@
-apiVersion: opc/v1
-kind: Agent
-metadata:
-  name: executive-assistant
-  version: 1.0.0
-  description: "AI Executive Assistant"
-  author: "Deepleaper Community"
-  license: Apache-2.0
-  marketplace:
-    category: admin
-    tags: [admin, executive, assistant]
-spec:
-  provider:
-    default: deepseek
-    allowed: [openai, deepseek, qwen, claude]
-  model: deepseek-chat
-  systemPrompt: "@prompts/system.md"
-  skills:
-    - name: calendar-management
-      description: "calendar management"
-    - name: email-drafting
-      description: "email drafting"
-    - name: meeting-preparation
-      description: "meeting preparation"
-    - name: travel-arrangement
-      description: "travel arrangement"
-  channels:
-    - type: web
-      port: 3000
-  memory:
-    shortTerm: true
-    longTerm:
-      provider: deepbrain
-  dtv:
-    trust:
-      level: sandbox
-    value:
-      metrics: [response_time, scheduling_accuracy, task_completion]
+id: executive-assistant
+category: admin
+title: Executive Assistant
+title_zh: 行政助理
+emoji: "📋"
+skills:
+  - calendar-management
+  - communication-drafting
+  - meeting-coordination
+  - task-prioritization
+  - travel-planning
+metrics:
+  - meetings_coordinated
+  - response_time
+  - schedule_efficiency
+  - task_completion_rate

@@ -1,27 +1,14 @@
 # Product Analyst / 产品分析师
 
-> AI-powered product analyst agent for product operations.
+> Product metrics analysis, feature impact measurement, and data-informed decision support.
 
-## Quick Start
+## Category
+`product`
 
-```bash
-opc init --from agent-workstation/product/product-analyst
-opc run
-```
+## Usage
+Use this role template to create an AI agent specialized in product analyst tasks.
 
-## Skills
+## Description
+**EN:** Product metrics analysis, feature impact measurement, and data-informed decision support.
 
-- **data-analysis**: data analysis
-- **funnel-optimization**: funnel optimization
-- **ab-testing**: ab testing
-- **metric-tracking**: metric tracking
-
-## Metrics
-
-- `analysis_accuracy`
-- `insight_impact`
-- `report_timeliness`
-
-## License
-
-Apache-2.0 — [Deepleaper](https://github.com/Deepleaper)
+**ZH:** 产品指标分析、功能影响度量与数据驱动决策支持。

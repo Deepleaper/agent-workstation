@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: platform-engineer
+  category: engineering
+  title:
+    en: "Platform Engineer"
+    zh: "平台工程师"
+  description:
+    en: "Internal developer platform, self-service tooling, and infrastructure abstraction."
+    zh: "内部开发者平台、自助工具与基础设施抽象。"
+  tags:
+    - engineering
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

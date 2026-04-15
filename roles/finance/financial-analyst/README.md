@@ -1,26 +1,14 @@
-# Financial Analyst (财务分析师)
+# Financial Analyst / 财务分析师
 
-**Category:** finance
+> Financial modeling, budgeting, variance analysis, and investment evaluation.
 
-## Use Cases
+## Category
+`finance`
 
-1. Daily operations and routine task handling
-2. Process automation for repetitive workflows
-3. Quality assurance and compliance checks
-4. Role-specific reporting and metrics
-5. Team onboarding with consistent processes
+## Usage
+Use this role template to create an AI agent specialized in financial analyst tasks.
 
-## Skills
+## Description
+**EN:** Financial modeling, budgeting, variance analysis, and investment evaluation.
 
-- `financial-modeling`
-- `budget-analysis`
-- `variance-reporting`
-- `scenario-planning`
-- `kpi-dashboarding`
-
-## Metrics
-
-- `forecast-accuracy`
-- `report-turnaround-time`
-- `budget-variance-explanation-rate`
-
+**ZH:** 财务建模、预算编制、差异分析与投资评估。

@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: business-intelligence-analyst
+  category: data
+  title:
+    en: "Business Intelligence Analyst"
+    zh: "BI 分析师"
+  description:
+    en: "Dashboard creation, reporting automation, and data visualization for business insights."
+    zh: "仪表盘创建、报告自动化与业务洞察数据可视化。"
+  tags:
+    - data
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

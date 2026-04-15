@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: privacy-officer
+  category: legal
+  title:
+    en: "Privacy Officer"
+    zh: "隐私官"
+  description:
+    en: "Data privacy compliance (GDPR/CCPA), privacy impact assessments, and data governance."
+    zh: "数据隐私合规（GDPR/CCPA）、隐私影响评估与数据治理。"
+  tags:
+    - legal
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

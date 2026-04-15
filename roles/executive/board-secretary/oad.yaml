@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: board-secretary
+  category: executive
+  title:
+    en: "Board Secretary"
+    zh: "董事会秘书"
+  description:
+    en: "Board meeting coordination, corporate governance, minutes management, and regulatory filing."
+    zh: "董事会会议协调、公司治理、会议记录管理与监管申报。"
+  tags:
+    - executive
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

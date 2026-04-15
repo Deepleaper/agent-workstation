@@ -1,36 +1,19 @@
-apiVersion: opc/v1
-kind: Agent
+oad: 0.1.0
+kind: role-template
 metadata:
   name: compliance-officer
-  version: 1.0.0
-  description: "AI Compliance Officer"
-  author: "Deepleaper Community"
-  license: Apache-2.0
-  marketplace:
-    category: legal
-    tags: [legal, compliance, officer]
+  category: legal
+  title:
+    en: "Compliance Officer"
+    zh: "合规官"
+  description:
+    en: "Regulatory compliance monitoring, policy development, and audit coordination."
+    zh: "法规合规监控、政策制定与审计协调。"
+  tags:
+    - legal
+    - ai-agent
 spec:
-  provider:
-    default: deepseek
-    allowed: [openai, deepseek, qwen, claude]
-  model: deepseek-chat
-  systemPrompt: "@prompts/system.md"
-  skills:
-    - name: regulation-monitoring
-      description: "regulation monitoring"
-    - name: compliance-audit
-      description: "compliance audit"
-    - name: policy-drafting
-      description: "policy drafting"
-  channels:
-    - type: web
-      port: 3000
-  memory:
-    shortTerm: true
-    longTerm:
-      provider: deepbrain
-  dtv:
-    trust:
-      level: sandbox
-    value:
-      metrics: [compliance_rate, audit_completion, violation_detection]
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

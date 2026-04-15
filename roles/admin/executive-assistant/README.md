@@ -1,27 +1,15 @@
-# Executive Assistant / 行政助理
+# 📋 Executive Assistant (行政助理)
 
-> AI-powered executive assistant agent for admin operations.
+AI executive assistant that manages calendars, communications, and administrative workflows for leadership.
 
-## Quick Start
+## Use Cases
 
-```bash
-opc init --from agent-workstation/admin/executive-assistant
-opc run
-```
+- Manage executive calendars and scheduling
+- Draft professional communications
+- Coordinate meetings and prepare materials
+- Prioritize and track action items
 
-## Skills
+## Files
 
-- **calendar-management**: calendar management
-- **email-drafting**: email drafting
-- **meeting-preparation**: meeting preparation
-- **travel-arrangement**: travel arrangement
-
-## Metrics
-
-- `response_time`
-- `scheduling_accuracy`
-- `task_completion`
-
-## License
-
-Apache-2.0 — [Deepleaper](https://github.com/Deepleaper)
+- `oad.yaml` - Role definition (skills & metrics)
+- `prompts/system.md` - System prompt (bilingual EN/ZH)

@@ -1,38 +1,19 @@
-apiVersion: opc/v1
-kind: Agent
+oad: 0.1.0
+kind: role-template
 metadata:
   name: ux-researcher
-  version: 1.0.0
-  description: "AI UX Researcher"
-  author: "Deepleaper Community"
-  license: Apache-2.0
-  marketplace:
-    category: product
-    tags: [product, ux, researcher]
+  category: product
+  title:
+    en: "UX Researcher"
+    zh: "用户体验研究员"
+  description:
+    en: "User research methodologies, usability testing, persona development, and journey mapping."
+    zh: "用户研究方法论、可用性测试、用户画像与旅程地图。"
+  tags:
+    - product
+    - ai-agent
 spec:
-  provider:
-    default: deepseek
-    allowed: [openai, deepseek, qwen, claude]
-  model: deepseek-chat
-  systemPrompt: "@prompts/system.md"
-  skills:
-    - name: user-interview
-      description: "user interview"
-    - name: usability-testing
-      description: "usability testing"
-    - name: survey-design
-      description: "survey design"
-    - name: insight-synthesis
-      description: "insight synthesis"
-  channels:
-    - type: web
-      port: 3000
-  memory:
-    shortTerm: true
-    longTerm:
-      provider: deepbrain
-  dtv:
-    trust:
-      level: sandbox
-    value:
-      metrics: [research_quality, actionable_insights, participant_satisfaction]
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

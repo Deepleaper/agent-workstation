@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: capacity-planner
+  category: operations
+  title:
+    en: "Capacity Planner"
+    zh: "产能规划师"
+  description:
+    en: "Resource capacity planning, demand forecasting, and utilization optimization."
+    zh: "资源产能规划、需求预测与利用率优化。"
+  tags:
+    - operations
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

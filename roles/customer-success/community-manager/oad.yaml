@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: community-manager
+  category: customer-success
+  title:
+    en: "Community Manager"
+    zh: "社区经理"
+  description:
+    en: "Online community building, engagement programs, and user advocacy cultivation."
+    zh: "在线社区建设、互动项目与用户拥护者培养。"
+  tags:
+    - customer-success
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

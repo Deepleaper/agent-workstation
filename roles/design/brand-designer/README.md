@@ -1,26 +1,14 @@
 # Brand Designer / 品牌设计师
 
-> AI-powered brand designer agent for design operations.
+> Brand identity systems, visual language, marketing collateral, and brand guidelines.
 
-## Quick Start
+## Category
+`design`
 
-```bash
-opc init --from agent-workstation/design/brand-designer
-opc run
-```
+## Usage
+Use this role template to create an AI agent specialized in brand designer tasks.
 
-## Skills
+## Description
+**EN:** Brand identity systems, visual language, marketing collateral, and brand guidelines.
 
-- **brand-identity**: brand identity
-- **visual-guideline**: visual guideline
-- **asset-creation**: asset creation
-
-## Metrics
-
-- `brand_consistency`
-- `creative_quality`
-- `delivery_speed`
-
-## License
-
-Apache-2.0 — [Deepleaper](https://github.com/Deepleaper)
+**ZH:** 品牌识别系统、视觉语言、营销物料与品牌规范。

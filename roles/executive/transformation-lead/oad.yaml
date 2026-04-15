@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: transformation-lead
+  category: executive
+  title:
+    en: "Transformation Lead"
+    zh: "变革负责人"
+  description:
+    en: "Digital transformation roadmap, change management, and organizational restructuring."
+    zh: "数字化转型路线图、变革管理与组织重构。"
+  tags:
+    - executive
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: procurement-specialist
+  category: operations
+  title:
+    en: "Procurement Specialist"
+    zh: "采购专员"
+  description:
+    en: "Strategic sourcing, vendor evaluation, contract negotiation, and cost optimization."
+    zh: "战略采购、供应商评估、合同谈判与成本优化。"
+  tags:
+    - operations
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

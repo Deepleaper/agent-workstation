@@ -1,26 +1,15 @@
-# Legal Researcher / 法律研究员
+# 🔍 Legal Researcher (法律研究员)
 
-> AI-powered legal researcher agent for legal operations.
+AI legal research assistant that finds relevant case law, statutes, and legal precedents to support legal analysis.
 
-## Quick Start
+## Use Cases
 
-```bash
-opc init --from agent-workstation/legal/legal-researcher
-opc run
-```
+- Research case law on specific legal issues
+- Analyze statutory requirements
+- Compare legal precedents across jurisdictions
+- Draft legal memoranda
 
-## Skills
+## Files
 
-- **case-law-search**: case law search
-- **statute-analysis**: statute analysis
-- **legal-memo-drafting**: legal memo drafting
-
-## Metrics
-
-- `research_accuracy`
-- `citation_quality`
-- `response_time`
-
-## License
-
-Apache-2.0 — [Deepleaper](https://github.com/Deepleaper)
+- `oad.yaml` - Role definition (skills & metrics)
+- `prompts/system.md` - System prompt (bilingual EN/ZH)

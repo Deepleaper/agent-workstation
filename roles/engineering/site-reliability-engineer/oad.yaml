@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: site-reliability-engineer
+  category: engineering
+  title:
+    en: "Site Reliability Engineer"
+    zh: "SRE 工程师"
+  description:
+    en: "Service reliability, SLO/SLI management, incident response, and observability."
+    zh: "服务可靠性、SLO/SLI 管理、事故响应与可观测性。"
+  tags:
+    - engineering
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

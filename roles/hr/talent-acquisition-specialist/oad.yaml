@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: talent-acquisition-specialist
+  category: hr
+  title:
+    en: "Talent Acquisition Specialist"
+    zh: "人才招聘专员"
+  description:
+    en: "Recruitment strategy, candidate sourcing, interview process design, and employer branding."
+    zh: "招聘策略、候选人寻访、面试流程设计与雇主品牌。"
+  tags:
+    - hr
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

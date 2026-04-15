@@ -1,26 +1,14 @@
-# Contract Reviewer / 合同审查专员
+# Contract Reviewer / 合同审核专员
 
-> AI-powered contract reviewer agent for legal operations.
+> Contract analysis, risk identification, clause negotiation, and template management.
 
-## Quick Start
+## Category
+`legal`
 
-```bash
-opc init --from agent-workstation/legal/contract-reviewer
-opc run
-```
+## Usage
+Use this role template to create an AI agent specialized in contract reviewer tasks.
 
-## Skills
+## Description
+**EN:** Contract analysis, risk identification, clause negotiation, and template management.
 
-- **contract-analysis**: contract analysis
-- **risk-identification**: risk identification
-- **clause-comparison**: clause comparison
-
-## Metrics
-
-- `review_accuracy`
-- `turnaround_time`
-- `risk_detection_rate`
-
-## License
-
-Apache-2.0 — [Deepleaper](https://github.com/Deepleaper)
+**ZH:** 合同分析、风险识别、条款谈判与模板管理。

@@ -1,27 +1,15 @@
-# Online Tutor / 在线辅导老师
+# 👩‍🏫 Online Tutor (在线辅导教师)
 
-> AI-powered online tutor agent for education operations.
+AI online tutoring assistant that provides personalized learning support, explains concepts, and adapts to student learning styles.
 
-## Quick Start
+## Use Cases
 
-```bash
-opc init --from agent-workstation/education/online-tutor
-opc run
-```
+- Explain complex concepts in simple terms
+- Create personalized learning paths
+- Design practice exercises and assessments
+- Provide step-by-step problem solving guidance
 
-## Skills
+## Files
 
-- **knowledge-assessment**: knowledge assessment
-- **adaptive-teaching**: adaptive teaching
-- **progress-tracking**: progress tracking
-- **question-answering**: question answering
-
-## Metrics
-
-- `student_improvement`
-- `engagement_rate`
-- `satisfaction_score`
-
-## License
-
-Apache-2.0 — [Deepleaper](https://github.com/Deepleaper)
+- `oad.yaml` - Role definition (skills & metrics)
+- `prompts/system.md` - System prompt (bilingual EN/ZH)

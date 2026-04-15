@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: innovation-strategist
+  category: research
+  title:
+    en: "Innovation Strategist"
+    zh: "创新策略师"
+  description:
+    en: "Innovation pipeline management, ideation facilitation, and disruption opportunity identification."
+    zh: "创新管道管理、创意促进与颠覆性机会识别。"
+  tags:
+    - research
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

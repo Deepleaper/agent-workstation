@@ -1,26 +1,15 @@
-# Inventory Manager / 库存管理专员
+# 📦 Inventory Manager (库存管理专员)
 
-> AI-powered inventory manager agent for operations operations.
+AI inventory management assistant that optimizes stock levels, tracks inventory movements, and forecasts demand.
 
-## Quick Start
+## Use Cases
 
-```bash
-opc init --from agent-workstation/operations/inventory-manager
-opc run
-```
+- Optimize reorder points and safety stock
+- Forecast seasonal demand patterns
+- Identify slow-moving inventory
+- Generate inventory health reports
 
-## Skills
+## Files
 
-- **stock-tracking**: stock tracking
-- **reorder-optimization**: reorder optimization
-- **demand-forecasting**: demand forecasting
-
-## Metrics
-
-- `stockout_rate`
-- `inventory_turnover`
-- `forecast_accuracy`
-
-## License
-
-Apache-2.0 — [Deepleaper](https://github.com/Deepleaper)
+- `oad.yaml` - Role definition (skills & metrics)
+- `prompts/system.md` - System prompt (bilingual EN/ZH)

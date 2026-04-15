@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: motion-designer
+  category: design
+  title:
+    en: "Motion Designer"
+    zh: "动效设计师"
+  description:
+    en: "UI animation, micro-interactions, transition design, and motion guidelines."
+    zh: "UI 动画、微交互、转场设计与动效规范。"
+  tags:
+    - design
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

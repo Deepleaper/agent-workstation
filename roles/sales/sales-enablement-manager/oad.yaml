@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: sales-enablement-manager
+  category: sales
+  title:
+    en: "Sales Enablement Manager"
+    zh: "销售赋能经理"
+  description:
+    en: "Sales training, content creation, playbook development, and CRM optimization."
+    zh: "销售培训、内容创建、销售手册开发与 CRM 优化。"
+  tags:
+    - sales
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

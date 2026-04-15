@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: fleet-manager
+  category: operations
+  title:
+    en: "Fleet Manager"
+    zh: "车队经理"
+  description:
+    en: "Fleet operations, vehicle maintenance scheduling, and route optimization."
+    zh: "车队运营、车辆维护调度与路线优化。"
+  tags:
+    - operations
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

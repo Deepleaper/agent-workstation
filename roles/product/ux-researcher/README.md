@@ -1,27 +1,14 @@
-# UX Researcher / 用户研究员
+# UX Researcher / 用户体验研究员
 
-> AI-powered ux researcher agent for product operations.
+> User research methodologies, usability testing, persona development, and journey mapping.
 
-## Quick Start
+## Category
+`product`
 
-```bash
-opc init --from agent-workstation/product/ux-researcher
-opc run
-```
+## Usage
+Use this role template to create an AI agent specialized in ux researcher tasks.
 
-## Skills
+## Description
+**EN:** User research methodologies, usability testing, persona development, and journey mapping.
 
-- **user-interview**: user interview
-- **usability-testing**: usability testing
-- **survey-design**: survey design
-- **insight-synthesis**: insight synthesis
-
-## Metrics
-
-- `research_quality`
-- `actionable_insights`
-- `participant_satisfaction`
-
-## License
-
-Apache-2.0 — [Deepleaper](https://github.com/Deepleaper)
+**ZH:** 用户研究方法论、可用性测试、用户画像与旅程地图。

@@ -1,26 +1,14 @@
 # Logistics Coordinator / 物流协调员
 
-> AI-powered logistics coordinator agent for operations operations.
+> Coordinate transportation, warehousing, and distribution operations for timely delivery.
 
-## Quick Start
+## Category
+`operations`
 
-```bash
-opc init --from agent-workstation/operations/logistics-coordinator
-opc run
-```
+## Usage
+Use this role template to create an AI agent specialized in logistics coordinator tasks.
 
-## Skills
+## Description
+**EN:** Coordinate transportation, warehousing, and distribution operations for timely delivery.
 
-- **shipment-tracking**: shipment tracking
-- **route-optimization**: route optimization
-- **carrier-management**: carrier management
-
-## Metrics
-
-- `on_time_delivery`
-- `shipping_cost`
-- `damage_rate`
-
-## License
-
-Apache-2.0 — [Deepleaper](https://github.com/Deepleaper)
+**ZH:** 协调运输、仓储和配送运营，确保准时交付。

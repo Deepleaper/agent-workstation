@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: customer-success-manager
+  category: customer-success
+  title:
+    en: "Customer Success Manager"
+    zh: "客户成功经理"
+  description:
+    en: "Customer lifecycle management, churn prevention, upsell identification, and health scoring."
+    zh: "客户全生命周期管理、流失预防、增购识别与健康评分。"
+  tags:
+    - customer-success
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

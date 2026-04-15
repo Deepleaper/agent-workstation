@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: corporate-trainer
+  category: education
+  title:
+    en: "Corporate Trainer"
+    zh: "企业培训师"
+  description:
+    en: "Training program design, workshop facilitation, and learning effectiveness measurement."
+    zh: "培训项目设计、工作坊引导与学习效果衡量。"
+  tags:
+    - education
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

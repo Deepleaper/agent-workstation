@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: security-engineer
+  category: tech
+  title:
+    en: "Security Engineer"
+    zh: "安全工程师"
+  description:
+    en: "Application security, penetration testing, vulnerability management, and security architecture."
+    zh: "应用安全、渗透测试、漏洞管理与安全架构。"
+  tags:
+    - tech
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

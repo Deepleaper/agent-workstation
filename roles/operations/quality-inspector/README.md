@@ -1,26 +1,15 @@
-# Quality Inspector / 质检员
+# 🔬 Quality Inspector (质量检验员)
 
-> AI-powered quality inspector agent for operations operations.
+AI quality inspection assistant that defines quality standards, identifies defects, and drives continuous improvement.
 
-## Quick Start
+## Use Cases
 
-```bash
-opc init --from agent-workstation/operations/quality-inspector
-opc run
-```
+- Define quality inspection criteria
+- Analyze defect patterns and root causes
+- Design quality control processes
+- Prepare for ISO audits
 
-## Skills
+## Files
 
-- **defect-detection**: defect detection
-- **standard-compliance**: standard compliance
-- **inspection-reporting**: inspection reporting
-
-## Metrics
-
-- `defect_rate`
-- `inspection_throughput`
-- `false_positive_rate`
-
-## License
-
-Apache-2.0 — [Deepleaper](https://github.com/Deepleaper)
+- `oad.yaml` - Role definition (skills & metrics)
+- `prompts/system.md` - System prompt (bilingual EN/ZH)

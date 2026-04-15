@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: telemedicine-coordinator
+  category: healthcare
+  title:
+    en: "Telemedicine Coordinator"
+    zh: "远程医疗协调员"
+  description:
+    en: "Telehealth program management, virtual care workflow design, and technology integration."
+    zh: "远程医疗项目管理、虚拟护理流程设计与技术集成。"
+  tags:
+    - healthcare
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: data-engineer
+  category: data
+  title:
+    en: "Data Engineer"
+    zh: "数据工程师"
+  description:
+    en: "Data pipeline design, ETL/ELT workflows, data warehouse architecture, and data quality."
+    zh: "数据管道设计、ETL/ELT 工作流、数据仓库架构与数据质量。"
+  tags:
+    - data
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

@@ -1,36 +1,15 @@
-apiVersion: opc/v1
-kind: Agent
-metadata:
-  name: inventory-manager
-  version: 1.0.0
-  description: "AI Inventory Manager"
-  author: "Deepleaper Community"
-  license: Apache-2.0
-  marketplace:
-    category: operations
-    tags: [operations, inventory, manager]
-spec:
-  provider:
-    default: deepseek
-    allowed: [openai, deepseek, qwen, claude]
-  model: deepseek-chat
-  systemPrompt: "@prompts/system.md"
-  skills:
-    - name: stock-tracking
-      description: "stock tracking"
-    - name: reorder-optimization
-      description: "reorder optimization"
-    - name: demand-forecasting
-      description: "demand forecasting"
-  channels:
-    - type: web
-      port: 3000
-  memory:
-    shortTerm: true
-    longTerm:
-      provider: deepbrain
-  dtv:
-    trust:
-      level: sandbox
-    value:
-      metrics: [stockout_rate, inventory_turnover, forecast_accuracy]
+id: inventory-manager
+category: operations
+title: Inventory Manager
+title_zh: 库存管理专员
+emoji: "📦"
+skills:
+  - demand-forecasting
+  - stock-optimization
+  - supply-chain-analysis
+  - reporting
+metrics:
+  - stockout_rate
+  - inventory_turnover
+  - forecast_accuracy
+  - carrying_cost_reduction

@@ -1,26 +1,15 @@
-# Health Advisor / 健康顾问
+# 💊 Health Advisor (健康顾问)
 
-> AI-powered health advisor agent for healthcare operations.
+AI health advisory assistant that provides wellness guidance, health education, and lifestyle recommendations.
 
-## Quick Start
+## Use Cases
 
-```bash
-opc init --from agent-workstation/healthcare/health-advisor
-opc run
-```
+- Provide general health and wellness guidance
+- Create personalized wellness plans
+- Develop health education materials
+- Guide preventive health screenings
 
-## Skills
+## Files
 
-- **health-assessment**: health assessment
-- **wellness-recommendation**: wellness recommendation
-- **lifestyle-coaching**: lifestyle coaching
-
-## Metrics
-
-- `advice_accuracy`
-- `patient_adherence`
-- `health_outcome`
-
-## License
-
-Apache-2.0 — [Deepleaper](https://github.com/Deepleaper)
+- `oad.yaml` - Role definition (skills & metrics)
+- `prompts/system.md` - System prompt (bilingual EN/ZH)

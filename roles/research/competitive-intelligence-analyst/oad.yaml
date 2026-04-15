@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: competitive-intelligence-analyst
+  category: research
+  title:
+    en: "Competitive Intelligence Analyst"
+    zh: "竞争情报分析师"
+  description:
+    en: "Competitor monitoring, market landscape analysis, and strategic intelligence reporting."
+    zh: "竞品监控、市场格局分析与战略情报报告。"
+  tags:
+    - research
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

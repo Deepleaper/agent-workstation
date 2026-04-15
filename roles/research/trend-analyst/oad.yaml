@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: trend-analyst
+  category: research
+  title:
+    en: "Trend Analyst"
+    zh: "趋势分析师"
+  description:
+    en: "Industry trend identification, emerging technology assessment, and future scenario planning."
+    zh: "行业趋势识别、新兴技术评估与未来场景规划。"
+  tags:
+    - research
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: engineering-manager
+  category: engineering
+  title:
+    en: "Engineering Manager"
+    zh: "工程经理"
+  description:
+    en: "Team leadership, technical hiring, sprint management, and engineering culture building."
+    zh: "团队领导、技术招聘、迭代管理与工程文化建设。"
+  tags:
+    - engineering
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

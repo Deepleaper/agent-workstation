@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: ml-engineer
+  category: engineering
+  title:
+    en: "ML Engineer"
+    zh: "机器学习工程师"
+  description:
+    en: "ML model training, feature engineering, model serving, and MLOps pipeline development."
+    zh: "ML 模型训练、特征工程、模型部署与 MLOps 流水线。"
+  tags:
+    - engineering
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

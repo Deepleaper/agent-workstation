@@ -1,36 +1,19 @@
-apiVersion: opc/v1
-kind: Agent
+oad: 0.1.0
+kind: role-template
 metadata:
   name: brand-designer
-  version: 1.0.0
-  description: "AI Brand Designer"
-  author: "Deepleaper Community"
-  license: Apache-2.0
-  marketplace:
-    category: design
-    tags: [design, brand, designer]
+  category: design
+  title:
+    en: "Brand Designer"
+    zh: "品牌设计师"
+  description:
+    en: "Brand identity systems, visual language, marketing collateral, and brand guidelines."
+    zh: "品牌识别系统、视觉语言、营销物料与品牌规范。"
+  tags:
+    - design
+    - ai-agent
 spec:
-  provider:
-    default: deepseek
-    allowed: [openai, deepseek, qwen, claude]
-  model: deepseek-chat
-  systemPrompt: "@prompts/system.md"
-  skills:
-    - name: brand-identity
-      description: "brand identity"
-    - name: visual-guideline
-      description: "visual guideline"
-    - name: asset-creation
-      description: "asset creation"
-  channels:
-    - type: web
-      port: 3000
-  memory:
-    shortTerm: true
-    longTerm:
-      provider: deepbrain
-  dtv:
-    trust:
-      level: sandbox
-    value:
-      metrics: [brand_consistency, creative_quality, delivery_speed]
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

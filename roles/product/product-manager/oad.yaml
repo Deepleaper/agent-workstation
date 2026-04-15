@@ -1,38 +1,16 @@
-apiVersion: opc/v1
-kind: Agent
-metadata:
-  name: product-manager
-  version: 1.0.0
-  description: "AI Product Manager"
-  author: "Deepleaper Community"
-  license: Apache-2.0
-  marketplace:
-    category: product
-    tags: [product, product, manager]
-spec:
-  provider:
-    default: deepseek
-    allowed: [openai, deepseek, qwen, claude]
-  model: deepseek-chat
-  systemPrompt: "@prompts/system.md"
-  skills:
-    - name: requirement-analysis
-      description: "requirement analysis"
-    - name: roadmap-planning
-      description: "roadmap planning"
-    - name: stakeholder-communication
-      description: "stakeholder communication"
-    - name: competitive-analysis
-      description: "competitive analysis"
-  channels:
-    - type: web
-      port: 3000
-  memory:
-    shortTerm: true
-    longTerm:
-      provider: deepbrain
-  dtv:
-    trust:
-      level: sandbox
-    value:
-      metrics: [feature_adoption, user_satisfaction, time_to_market]
+id: product-manager
+category: product
+title: Product Manager
+title_zh: 产品经理
+emoji: "🎯"
+skills:
+  - roadmap-planning
+  - feature-prioritization
+  - user-story-writing
+  - stakeholder-management
+  - market-analysis
+metrics:
+  - features_shipped
+  - user_satisfaction
+  - roadmap_adherence
+  - stakeholder_alignment_score

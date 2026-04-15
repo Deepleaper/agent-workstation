@@ -1,36 +1,15 @@
-apiVersion: opc/v1
-kind: Agent
-metadata:
-  name: health-advisor
-  version: 1.0.0
-  description: "AI Health Advisor"
-  author: "Deepleaper Community"
-  license: Apache-2.0
-  marketplace:
-    category: healthcare
-    tags: [healthcare, health, advisor]
-spec:
-  provider:
-    default: deepseek
-    allowed: [openai, deepseek, qwen, claude]
-  model: deepseek-chat
-  systemPrompt: "@prompts/system.md"
-  skills:
-    - name: health-assessment
-      description: "health assessment"
-    - name: wellness-recommendation
-      description: "wellness recommendation"
-    - name: lifestyle-coaching
-      description: "lifestyle coaching"
-  channels:
-    - type: web
-      port: 3000
-  memory:
-    shortTerm: true
-    longTerm:
-      provider: deepbrain
-  dtv:
-    trust:
-      level: sandbox
-    value:
-      metrics: [advice_accuracy, patient_adherence, health_outcome]
+id: health-advisor
+category: healthcare
+title: Health Advisor
+title_zh: 健康顾问
+emoji: "💊"
+skills:
+  - health-education
+  - wellness-planning
+  - lifestyle-coaching
+  - health-screening-guidance
+metrics:
+  - consultations_provided
+  - health_goal_adherence
+  - education_materials_created
+  - wellness_score_improvement

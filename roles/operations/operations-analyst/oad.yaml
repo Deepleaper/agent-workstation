@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: operations-analyst
+  category: operations
+  title:
+    en: "Operations Analyst"
+    zh: "运营分析师"
+  description:
+    en: "Operational data analysis, KPI tracking, and process efficiency reporting."
+    zh: "运营数据分析、KPI 追踪与流程效率报告。"
+  tags:
+    - operations
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

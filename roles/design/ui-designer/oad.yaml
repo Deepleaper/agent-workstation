@@ -1,38 +1,19 @@
-apiVersion: opc/v1
-kind: Agent
+oad: 0.1.0
+kind: role-template
 metadata:
   name: ui-designer
-  version: 1.0.0
-  description: "AI UI Designer"
-  author: "Deepleaper Community"
-  license: Apache-2.0
-  marketplace:
-    category: design
-    tags: [design, ui, designer]
+  category: design
+  title:
+    en: "UI Designer"
+    zh: "UI 设计师"
+  description:
+    en: "Visual interface design, design token systems, component library creation, and pixel-perfect delivery."
+    zh: "视觉界面设计、设计令牌系统、组件库创建与像素级交付。"
+  tags:
+    - design
+    - ai-agent
 spec:
-  provider:
-    default: deepseek
-    allowed: [openai, deepseek, qwen, claude]
-  model: deepseek-chat
-  systemPrompt: "@prompts/system.md"
-  skills:
-    - name: interface-design
-      description: "interface design"
-    - name: design-system
-      description: "design system"
-    - name: prototype-creation
-      description: "prototype creation"
-    - name: accessibility-audit
-      description: "accessibility audit"
-  channels:
-    - type: web
-      port: 3000
-  memory:
-    shortTerm: true
-    longTerm:
-      provider: deepbrain
-  dtv:
-    trust:
-      level: sandbox
-    value:
-      metrics: [design_consistency, usability_score, iteration_speed]
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

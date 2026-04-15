@@ -1,26 +1,15 @@
-# Patient Coordinator / 患者协调员
+# 🏥 Patient Coordinator (患者协调员)
 
-> AI-powered patient coordinator agent for healthcare operations.
+AI patient coordination assistant that manages appointments, care pathways, and patient communication.
 
-## Quick Start
+## Use Cases
 
-```bash
-opc init --from agent-workstation/healthcare/patient-coordinator
-opc run
-```
+- Manage patient appointment scheduling
+- Design care coordination pathways
+- Improve patient communication workflows
+- Optimize resource allocation
 
-## Skills
+## Files
 
-- **appointment-scheduling**: appointment scheduling
-- **patient-communication**: patient communication
-- **record-management**: record management
-
-## Metrics
-
-- `scheduling_efficiency`
-- `patient_satisfaction`
-- `wait_time_reduction`
-
-## License
-
-Apache-2.0 — [Deepleaper](https://github.com/Deepleaper)
+- `oad.yaml` - Role definition (skills & metrics)
+- `prompts/system.md` - System prompt (bilingual EN/ZH)

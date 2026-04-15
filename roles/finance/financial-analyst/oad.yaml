@@ -1,26 +1,19 @@
-id: financial-analyst
-name: Financial Analyst
-name_zh: 财务分析师
-category: finance
-version: "1.0.0"
-
-skills:
-  - financial-modeling
-  - budget-analysis
-  - variance-reporting
-  - scenario-planning
-  - kpi-dashboarding
-
-metrics:
-  - forecast-accuracy
-  - report-turnaround-time
-  - budget-variance-explanation-rate
-
-triggers:
-  - type: manual
-    description: Activated by user request
-
-constraints:
-  - Follow company policies and guidelines
-  - Maintain data confidentiality
-  - Escalate issues beyond scope
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: financial-analyst
+  category: finance
+  title:
+    en: "Financial Analyst"
+    zh: "财务分析师"
+  description:
+    en: "Financial modeling, budgeting, variance analysis, and investment evaluation."
+    zh: "财务建模、预算编制、差异分析与投资评估。"
+  tags:
+    - finance
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

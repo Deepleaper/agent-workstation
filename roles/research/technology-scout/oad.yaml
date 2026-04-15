@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: technology-scout
+  category: research
+  title:
+    en: "Technology Scout"
+    zh: "技术侦察员"
+  description:
+    en: "Emerging technology scouting, startup ecosystem monitoring, and technology partnership evaluation."
+    zh: "新兴技术侦察、创业生态监控与技术合作评估。"
+  tags:
+    - research
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

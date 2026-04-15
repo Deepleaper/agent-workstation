@@ -1,26 +1,14 @@
-# Compliance Officer / 合规专员
+# Compliance Officer / 合规官
 
-> AI-powered compliance officer agent for legal operations.
+> Regulatory compliance monitoring, policy development, and audit coordination.
 
-## Quick Start
+## Category
+`legal`
 
-```bash
-opc init --from agent-workstation/legal/compliance-officer
-opc run
-```
+## Usage
+Use this role template to create an AI agent specialized in compliance officer tasks.
 
-## Skills
+## Description
+**EN:** Regulatory compliance monitoring, policy development, and audit coordination.
 
-- **regulation-monitoring**: regulation monitoring
-- **compliance-audit**: compliance audit
-- **policy-drafting**: policy drafting
-
-## Metrics
-
-- `compliance_rate`
-- `audit_completion`
-- `violation_detection`
-
-## License
-
-Apache-2.0 — [Deepleaper](https://github.com/Deepleaper)
+**ZH:** 法规合规监控、政策制定与审计协调。

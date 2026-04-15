@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: medical-records-manager
+  category: healthcare
+  title:
+    en: "Medical Records Manager"
+    zh: "病历管理经理"
+  description:
+    en: "Health information management, EHR system administration, and records compliance."
+    zh: "健康信息管理、电子病历系统管理与记录合规。"
+  tags:
+    - healthcare
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

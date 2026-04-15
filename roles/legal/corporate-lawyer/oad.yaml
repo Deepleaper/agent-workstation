@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: corporate-lawyer
+  category: legal
+  title:
+    en: "Corporate Lawyer"
+    zh: "企业法律顾问"
+  description:
+    en: "Corporate governance, M&A support, regulatory compliance, and legal risk management."
+    zh: "公司治理、并购支持、合规监管与法律风险管理。"
+  tags:
+    - legal
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

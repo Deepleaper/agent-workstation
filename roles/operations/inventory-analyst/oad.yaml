@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: inventory-analyst
+  category: operations
+  title:
+    en: "Inventory Analyst"
+    zh: "库存分析师"
+  description:
+    en: "Inventory forecasting, demand planning, and stock level optimization."
+    zh: "库存预测、需求计划与库存水平优化。"
+  tags:
+    - operations
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}

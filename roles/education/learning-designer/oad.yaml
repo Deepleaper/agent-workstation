@@ -1,0 +1,19 @@
+oad: 0.1.0
+kind: role-template
+metadata:
+  name: learning-designer
+  category: education
+  title:
+    en: "Learning Designer"
+    zh: "学习设计师"
+  description:
+    en: "Instructional design, e-learning content creation, and learning experience optimization."
+    zh: "教学设计、在线学习内容创建与学习体验优化。"
+  tags:
+    - education
+    - ai-agent
+spec:
+  prompts:
+    system: prompts/system.md
+  parameters: {}
+  outputs: {}
