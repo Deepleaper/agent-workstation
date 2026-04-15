@@ -1,14 +1,15 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "target_roles": 849,
-  "current_count": 20,
-  "batch": 1,
+  "current_count": 100,
+  "full_count": 8,
+  "batch": 2,
   "categories": {
     "customer-service": {
       "name": "Customer Service",
       "name_zh": "客户服务",
       "roles": [
-        {"id": "customer-service-rep", "name": "Customer Service Representative", "name_zh": "客服代表"},
+        {"id": "customer-service-rep", "name": "Customer Service Representative", "name_zh": "客服代表", "status": "full"},
         {"id": "complaint-handler", "name": "Complaint Handler", "name_zh": "投诉处理专员"},
         {"id": "live-chat-agent", "name": "Live Chat Agent", "name_zh": "在线客服"}
       ]
@@ -17,7 +18,7 @@
       "name": "Sales",
       "name_zh": "销售",
       "roles": [
-        {"id": "sales-development-rep", "name": "Sales Development Representative", "name_zh": "销售拓展代表"},
+        {"id": "sales-development-rep", "name": "Sales Development Representative", "name_zh": "销售拓展代表", "status": "full"},
         {"id": "account-executive", "name": "Account Executive", "name_zh": "客户经理"},
         {"id": "sales-analyst", "name": "Sales Analyst", "name_zh": "销售分析师"}
       ]
@@ -36,7 +37,7 @@
       "name_zh": "财务",
       "roles": [
         {"id": "accounts-payable-clerk", "name": "Accounts Payable Clerk", "name_zh": "应付账款专员"},
-        {"id": "financial-analyst", "name": "Financial Analyst", "name_zh": "财务分析师"},
+        {"id": "financial-analyst", "name": "Financial Analyst", "name_zh": "财务分析师", "status": "full"},
         {"id": "tax-preparer", "name": "Tax Preparer", "name_zh": "税务专员"}
       ]
     },
@@ -44,9 +45,9 @@
       "name": "Human Resources",
       "name_zh": "人力资源",
       "roles": [
-        {"id": "recruiter", "name": "Recruiter", "name_zh": "招聘专员"},
+        {"id": "recruiter", "name": "Recruiter", "name_zh": "招聘专员", "status": "full"},
         {"id": "onboarding-specialist", "name": "Onboarding Specialist", "name_zh": "入职引导专员"},
-        {"id": "hr-coordinator", "name": "HR Coordinator", "name_zh": "HR协调员"}
+        {"id": "hr-coordinator", "name": "HR Coordinator", "name_zh": "HR协调员", "status": "full"}
       ]
     },
     "tech": {
@@ -61,7 +62,7 @@
       "name": "Data",
       "name_zh": "数据",
       "roles": [
-        {"id": "data-analyst", "name": "Data Analyst", "name_zh": "数据分析师"},
+        {"id": "data-analyst", "name": "Data Analyst", "name_zh": "数据分析师", "status": "full"},
         {"id": "report-generator", "name": "Report Generator", "name_zh": "报表专员"}
       ]
     },
@@ -69,7 +70,15 @@
       "name": "Content",
       "name_zh": "内容",
       "roles": [
-        {"id": "copywriter", "name": "Copywriter", "name_zh": "文案"}
+        {"id": "copywriter", "name": "Copywriter", "name_zh": "文案策划", "status": "full"},
+        {"id": "content-marketer", "name": "Content Marketer", "name_zh": "内容营销"}
+      ]
+    },
+    "operations": {
+      "name": "Operations",
+      "name_zh": "运营",
+      "roles": [
+        {"id": "operations-analyst", "name": "Operations Analyst", "name_zh": "运营分析师", "status": "full"}
       ]
     }
   }

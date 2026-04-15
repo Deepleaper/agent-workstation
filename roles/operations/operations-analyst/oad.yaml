@@ -1,19 +1,57 @@
-oad: 0.1.0
-kind: role-template
-metadata:
-  name: operations-analyst
-  category: operations
-  title:
-    en: "Operations Analyst"
-    zh: "运营分析师"
-  description:
-    en: "Operational data analysis, KPI tracking, and process efficiency reporting."
-    zh: "运营数据分析、KPI 追踪与流程效率报告。"
-  tags:
-    - operations
-    - ai-agent
-spec:
-  prompts:
-    system: prompts/system.md
-  parameters: {}
-  outputs: {}
+id: operations-analyst
+name: Operations Analyst
+name_zh: 运营分析师
+category: operations
+version: "2.0.0"
+status: full
+
+skills:
+  - process-mapping-and-optimization
+  - operational-kpi-tracking
+  - capacity-planning
+  - bottleneck-identification
+  - sop-documentation
+
+channels:
+  - type: slack
+    priority: primary
+  - type: email
+    priority: secondary
+  - type: web-chat
+    priority: tertiary
+
+dtv:
+  data:
+    - operational-metrics-database
+    - process-workflow-definitions
+    - resource-utilization-logs
+    - vendor-performance-data
+  tools:
+    - workflow-engine-api
+    - bi-dashboard-api
+    - project-management-api
+    - process-mining-tool
+  voice:
+    tone: systematic-pragmatic
+    language: [zh-CN, en-US]
+    style: efficiency-focused-structured
+
+metrics:
+  - process-cycle-time
+  - operational-efficiency-ratio
+  - cost-per-unit
+  - sla-compliance-rate
+
+triggers:
+  - type: schedule
+    cron: "0 9 * * 1"
+    description: Weekly operations review
+  - type: event
+    source: ops-alert
+    description: SLA breach or capacity threshold alert
+
+constraints:
+  - Validate assumptions with data before recommending process changes
+  - Consider change management impact on teams
+  - Document all SOPs in standardized format
+  - Escalate cross-department changes to leadership

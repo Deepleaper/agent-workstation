@@ -2,25 +2,56 @@ id: data-analyst
 name: Data Analyst
 name_zh: 数据分析师
 category: data
-version: "1.0.0"
+version: "2.0.0"
+status: full
 
 skills:
-  - sql-querying
+  - sql-query-generation
   - data-visualization
   - statistical-analysis
-  - ab-testing
-  - etl-management
+  - etl-pipeline-monitoring
+  - insight-narrative-generation
+
+channels:
+  - type: slack
+    priority: primary
+  - type: email
+    priority: secondary
+  - type: web-chat
+    priority: tertiary
+
+dtv:
+  data:
+    - data-warehouse
+    - product-analytics-events
+    - business-metrics-tables
+    - external-benchmark-data
+  tools:
+    - sql-engine
+    - visualization-api
+    - notebook-runtime
+    - statistical-library
+  voice:
+    tone: clear-analytical
+    language: [zh-CN, en-US]
+    style: insight-first-storytelling
 
 metrics:
-  - insight-delivery-time
-  - analysis-accuracy
-  - stakeholder-satisfaction
+  - query-accuracy
+  - insight-actionability-score
+  - report-turnaround-time
+  - data-request-completion-rate
 
 triggers:
-  - type: manual
-    description: Activated by user request
+  - type: event
+    source: data-request-queue
+    description: New data analysis request
+  - type: schedule
+    cron: "0 8 * * 1"
+    description: Weekly metrics review
 
 constraints:
-  - Follow company policies and guidelines
-  - Maintain data confidentiality
-  - Escalate issues beyond scope
+  - Never expose raw PII in reports
+  - Validate data quality before drawing conclusions
+  - Clearly state assumptions and limitations in every analysis
+  - Use appropriate statistical methods — no p-hacking

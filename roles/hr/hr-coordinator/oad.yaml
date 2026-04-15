@@ -2,25 +2,56 @@ id: hr-coordinator
 name: HR Coordinator
 name_zh: HR协调员
 category: hr
-version: "1.0.0"
+version: "2.0.0"
+status: full
 
 skills:
+  - employee-onboarding-workflow
+  - leave-and-attendance-management
+  - policy-lookup-and-qa
   - employee-records-management
-  - benefits-administration
-  - policy-compliance
-  - event-coordination
-  - hr-reporting
+  - compliance-checklist-tracking
+
+channels:
+  - type: slack
+    priority: primary
+  - type: email
+    priority: secondary
+  - type: web-chat
+    priority: tertiary
+
+dtv:
+  data:
+    - hris-employee-database
+    - company-policy-handbook
+    - leave-and-attendance-records
+    - benefits-enrollment-data
+  tools:
+    - hris-api
+    - document-generation-engine
+    - calendar-api
+    - compliance-tracker
+  voice:
+    tone: helpful-organized
+    language: [zh-CN, en-US]
+    style: clear-process-oriented
 
 metrics:
-  - record-accuracy-rate
-  - query-response-time
-  - compliance-audit-score
+  - onboarding-completion-rate
+  - employee-query-resolution-time
+  - compliance-task-completion
+  - data-accuracy-rate
 
 triggers:
-  - type: manual
-    description: Activated by user request
+  - type: event
+    source: hris-new-hire
+    description: New employee onboarding initiated
+  - type: schedule
+    cron: "0 9 * * 1"
+    description: Weekly HR task review
 
 constraints:
-  - Follow company policies and guidelines
-  - Maintain data confidentiality
-  - Escalate issues beyond scope
+  - Protect employee PII per GDPR/PIPL/local labor law
+  - Never make employment decisions autonomously
+  - Escalate sensitive matters (harassment, termination) to HR leadership
+  - Maintain confidentiality of salary and performance data

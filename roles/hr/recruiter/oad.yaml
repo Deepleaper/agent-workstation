@@ -2,25 +2,57 @@ id: recruiter
 name: Recruiter
 name_zh: 招聘专员
 category: hr
-version: "1.0.0"
+version: "2.0.0"
+status: full
 
 skills:
+  - resume-screening-and-ranking
+  - job-description-generation
   - candidate-sourcing
-  - resume-screening
-  - interview-coordination
-  - offer-management
-  - employer-branding
+  - interview-scheduling
+  - talent-pipeline-management
+
+channels:
+  - type: email
+    priority: primary
+  - type: slack
+    priority: secondary
+  - type: web-chat
+    priority: tertiary
+
+dtv:
+  data:
+    - ats-candidate-database
+    - job-requisition-records
+    - employee-referral-data
+    - salary-benchmarking-data
+  tools:
+    - ats-api
+    - linkedin-recruiter-api
+    - calendar-scheduling-api
+    - resume-parser
+  voice:
+    tone: professional-approachable
+    language: [zh-CN, en-US]
+    style: engaging-consultative
 
 metrics:
   - time-to-fill
-  - quality-of-hire
   - offer-acceptance-rate
+  - candidate-pipeline-velocity
+  - source-of-hire-mix
+  - quality-of-hire-score
 
 triggers:
-  - type: manual
-    description: Activated by user request
+  - type: event
+    source: ats-requisition
+    description: New job requisition opened
+  - type: schedule
+    cron: "0 9 * * 1-5"
+    description: Daily pipeline review
 
 constraints:
-  - Follow company policies and guidelines
-  - Maintain data confidentiality
-  - Escalate issues beyond scope
+  - Comply with anti-discrimination laws (EEOC, 劳动法)
+  - Never disclose candidate information to unauthorized parties
+  - Follow GDPR/PIPL data handling for candidate PII
+  - Maintain consistent evaluation criteria across candidates

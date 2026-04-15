@@ -2,7 +2,7 @@
 
 **AI Agent Templates for Business Roles**
 
-A growing library of ready-to-use agent role templates for real business positions. Our target: **849 roles** covering every function in a modern enterprise. Currently shipping the first batch of 20 fully-defined templates.
+A growing library of ready-to-use agent role templates for real business positions. Our target: **849 roles** covering every function in a modern enterprise. Currently **100 skeleton templates** across 19 categories, with **8 fully upgraded** (system prompt + channels + DTV config).
 
 ## What's Inside
 
@@ -39,8 +39,9 @@ roles/
 
 | Batch | Roles | Status |
 |-------|-------|--------|
-| 1 | 20 | ✅ Shipped |
-| 2-N | 829 | 🔜 Coming |
+| 1 | 100 skeletons | ✅ Shipped |
+| 2 | 8 full templates | ✅ Upgraded (customer-service-rep, recruiter, sales-development-rep, financial-analyst, hr-coordinator, data-analyst, operations-analyst, copywriter) |
+| 3-N | 749 remaining | 🔜 Coming |
 
 ## Related Projects
 
