@@ -1,57 +1,94 @@
-# 🏢 Agent Workstation
+# 🏢 AI 岗位模板库
 
-**AI Agent 业务角色模板库**
+**100 个 AI 岗位模板，覆盖 19 个行业分类，开箱即用。**
 
-一个持续增长的 AI Agent 角色模板库，覆盖真实企业岗位。目标：**849 个角色**，覆盖现代企业的每一个职能。当前已发布第一批 20 个完整模板。
+为现代企业打造的 AI Agent 岗位模板库。每个模板包含完整的 OPC Agent 定义文件（`oad.yaml`）、双语系统提示词（`prompts/system.md`）和岗位说明（`README.md`）。
 
-## 包含内容
+## 📂 分类总览
 
-每个角色模板包括：
-- **oad.yaml** — OPC Agent 配置（技能、指标、触发器）
-- **prompts/system.md** — 详细的中英双语系统提示词（200+ 词）
-- **README.md** — 角色概述、使用场景、示例交互
+| 分类 | 英文标识 | 岗位数 | 包含角色 |
+|------|---------|--------|---------|
+| 行政管理 | `admin` | 3 | 行政助理、办公室经理、差旅协调 |
+| 内容创作 | `content` | 2 | 文案策划、技术写作 |
+| 客户服务 | `customer-service` | 5 | 客服代表、投诉处理、升级经理、在线客服、VIP 客户经理 |
+| 客户成功 | `customer-success` | 5 | 客户成功经理、社区经理、入职专员、续约经理、客户之声分析师 |
+| 数据分析 | `data` | 4 | 数据分析师、BI 分析师、数据工程师、报表生成 |
+| 设计 | `design` | 5 | UI 设计师、品牌设计师、动效设计师、设计系统负责人、UX 文案 |
+| 教育培训 | `education` | 8 | 企业培训师、课程设计师、知识管理、学习设计师、导师协调、在线辅导、技能评估、培训协调 |
+| 工程技术 | `engineering` | 10 | 后端开发、前端开发、DevOps、ML 工程师、移动开发、平台工程师、发布经理、SRE、测试自动化、工程经理 |
+| 高管 | `executive` | 5 | 董事会秘书、首席幕僚、行政助理、战略总监、变革负责人 |
+| 财务 | `finance` | 3 | 财务分析师、应付账款专员、税务专员 |
+| 医疗健康 | `healthcare` | 7 | 临床数据分析、健康顾问、健康合规官、病历管理、患者协调、患者体验经理、远程医疗协调 |
+| 人力资源 | `hr` | 4 | 招聘专员、人事协调、入职专员、人才获取专家 |
+| 法务 | `legal` | 6 | 合规官、合同审查、企业律师、知识产权律师、法律研究、隐私官 |
+| 市场营销 | `marketing` | 3 | 内容营销、SEO 专家、社交媒体经理 |
+| 运营管理 | `operations` | 12 | 供应链经理、库存分析师、采购专员、质检员、物流协调、车队管理、产能规划、仓库经理、流程改进、供应商管理 等 |
+| 产品 | `product` | 6 | 产品经理、产品分析师、产品负责人、增长产品经理、技术产品经理、UX 研究员 |
+| 研究 | `research` | 5 | 竞品情报分析师、创新策略师、技术侦察、趋势分析师、用户研究员 |
+| 销售 | `sales` | 4 | 客户经理、销售分析师、销售开发代表（SDR）、销售赋能经理 |
+| 技术 | `tech` | 3 | 代码审查、DevOps 工程师、安全工程师 |
 
-## 快速开始
+## 🚀 使用指南
+
+### 第一步：选择模板
+
+浏览 `roles/` 目录，按行业分类找到适合的岗位模板：
 
 ```bash
-# 浏览角色
-ls roles/
-
-# 将模板用于 OPC Agent
-cp roles/sales/account-executive/oad.yaml ~/.opc-agent/agents/my-ae/
+ls roles/                    # 查看所有分类
+ls roles/sales/              # 查看销售类岗位
+cat roles/sales/account-executive/README.md  # 查看岗位详细说明
 ```
 
-## 目录结构
+每个岗位目录包含：
+- `oad.yaml` — OPC Agent 定义文件（技能、指标、触发条件）
+- `prompts/system.md` — 双语系统提示词
+- `README.md` — 岗位概述和使用场景
 
+### 第二步：定制模板
+
+复制模板到你的工作目录并根据需要修改：
+
+```bash
+# 复制模板
+cp -r roles/sales/account-executive/ ~/.opc-agent/agents/my-ae/
+
+# 编辑 OPC Agent 定义
+vim ~/.opc-agent/agents/my-ae/oad.yaml
+
+# 编辑系统提示词
+vim ~/.opc-agent/agents/my-ae/prompts/system.md
 ```
-roles/
-├── customer-service/   # 客服
-├── sales/              # 销售
-├── marketing/          # 市场营销
-├── finance/            # 财务
-├── hr/                 # 人力资源
-├── tech/               # 技术
-├── data/               # 数据
-└── content/            # 内容
+
+**定制要点：**
+- 修改 `oad.yaml` 中的技能列表，匹配你的业务工具
+- 调整 `prompts/system.md` 中的角色定位和语气
+- 设置合适的触发条件和 KPI 指标
+
+### 第三步：部署到 OPC Agent
+
+```bash
+# 加载 Agent
+opc-agent load ~/.opc-agent/agents/my-ae/oad.yaml
+
+# 验证部署
+opc-agent status my-ae
 ```
 
-## 进度
+## 📊 当前进度
 
-| 批次 | 角色数 | 状态 |
+| 批次 | 岗位数 | 状态 |
 |------|--------|------|
-| 第1批 | 20 | ✅ 已发布 |
-| 第2-N批 | 829 | 🔜 即将推出 |
+| 第 1 批 | 100 个骨架模板 | ✅ 已交付 |
+| 第 2 批 | 8 个完整模板 | ✅ 已升级 |
+| 第 3-N 批 | 749 个待开发 | 🔜 进行中 |
 
-## 相关项目
+**已完整升级的 8 个模板：** 客服代表、招聘专员、销售开发代表、财务分析师、人事协调、数据分析师、运营分析师、文案策划
 
-- [opc-agent](https://github.com/anthropics/opc-agent) — OPC Agent 运行时
-- [deepbrain](https://github.com/Deepleaper/deepbrain) — 共享知识大脑
-- [agentkits](https://github.com/Deepleaper/agentkits) — Agent 技能工具包
+## 🤝 贡献
 
-## 贡献
+欢迎提交 PR 添加新模板或改进现有模板。模板规范请参考已升级的 8 个完整模板。
 
-参见 [CONTRIBUTING.md](./CONTRIBUTING.md) 了解如何贡献角色模板。
+## 📄 许可证
 
-## 许可证
-
-参见 [LICENSE](./LICENSE)。
+MIT
