@@ -1,0 +1,38 @@
+apiVersion: opc/v1
+kind: Agent
+metadata:
+  name: online-tutor
+  version: 1.0.0
+  description: "AI Online Tutor"
+  author: "Deepleaper Community"
+  license: Apache-2.0
+  marketplace:
+    category: education
+    tags: [education, online, tutor]
+spec:
+  provider:
+    default: deepseek
+    allowed: [openai, deepseek, qwen, claude]
+  model: deepseek-chat
+  systemPrompt: "@prompts/system.md"
+  skills:
+    - name: knowledge-assessment
+      description: "knowledge assessment"
+    - name: adaptive-teaching
+      description: "adaptive teaching"
+    - name: progress-tracking
+      description: "progress tracking"
+    - name: question-answering
+      description: "question answering"
+  channels:
+    - type: web
+      port: 3000
+  memory:
+    shortTerm: true
+    longTerm:
+      provider: deepbrain
+  dtv:
+    trust:
+      level: sandbox
+    value:
+      metrics: [student_improvement, engagement_rate, satisfaction_score]

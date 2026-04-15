@@ -137,4 +137,4 @@ Apache-2.0 — [Deepleaper](https://github.com/Deepleaper)
 `);
 }
 
-console.log(\`Generated \${roles.length} role templates.\`);
+console.log('Generated ' + roles.length + ' role templates.');

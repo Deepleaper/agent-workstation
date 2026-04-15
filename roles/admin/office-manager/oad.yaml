@@ -1,0 +1,38 @@
+apiVersion: opc/v1
+kind: Agent
+metadata:
+  name: office-manager
+  version: 1.0.0
+  description: "AI Office Manager"
+  author: "Deepleaper Community"
+  license: Apache-2.0
+  marketplace:
+    category: admin
+    tags: [admin, office, manager]
+spec:
+  provider:
+    default: deepseek
+    allowed: [openai, deepseek, qwen, claude]
+  model: deepseek-chat
+  systemPrompt: "@prompts/system.md"
+  skills:
+    - name: facility-management
+      description: "facility management"
+    - name: vendor-coordination
+      description: "vendor coordination"
+    - name: budget-tracking
+      description: "budget tracking"
+    - name: event-planning
+      description: "event planning"
+  channels:
+    - type: web
+      port: 3000
+  memory:
+    shortTerm: true
+    longTerm:
+      provider: deepbrain
+  dtv:
+    trust:
+      level: sandbox
+    value:
+      metrics: [operational_efficiency, cost_savings, employee_satisfaction]

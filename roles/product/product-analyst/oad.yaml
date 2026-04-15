@@ -1,0 +1,38 @@
+apiVersion: opc/v1
+kind: Agent
+metadata:
+  name: product-analyst
+  version: 1.0.0
+  description: "AI Product Analyst"
+  author: "Deepleaper Community"
+  license: Apache-2.0
+  marketplace:
+    category: product
+    tags: [product, product, analyst]
+spec:
+  provider:
+    default: deepseek
+    allowed: [openai, deepseek, qwen, claude]
+  model: deepseek-chat
+  systemPrompt: "@prompts/system.md"
+  skills:
+    - name: data-analysis
+      description: "data analysis"
+    - name: funnel-optimization
+      description: "funnel optimization"
+    - name: ab-testing
+      description: "ab testing"
+    - name: metric-tracking
+      description: "metric tracking"
+  channels:
+    - type: web
+      port: 3000
+  memory:
+    shortTerm: true
+    longTerm:
+      provider: deepbrain
+  dtv:
+    trust:
+      level: sandbox
+    value:
+      metrics: [analysis_accuracy, insight_impact, report_timeliness]

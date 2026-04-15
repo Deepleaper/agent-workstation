@@ -1,0 +1,38 @@
+apiVersion: opc/v1
+kind: Agent
+metadata:
+  name: ui-designer
+  version: 1.0.0
+  description: "AI UI Designer"
+  author: "Deepleaper Community"
+  license: Apache-2.0
+  marketplace:
+    category: design
+    tags: [design, ui, designer]
+spec:
+  provider:
+    default: deepseek
+    allowed: [openai, deepseek, qwen, claude]
+  model: deepseek-chat
+  systemPrompt: "@prompts/system.md"
+  skills:
+    - name: interface-design
+      description: "interface design"
+    - name: design-system
+      description: "design system"
+    - name: prototype-creation
+      description: "prototype creation"
+    - name: accessibility-audit
+      description: "accessibility audit"
+  channels:
+    - type: web
+      port: 3000
+  memory:
+    shortTerm: true
+    longTerm:
+      provider: deepbrain
+  dtv:
+    trust:
+      level: sandbox
+    value:
+      metrics: [design_consistency, usability_score, iteration_speed]

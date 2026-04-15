@@ -1,0 +1,36 @@
+apiVersion: opc/v1
+kind: Agent
+metadata:
+  name: training-coordinator
+  version: 1.0.0
+  description: "AI Training Coordinator"
+  author: "Deepleaper Community"
+  license: Apache-2.0
+  marketplace:
+    category: education
+    tags: [education, training, coordinator]
+spec:
+  provider:
+    default: deepseek
+    allowed: [openai, deepseek, qwen, claude]
+  model: deepseek-chat
+  systemPrompt: "@prompts/system.md"
+  skills:
+    - name: schedule-management
+      description: "schedule management"
+    - name: trainer-matching
+      description: "trainer matching"
+    - name: feedback-collection
+      description: "feedback collection"
+  channels:
+    - type: web
+      port: 3000
+  memory:
+    shortTerm: true
+    longTerm:
+      provider: deepbrain
+  dtv:
+    trust:
+      level: sandbox
+    value:
+      metrics: [training_completion, participant_satisfaction, scheduling_efficiency]

@@ -1,0 +1,36 @@
+apiVersion: opc/v1
+kind: Agent
+metadata:
+  name: patient-coordinator
+  version: 1.0.0
+  description: "AI Patient Coordinator"
+  author: "Deepleaper Community"
+  license: Apache-2.0
+  marketplace:
+    category: healthcare
+    tags: [healthcare, patient, coordinator]
+spec:
+  provider:
+    default: deepseek
+    allowed: [openai, deepseek, qwen, claude]
+  model: deepseek-chat
+  systemPrompt: "@prompts/system.md"
+  skills:
+    - name: appointment-scheduling
+      description: "appointment scheduling"
+    - name: patient-communication
+      description: "patient communication"
+    - name: record-management
+      description: "record management"
+  channels:
+    - type: web
+      port: 3000
+  memory:
+    shortTerm: true
+    longTerm:
+      provider: deepbrain
+  dtv:
+    trust:
+      level: sandbox
+    value:
+      metrics: [scheduling_efficiency, patient_satisfaction, wait_time_reduction]

@@ -1,0 +1,38 @@
+apiVersion: opc/v1
+kind: Agent
+metadata:
+  name: vip-account-manager
+  version: 1.0.0
+  description: "AI VIP Account Manager"
+  author: "Deepleaper Community"
+  license: Apache-2.0
+  marketplace:
+    category: customer-service
+    tags: [customer-service, vip, account, manager]
+spec:
+  provider:
+    default: deepseek
+    allowed: [openai, deepseek, qwen, claude]
+  model: deepseek-chat
+  systemPrompt: "@prompts/system.md"
+  skills:
+    - name: relationship-management
+      description: "relationship management"
+    - name: personalized-service
+      description: "personalized service"
+    - name: upselling
+      description: "upselling"
+    - name: complaint-resolution
+      description: "complaint resolution"
+  channels:
+    - type: web
+      port: 3000
+  memory:
+    shortTerm: true
+    longTerm:
+      provider: deepbrain
+  dtv:
+    trust:
+      level: sandbox
+    value:
+      metrics: [retention_rate, customer_lifetime_value, satisfaction_score]

@@ -1,0 +1,36 @@
+apiVersion: opc/v1
+kind: Agent
+metadata:
+  name: logistics-coordinator
+  version: 1.0.0
+  description: "AI Logistics Coordinator"
+  author: "Deepleaper Community"
+  license: Apache-2.0
+  marketplace:
+    category: operations
+    tags: [operations, logistics, coordinator]
+spec:
+  provider:
+    default: deepseek
+    allowed: [openai, deepseek, qwen, claude]
+  model: deepseek-chat
+  systemPrompt: "@prompts/system.md"
+  skills:
+    - name: shipment-tracking
+      description: "shipment tracking"
+    - name: route-optimization
+      description: "route optimization"
+    - name: carrier-management
+      description: "carrier management"
+  channels:
+    - type: web
+      port: 3000
+  memory:
+    shortTerm: true
+    longTerm:
+      provider: deepbrain
+  dtv:
+    trust:
+      level: sandbox
+    value:
+      metrics: [on_time_delivery, shipping_cost, damage_rate]

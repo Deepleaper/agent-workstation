@@ -1,0 +1,38 @@
+apiVersion: opc/v1
+kind: Agent
+metadata:
+  name: course-designer
+  version: 1.0.0
+  description: "AI Course Designer"
+  author: "Deepleaper Community"
+  license: Apache-2.0
+  marketplace:
+    category: education
+    tags: [education, course, designer]
+spec:
+  provider:
+    default: deepseek
+    allowed: [openai, deepseek, qwen, claude]
+  model: deepseek-chat
+  systemPrompt: "@prompts/system.md"
+  skills:
+    - name: curriculum-design
+      description: "curriculum design"
+    - name: learning-objective
+      description: "learning objective"
+    - name: content-structuring
+      description: "content structuring"
+    - name: assessment-creation
+      description: "assessment creation"
+  channels:
+    - type: web
+      port: 3000
+  memory:
+    shortTerm: true
+    longTerm:
+      provider: deepbrain
+  dtv:
+    trust:
+      level: sandbox
+    value:
+      metrics: [learning_outcome, completion_rate, content_quality]

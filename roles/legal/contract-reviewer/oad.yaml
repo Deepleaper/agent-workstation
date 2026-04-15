@@ -1,0 +1,36 @@
+apiVersion: opc/v1
+kind: Agent
+metadata:
+  name: contract-reviewer
+  version: 1.0.0
+  description: "AI Contract Reviewer"
+  author: "Deepleaper Community"
+  license: Apache-2.0
+  marketplace:
+    category: legal
+    tags: [legal, contract, reviewer]
+spec:
+  provider:
+    default: deepseek
+    allowed: [openai, deepseek, qwen, claude]
+  model: deepseek-chat
+  systemPrompt: "@prompts/system.md"
+  skills:
+    - name: contract-analysis
+      description: "contract analysis"
+    - name: risk-identification
+      description: "risk identification"
+    - name: clause-comparison
+      description: "clause comparison"
+  channels:
+    - type: web
+      port: 3000
+  memory:
+    shortTerm: true
+    longTerm:
+      provider: deepbrain
+  dtv:
+    trust:
+      level: sandbox
+    value:
+      metrics: [review_accuracy, turnaround_time, risk_detection_rate]
