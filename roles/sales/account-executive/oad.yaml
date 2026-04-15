@@ -1,0 +1,26 @@
+id: account-executive
+name: Account Executive
+name_zh: 客户经理
+category: sales
+version: "1.0.0"
+
+skills:
+  - deal-negotiation
+  - proposal-generation
+  - stakeholder-mapping
+  - demo-presentation
+  - contract-management
+
+metrics:
+  - quota-attainment
+  - average-deal-size
+  - win-rate
+
+triggers:
+  - type: manual
+    description: Activated by user request
+
+constraints:
+  - Follow company policies and guidelines
+  - Maintain data confidentiality
+  - Escalate issues beyond scope

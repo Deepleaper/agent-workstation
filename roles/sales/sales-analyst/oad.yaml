@@ -1,0 +1,26 @@
+id: sales-analyst
+name: Sales Analyst
+name_zh: 销售分析师
+category: sales
+version: "1.0.0"
+
+skills:
+  - sales-data-analysis
+  - pipeline-reporting
+  - forecast-modeling
+  - territory-analysis
+  - competitive-tracking
+
+metrics:
+  - forecast-accuracy
+  - report-delivery-time
+  - insight-actionability-score
+
+triggers:
+  - type: manual
+    description: Activated by user request
+
+constraints:
+  - Follow company policies and guidelines
+  - Maintain data confidentiality
+  - Escalate issues beyond scope

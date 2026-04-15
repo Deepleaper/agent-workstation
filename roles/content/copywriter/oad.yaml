@@ -1,0 +1,26 @@
+id: copywriter
+name: Copywriter
+name_zh: 文案
+category: content
+version: "1.0.0"
+
+skills:
+  - brand-voice-writing
+  - headline-crafting
+  - ad-copywriting
+  - email-copy
+  - a-b-copy-testing
+
+metrics:
+  - conversion-rate
+  - click-through-rate
+  - brand-consistency-score
+
+triggers:
+  - type: manual
+    description: Activated by user request
+
+constraints:
+  - Follow company policies and guidelines
+  - Maintain data confidentiality
+  - Escalate issues beyond scope

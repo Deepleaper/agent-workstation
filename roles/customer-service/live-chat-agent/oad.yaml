@@ -1,0 +1,26 @@
+id: live-chat-agent
+name: Live Chat Agent
+name_zh: 在线客服
+category: customer-service
+version: "1.0.0"
+
+skills:
+  - real-time-response
+  - multi-session-management
+  - quick-reply-templates
+  - product-knowledge
+  - chat-transfer
+
+metrics:
+  - average-response-time
+  - concurrent-chats-handled
+  - chat-satisfaction-score
+
+triggers:
+  - type: manual
+    description: Activated by user request
+
+constraints:
+  - Follow company policies and guidelines
+  - Maintain data confidentiality
+  - Escalate issues beyond scope

@@ -1,0 +1,26 @@
+id: social-media-manager
+name: Social Media Manager
+name_zh: 社媒运营
+category: marketing
+version: "1.0.0"
+
+skills:
+  - content-scheduling
+  - audience-analytics
+  - platform-optimization
+  - community-management
+  - trend-monitoring
+
+metrics:
+  - engagement-rate
+  - follower-growth
+  - content-reach
+
+triggers:
+  - type: manual
+    description: Activated by user request
+
+constraints:
+  - Follow company policies and guidelines
+  - Maintain data confidentiality
+  - Escalate issues beyond scope

@@ -1,0 +1,26 @@
+id: data-analyst
+name: Data Analyst
+name_zh: 数据分析师
+category: data
+version: "1.0.0"
+
+skills:
+  - sql-querying
+  - data-visualization
+  - statistical-analysis
+  - ab-testing
+  - etl-management
+
+metrics:
+  - insight-delivery-time
+  - analysis-accuracy
+  - stakeholder-satisfaction
+
+triggers:
+  - type: manual
+    description: Activated by user request
+
+constraints:
+  - Follow company policies and guidelines
+  - Maintain data confidentiality
+  - Escalate issues beyond scope

@@ -1,0 +1,26 @@
+id: tax-preparer
+name: Tax Preparer
+name_zh: 税务专员
+category: finance
+version: "1.0.0"
+
+skills:
+  - tax-calculation
+  - compliance-checking
+  - deduction-optimization
+  - filing-management
+  - regulatory-monitoring
+
+metrics:
+  - filing-accuracy-rate
+  - on-time-filing-rate
+  - tax-savings-identified
+
+triggers:
+  - type: manual
+    description: Activated by user request
+
+constraints:
+  - Follow company policies and guidelines
+  - Maintain data confidentiality
+  - Escalate issues beyond scope

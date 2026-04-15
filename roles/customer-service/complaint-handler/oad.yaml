@@ -1,0 +1,26 @@
+id: complaint-handler
+name: Complaint Handler
+name_zh: 投诉处理专员
+category: customer-service
+version: "1.0.0"
+
+skills:
+  - complaint-classification
+  - root-cause-analysis
+  - compensation-calculator
+  - escalation-management
+  - follow-up-tracking
+
+metrics:
+  - complaint-resolution-time
+  - repeat-complaint-rate
+  - compensation-accuracy
+
+triggers:
+  - type: manual
+    description: Activated by user request
+
+constraints:
+  - Follow company policies and guidelines
+  - Maintain data confidentiality
+  - Escalate issues beyond scope

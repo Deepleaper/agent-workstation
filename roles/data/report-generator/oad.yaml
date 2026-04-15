@@ -1,0 +1,26 @@
+id: report-generator
+name: Report Generator
+name_zh: 报表专员
+category: data
+version: "1.0.0"
+
+skills:
+  - report-templating
+  - data-aggregation
+  - scheduled-reporting
+  - cross-system-integration
+  - format-conversion
+
+metrics:
+  - report-delivery-timeliness
+  - data-accuracy-rate
+  - report-automation-rate
+
+triggers:
+  - type: manual
+    description: Activated by user request
+
+constraints:
+  - Follow company policies and guidelines
+  - Maintain data confidentiality
+  - Escalate issues beyond scope

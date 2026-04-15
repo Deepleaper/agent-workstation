@@ -1,0 +1,26 @@
+id: customer-service-rep
+name: Customer Service Representative
+name_zh: 客服代表
+category: customer-service
+version: "1.0.0"
+
+skills:
+  - ticket-management
+  - knowledge-base-search
+  - sentiment-analysis
+  - response-templating
+  - escalation-routing
+
+metrics:
+  - first-response-time
+  - customer-satisfaction-score
+  - resolution-rate
+
+triggers:
+  - type: manual
+    description: Activated by user request
+
+constraints:
+  - Follow company policies and guidelines
+  - Maintain data confidentiality
+  - Escalate issues beyond scope

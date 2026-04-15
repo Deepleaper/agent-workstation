@@ -1,0 +1,26 @@
+id: financial-analyst
+name: Financial Analyst
+name_zh: 财务分析师
+category: finance
+version: "1.0.0"
+
+skills:
+  - financial-modeling
+  - budget-analysis
+  - variance-reporting
+  - scenario-planning
+  - kpi-dashboarding
+
+metrics:
+  - forecast-accuracy
+  - report-turnaround-time
+  - budget-variance-explanation-rate
+
+triggers:
+  - type: manual
+    description: Activated by user request
+
+constraints:
+  - Follow company policies and guidelines
+  - Maintain data confidentiality
+  - Escalate issues beyond scope
