@@ -1,0 +1,33 @@
+{
+  "name": "agent-workstation",
+  "version": "1.0.0",
+  "description": "849+ AI Agent 岗位模板库 — 覆盖 19 个职能领域的即用型 Agent 配置",
+  "main": "index.js",
+  "bin": {
+    "workstation": "./cli.mjs"
+  },
+  "keywords": [
+    "ai-agent",
+    "agent-templates",
+    "workstation",
+    "opc",
+    "deepleaper",
+    "agent-roles",
+    "enterprise-ai"
+  ],
+  "files": [
+    "roles/",
+    "matrix.json",
+    "cli.mjs",
+    "index.js",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Deepleaper/agent-workstation"
+  },
+  "author": "Deepleaper <dev@deepleaper.com>",
+  "license": "Apache-2.0"
+}
