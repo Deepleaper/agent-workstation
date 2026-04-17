@@ -178,15 +178,160 @@ Apache-2.0
 
 ## English
 
-**Agent Workstation** is a library of 100+ ready-to-use AI role templates across 19 business functions and 11 industries.
+## 💡 What Is Agent Workstation?
 
-Each template includes: OAD config (YAML), system prompt, brain seed (L1 initial memory), and scoring criteria.
+> **Don't build Agents from scratch. Pick a role, onboard in 5 minutes.**
 
-3-tier taxonomy: Industry (11) → Function (19) → Role (100+). Target: 849 roles covering every function in a modern enterprise.
+Agent Workstation provides 100+ ready-to-use AI role templates covering 19 business functions. Each template includes a system prompt, channel configuration, scoring criteria, and L1 initial memory.
+
+## Quick Start
 
 ```bash
 npm install agent-workstation
+
+# Browse all templates
 npx agent-workstation list
+
+# View a specific template
+npx agent-workstation show customer-service-rep
+
+# Use with opc-agent
+opc init my-agent --template customer-service-rep
 ```
 
-Part of Deepleaper's open-source suite: [deepbrain](https://github.com/Deepleaper/deepbrain) · [opc-agent](https://github.com/Deepleaper/opc-agent) · [agentkits](https://github.com/Deepleaper/agentkits)
+## 3-Tier Taxonomy
+
+```
+Industry (11)  →  Function (19)  →  Role (100+)
+
+Technology     Engineering     Backend Developer
+               Product        Product Manager
+               Data           Data Analyst
+
+E-commerce     Sales          Sales Dev Rep
+               Marketing      Growth Hacker
+               Customer Svc   Customer Service Rep
+
+Finance        Finance        Financial Analyst
+               Legal          Legal Counsel
+               Operations     Operations Analyst
+```
+
+### 11 Industries
+
+| Industry | Core Functions |
+|----------|---------------|
+| 🖥️ Technology & Software | Engineering, Product, Data |
+| 🛒 E-commerce & Retail | Sales, Marketing, Customer Service |
+| 🏦 Financial Services | Finance, Legal, Operations |
+| 🏥 Healthcare | Healthcare, Research |
+| 🎓 Education & Training | Education, Content |
+| 🏭 Manufacturing | Engineering, Operations |
+| 📋 Consulting | Research, Sales |
+| 🎬 Media & Entertainment | Content, Marketing, Design |
+| 🏠 Real Estate | Sales, Finance, Legal |
+| 🚚 Logistics & Supply Chain | Operations, Sales |
+| 🏢 General Enterprise | Executive, Admin, HR |
+
+### 19 Functions
+
+| Function | Example Roles | Templates |
+|----------|--------------|-----------|
+| 💻 Engineering | Backend, Frontend, DevOps | 8 |
+| 📦 Product | Product Manager, Requirements Analyst | 5 |
+| 📊 Data | Data Analyst, BI | 6 |
+| 🛒 Sales | Sales Rep, Account Manager | 6 |
+| 📢 Marketing | Marketing, Growth Hacker | 6 |
+| 💬 Customer Service | Service Rep, Complaints Handler | 5 |
+| 📝 Content | Copywriter, Editor | 5 |
+| 🎨 Design | UI Design, Brand Design | 5 |
+| 💰 Finance | Financial Analyst, Auditor | 5 |
+| 👥 HR | Recruiter, HRBP | 6 |
+| ⚖️ Legal | Legal Counsel, Compliance | 4 |
+| ⚙️ Operations | Operations Analyst, Process Optimization | 6 |
+| 🔬 Research | Researcher, Industry Analyst | 5 |
+| 🎓 Education | Trainer, Instructional Designer | 5 |
+| 🏥 Healthcare | Medical Consultant | 4 |
+| 👔 Executive | CEO Assistant, Strategy Analyst | 4 |
+| 🛡️ Admin | Administrative Management | 4 |
+| 🎯 Customer Success | Customer Success Manager | 4 |
+| 💻 Tech | Tech Support, IT Operations | 5 |
+
+## Template Structure
+
+Each complete template contains:
+
+```
+roles/sales/sales-development-rep/
+├── oad.yaml          # Agent config (OAD declarative)
+├── system-prompt.md  # System prompt
+├── brain-seed.md     # 🧠 L1 initial memory
+└── README.md         # Role description
+```
+
+### oad.yaml Example
+
+```yaml
+id: sales-development-rep
+name: Sales Development Rep
+name_zh: 销售开发代表
+category: sales
+version: "2.0.0"
+
+skills:
+  - lead-qualification
+  - cold-outreach
+  - crm-management
+
+channels:
+  - type: web-app
+    priority: primary
+  - type: email
+    priority: secondary
+
+resources:
+  data:
+    - crm-database
+    - lead-scoring-model
+  tools:
+    - email-sequencer
+    - calendar-booking
+
+metrics:
+  - qualified-leads-per-week
+  - response-time
+  - conversion-rate
+```
+
+### brain-seed.md — L1 Initial Memory
+
+Each template's `brain-seed.md` provides the Agent with ready-to-use initial knowledge:
+
+- **Core domain knowledge** — What this role must know
+- **Common scenarios** — Typical problems and how to handle them
+- **Learning priorities** — What the Agent should focus on
+- **Retrieval hints** — Keywords that should trigger memory recall
+
+Works with [DeepBrain](https://github.com/Deepleaper/deepbrain) so the Agent has baseline memory from day one — no cold start.
+
+## Roadmap
+
+| Phase | Goal | Status |
+|-------|------|--------|
+| v1.0 | 100 skeleton templates | ✅ |
+| v1.5 | 16 complete templates | ✅ |
+| v2.0 | 100 complete templates (with brain-seed) | 🚧 |
+| v3.0 | 849 roles full coverage | 📋 |
+
+## 🔗 Ecosystem
+
+| Project | Role | Relationship |
+|---------|------|-------------|
+| [deepbrain](https://github.com/Deepleaper/deepbrain) | Agent Memory Engine | brain-seed → learn() |
+| [opc-agent](https://github.com/Deepleaper/opc-agent) | Agent OS | `opc init --template` |
+| [agentkits](https://github.com/Deepleaper/agentkits) | OpenRouter with Memory | Mock mode for template testing |
+| **agent-workstation** | Virtual Role Templates | ← You are here |
+
+## License
+
+Apache-2.0
