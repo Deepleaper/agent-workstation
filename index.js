@@ -1,4 +1,4 @@
-const { readFileSync, readdirSync, existsSync } = require('node:fs');
+const { readFileSync, readdirSync, existsSync, statSync } = require('node:fs');
 const { join } = require('node:path');
 
 const ROLES_DIR = join(__dirname, 'roles');
@@ -13,13 +13,24 @@ function getCategories() {
     });
 }
 
+function readDirRecursive(dirPath, prefix = '') {
+  const files = {};
+  for (const entry of readdirSync(dirPath, { withFileTypes: true })) {
+    const key = prefix ? `${prefix}/${entry.name}` : entry.name;
+    const fullPath = join(dirPath, entry.name);
+    if (entry.isDirectory()) {
+      Object.assign(files, readDirRecursive(fullPath, key));
+    } else {
+      files[key] = readFileSync(fullPath, 'utf8');
+    }
+  }
+  return files;
+}
+
 function getRole(category, role) {
   const rolePath = join(ROLES_DIR, category, role);
   if (!existsSync(rolePath)) return null;
-  const files = {};
-  for (const f of readdirSync(rolePath)) {
-    files[f] = readFileSync(join(rolePath, f), 'utf8');
-  }
+  const files = readDirRecursive(rolePath);
   return { category, role, files };
 }
 
