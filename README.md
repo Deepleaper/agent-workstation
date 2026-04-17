@@ -43,6 +43,30 @@ opc init my-agent --template customer-service-rep
 | 🎯 Customer Success | 客户成功经理 | 4 |
 | 💻 Tech | 技术支持、IT运维 | 5 |
 
+## 三层分类体系
+
+```
+行业 (10+)  →  职能 (19)  →  工位 (100+)
+Technology     Engineering     Backend Developer
+               Product        Product Manager
+E-commerce     Sales          Sales Dev Rep
+               Marketing      Growth Hacker
+```
+
+详见 `industries/index.yaml`。
+
+## L1 Brain Seed
+
+每个完整模板包含 `brain-seed.md`，为 Agent 提供初始记忆：
+
+```
+roles/sales/sales-development-rep/
+├── oad.yaml          # Agent 配置
+├── system-prompt.md  # 系统提示词
+├── brain-seed.md     # 🧠 L1 初始记忆
+└── README.md         # 岗位说明
+```
+
 ## 模板结构
 
 每个模板包含：

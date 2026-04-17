@@ -1,0 +1,58 @@
+# Industry Classification for Agent Workstation
+# 3-tier taxonomy: Industry → Function → Role (Workstation)
+
+industries:
+  - id: technology
+    name: Technology & Software
+    name_zh: 科技与软件
+    functions: [engineering, product, data, design, tech]
+
+  - id: ecommerce
+    name: E-commerce & Retail
+    name_zh: 电商与零售
+    functions: [sales, marketing, customer-service, operations, content]
+
+  - id: finance
+    name: Financial Services
+    name_zh: 金融服务
+    functions: [finance, legal, sales, customer-service, operations]
+
+  - id: healthcare
+    name: Healthcare
+    name_zh: 医疗健康
+    functions: [healthcare, research, operations, hr, legal]
+
+  - id: education
+    name: Education
+    name_zh: 教育培训
+    functions: [education, content, research, operations, hr]
+
+  - id: manufacturing
+    name: Manufacturing
+    name_zh: 制造业
+    functions: [engineering, operations, sales, finance, hr]
+
+  - id: consulting
+    name: Consulting & Professional Services
+    name_zh: 咨询与专业服务
+    functions: [research, sales, content, finance, operations]
+
+  - id: media
+    name: Media & Entertainment
+    name_zh: 媒体与娱乐
+    functions: [content, marketing, design, sales, operations]
+
+  - id: real-estate
+    name: Real Estate
+    name_zh: 房地产
+    functions: [sales, finance, legal, marketing, operations]
+
+  - id: logistics
+    name: Logistics & Supply Chain
+    name_zh: 物流与供应链
+    functions: [operations, sales, finance, tech, customer-service]
+
+  - id: general
+    name: General Enterprise
+    name_zh: 通用企业
+    functions: [executive, admin, hr, finance, legal, operations]
