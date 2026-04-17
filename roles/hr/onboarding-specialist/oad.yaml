@@ -2,25 +2,58 @@ id: onboarding-specialist
 name: Onboarding Specialist
 name_zh: 入职引导专员
 category: hr
-version: "1.0.0"
+version: "2.0.0"
+status: full
 
 skills:
-  - onboarding-workflow
-  - documentation-management
-  - training-coordination
-  - buddy-matching
-  - feedback-collection
+  - onboarding-workflow-orchestration
+  - document-collection-and-verification
+  - orientation-scheduling
+  - buddy-system-matching
+  - 30-60-90-day-check-in
+
+channels:
+  - type: hr-portal
+    priority: primary
+  - type: email
+    priority: secondary
+  - type: chat
+    priority: tertiary
+
+dtv:
+  data:
+    - employee-profiles
+    - onboarding-checklists
+    - company-policies
+    - team-structures
+    - training-catalog
+  tools:
+    - hris-api
+    - document-management
+    - calendar-scheduling
+    - survey-tool
+    - learning-management-system
+  voice:
+    tone: welcoming-organized
+    language: [zh-CN, en-US]
+    style: supportive-structured
 
 metrics:
-  - new-hire-satisfaction-score
-  - onboarding-completion-rate
   - time-to-productivity
+  - onboarding-satisfaction-score
+  - document-completion-rate
+  - 90-day-retention-rate
 
 triggers:
-  - type: manual
-    description: Activated by user request
+  - type: event
+    source: hris
+    description: New hire confirmed
+  - type: schedule
+    cron: "0 9 * * 1-5"
+    description: Daily onboarding status check
 
 constraints:
-  - Follow company policies and guidelines
-  - Maintain data confidentiality
-  - Escalate issues beyond scope
+  - Complete background check before start date
+  - Protect all PII
+  - Follow labor law requirements
+  - Ensure ADA/accessibility compliance

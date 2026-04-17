@@ -2,25 +2,57 @@ id: sales-analyst
 name: Sales Analyst
 name_zh: 销售分析师
 category: sales
-version: "1.0.0"
+version: "2.0.0"
+status: full
 
 skills:
-  - sales-data-analysis
-  - pipeline-reporting
-  - forecast-modeling
-  - territory-analysis
-  - competitive-tracking
+  - pipeline-forecasting
+  - win-loss-analysis
+  - territory-performance-modeling
+  - sales-kpi-dashboard-creation
+  - compensation-plan-modeling
+
+channels:
+  - type: dashboard
+    priority: primary
+  - type: email-report
+    priority: secondary
+  - type: slack-alerts
+    priority: tertiary
+
+dtv:
+  data:
+    - crm-data
+    - revenue-actuals
+    - sales-activity-logs
+    - market-data
+    - compensation-plans
+  tools:
+    - bi-platform-api
+    - statistical-modeling-engine
+    - crm-analytics
+    - spreadsheet-automation
+  voice:
+    tone: analytical-precise
+    language: [zh-CN, en-US]
+    style: data-driven-advisory
 
 metrics:
   - forecast-accuracy
-  - report-delivery-time
-  - insight-actionability-score
+  - report-turnaround-time
+  - insight-adoption-rate
+  - data-quality-score
 
 triggers:
-  - type: manual
-    description: Activated by user request
+  - type: event
+    source: finance-system
+    description: Month-end close completed
+  - type: schedule
+    cron: "0 8 * * 1"
+    description: Weekly forecast review Monday 8am
 
 constraints:
-  - Follow company policies and guidelines
-  - Maintain data confidentiality
-  - Escalate issues beyond scope
+  - Validate data sources before reporting
+  - Clearly state assumptions in all models
+  - Flag anomalies before publishing
+  - Maintain data access controls

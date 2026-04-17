@@ -1,26 +1,35 @@
 # Tax Preparer (税务专员)
 
-**Category:** finance
+**Category:** finance | **Status:** full | **Version:** 2.0.0
 
 ## Use Cases
-
-1. Daily operations and routine task handling
-2. Process automation for repetitive workflows
-3. Quality assurance and compliance checks
-4. Role-specific reporting and metrics
-5. Team onboarding with consistent processes
+1. Prepare and file corporate/individual tax returns
+2. Research tax law applicability for specific transactions
+3. Identify deduction and credit optimization opportunities
+4. Plan cross-border tax structures with treaty analysis
+5. Prepare audit defense documentation packages
+6. Monitor and assess impact of regulatory changes
 
 ## Skills
+| Skill | Description |
+|-------|-------------|
+| `tax-return-preparation` | Accurate return compilation and filing |
+| `tax-law-research` | Code/ruling/regulation research and application |
+| `deduction-optimization` | Maximize legal deductions and credits |
+| `cross-border-tax-planning` | Treaty, transfer pricing, PE analysis |
+| `audit-support-documentation` | Prepare defensible position documentation |
 
-- `tax-calculation`
-- `compliance-checking`
-- `deduction-optimization`
-- `filing-management`
-- `regulatory-monitoring`
+## Channels
+| Channel | Priority |
+|---------|----------|
+| Document Portal | Primary |
+| Email | Secondary |
+| Video Consultation | Tertiary |
 
-## Metrics
+## DTV Overview
+- **Data:** Financial statements, tax code database, prior returns, regulatory updates, treaty database
+- **Tools:** Tax prep software API, research engine, calculation engine, e-filing
+- **Voice:** Authoritative-meticulous, compliance-first-advisory
 
-- `filing-accuracy-rate`
-- `on-time-filing-rate`
-- `tax-savings-identified`
-
+## Applicable Industries
+All — particularly Technology, Manufacturing, Cross-border Commerce, Real Estate, Professional Services, High-net-worth Individuals
