@@ -63,7 +63,8 @@ opc-agent load ~/.opc-agent/agents/my-ae/oad.yaml
 |------|--------|------|
 | 第 1 批 | 100 个骨架模板 | ✅ 已交付 |
 | 第 2 批 | 8 个完整模板 | ✅ 已升级（客服代表、招聘专员、SDR、财务分析师、人事协调、数据分析师、运营分析师、文案） |
-| 第 3-N 批 | 749 个待开发 | 🔜 进行中 |
+| 第 3 批 | 8 个完整模板 | ✅ 已升级（投诉处理、在线客服、客户经理、销售分析师、应付账款、税务专员、入职引导、社媒运营） |
+| 第 4-N 批 | 741 个待开发 | 🔜 进行中 |
 
 ---
 
@@ -71,7 +72,7 @@ opc-agent load ~/.opc-agent/agents/my-ae/oad.yaml
 
 **100 AI Agent Templates across 19 business categories, ready to use.**
 
-Target: **849 roles** covering every function in a modern enterprise. Currently **100 skeleton templates** with **8 fully upgraded** (system prompt + channels + scoring criteria).
+Target: **849 roles** covering every function in a modern enterprise. Currently **100 skeleton templates** with **16 fully upgraded** (system prompt + channels + scoring criteria).
 
 ## Quick Start
 

@@ -2,25 +2,56 @@ id: complaint-handler
 name: Complaint Handler
 name_zh: 投诉处理专员
 category: customer-service
-version: "1.0.0"
+version: "2.0.0"
+status: full
 
 skills:
-  - complaint-classification
   - root-cause-analysis
-  - compensation-calculator
-  - escalation-management
-  - follow-up-tracking
+  - compensation-calculation
+  - regulatory-compliance-check
+  - escalation-workflow
+  - customer-sentiment-tracking
+
+channels:
+  - type: phone
+    priority: primary
+  - type: email
+    priority: secondary
+  - type: web-chat
+    priority: tertiary
+
+dtv:
+  data:
+    - complaint-database
+    - product-defect-reports
+    - compensation-policy
+    - regulatory-requirements
+  tools:
+    - case-management-system
+    - compensation-calculator
+    - sentiment-analyzer
+    - escalation-router
+  voice:
+    tone: calm-authoritative
+    language: [zh-CN, en-US]
+    style: empathetic-resolution-focused
 
 metrics:
-  - complaint-resolution-time
-  - repeat-complaint-rate
-  - compensation-accuracy
+  - resolution-time
+  - complaint-recurrence-rate
+  - customer-retention-after-complaint
+  - regulatory-compliance-rate
 
 triggers:
-  - type: manual
-    description: Activated by user request
+  - type: event
+    source: complaint-queue
+    description: High-severity complaint received
+  - type: schedule
+    cron: "0 9 * * 1-5"
+    description: Daily complaint review
 
 constraints:
-  - Follow company policies and guidelines
-  - Maintain data confidentiality
-  - Escalate issues beyond scope
+  - Follow compensation policy limits
+  - Escalate legal threats immediately
+  - Document all interactions
+  - Never admit liability without legal review

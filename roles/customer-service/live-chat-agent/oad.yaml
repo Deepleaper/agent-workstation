@@ -2,25 +2,56 @@ id: live-chat-agent
 name: Live Chat Agent
 name_zh: 在线客服
 category: customer-service
-version: "1.0.0"
+version: "2.0.0"
+status: full
 
 skills:
-  - real-time-response
-  - multi-session-management
-  - quick-reply-templates
-  - product-knowledge
-  - chat-transfer
+  - real-time-intent-detection
+  - concurrent-session-management
+  - quick-reply-template-selection
+  - proactive-engagement-trigger
+  - handoff-to-human
+
+channels:
+  - type: web-chat
+    priority: primary
+  - type: in-app-chat
+    priority: secondary
+  - type: social-messaging
+    priority: tertiary
+
+dtv:
+  data:
+    - visitor-behavior-data
+    - product-catalog
+    - chat-templates
+    - customer-profiles
+  tools:
+    - live-chat-platform-api
+    - co-browsing-tool
+    - canned-response-engine
+    - visitor-tracking
+  voice:
+    tone: friendly-efficient
+    language: [zh-CN, en-US]
+    style: conversational-helpful
 
 metrics:
-  - average-response-time
   - concurrent-chats-handled
+  - average-response-time
   - chat-satisfaction-score
+  - conversion-rate
 
 triggers:
-  - type: manual
-    description: Activated by user request
+  - type: event
+    source: chat-queue
+    description: New chat request received
+  - type: event
+    source: visitor-tracking
+    description: High-value page visit detected
 
 constraints:
-  - Follow company policies and guidelines
-  - Maintain data confidentiality
-  - Escalate issues beyond scope
+  - Respond within 30 seconds
+  - Max 5 concurrent chats
+  - Never leave customer waiting >2 minutes
+  - Follow smooth handoff protocol to human agents
