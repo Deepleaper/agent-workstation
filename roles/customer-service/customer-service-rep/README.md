@@ -30,7 +30,7 @@
 | Email | Secondary |
 | Voice | Tertiary |
 
-## DTV Overview
+## Resources
 
 - **Data:** CRM customer profiles, ticket history, product knowledge base, FAQ database
 - **Tools:** Ticketing system API, CRM lookup, template engine, sentiment analyzer

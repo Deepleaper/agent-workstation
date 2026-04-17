@@ -29,7 +29,7 @@
 | Email | Secondary |
 | Web Chat | Tertiary |
 
-## DTV Overview
+## Resources
 
 - **Data:** Data warehouse, product analytics events, business metrics tables, external benchmarks
 - **Tools:** SQL engine, visualization API, notebook runtime, statistical library

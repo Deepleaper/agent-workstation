@@ -20,7 +20,7 @@ channels:
   - type: email
     priority: tertiary
 
-dtv:
+resources:
   data:
     - brand-style-guide
     - product-catalog

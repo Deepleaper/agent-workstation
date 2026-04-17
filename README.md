@@ -2,7 +2,7 @@
 
 **100 个 AI 岗位模板，覆盖 19 个行业分类，开箱即用。**
 
-目标：**849 个岗位**，覆盖现代企业所有职能。当前已有 **100 个骨架模板**，其中 **8 个已完整升级**（系统提示词 + 渠道配置 + DTV 配置）。
+目标：**849 个岗位**，覆盖现代企业所有职能。当前已有 **100 个骨架模板**，其中 **8 个已完整升级**（系统提示词 + 渠道配置 + 评分标准）。
 
 ## 📂 分类总览
 
@@ -72,7 +72,7 @@ opc-agent load ~/.opc-agent/agents/my-ae/oad.yaml
 
 **100 AI Agent Templates across 19 business categories, ready to use.**
 
-Target: **849 roles** covering every function in a modern enterprise. Currently **100 skeleton templates** with **16 fully upgraded** (system prompt + channels + DTV config).
+Target: **849 roles** covering every function in a modern enterprise. Currently **100 skeleton templates** with **16 fully upgraded** (system prompt + channels + scoring criteria).
 
 ## Quick Start
 

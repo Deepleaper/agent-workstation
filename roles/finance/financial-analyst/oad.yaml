@@ -20,7 +20,7 @@ channels:
   - type: web-chat
     priority: tertiary
 
-dtv:
+resources:
   data:
     - general-ledger
     - budget-plans

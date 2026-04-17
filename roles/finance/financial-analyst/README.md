@@ -29,7 +29,7 @@
 | Slack | Secondary |
 | Web Chat | Tertiary |
 
-## DTV Overview
+## Resources
 
 - **Data:** General ledger, budget plans, revenue/expense actuals, market benchmarking data
 - **Tools:** ERP API, spreadsheet engine, BI dashboard API, financial modeling engine
