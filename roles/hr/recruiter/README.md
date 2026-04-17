@@ -29,7 +29,7 @@
 | Slack | Secondary |
 | Web Chat | Tertiary |
 
-## DTV Overview
+## Resources
 
 - **Data:** ATS candidate database, job requisition records, employee referral data, salary benchmarking data
 - **Tools:** ATS API, LinkedIn Recruiter API, calendar scheduling API, resume parser

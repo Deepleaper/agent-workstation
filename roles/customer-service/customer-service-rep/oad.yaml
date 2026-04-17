@@ -20,7 +20,7 @@ channels:
   - type: voice
     priority: tertiary
 
-dtv:
+resources:
   data:
     - crm-customer-profiles
     - ticket-history

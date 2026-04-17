@@ -20,7 +20,7 @@ channels:
   - type: web-chat
     priority: tertiary
 
-dtv:
+resources:
   data:
     - crm-lead-database
     - company-firmographic-data

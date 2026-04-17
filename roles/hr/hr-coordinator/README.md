@@ -29,7 +29,7 @@
 | Email | Secondary |
 | Web Chat | Tertiary |
 
-## DTV Overview
+## Resources
 
 - **Data:** HRIS employee database, company policy handbook, leave/attendance records, benefits enrollment data
 - **Tools:** HRIS API, document generation engine, calendar API, compliance tracker

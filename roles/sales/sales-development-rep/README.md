@@ -29,7 +29,7 @@
 | Slack | Secondary |
 | Web Chat | Tertiary |
 
-## DTV Overview
+## Resources
 
 - **Data:** CRM lead database, company firmographic data, engagement activity logs, ICP definition
 - **Tools:** CRM API, email sequencer, calendar booking API, lead enrichment API

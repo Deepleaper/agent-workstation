@@ -20,7 +20,7 @@ channels:
   - type: web-chat
     priority: tertiary
 
-dtv:
+resources:
   data:
     - operational-metrics-database
     - process-workflow-definitions

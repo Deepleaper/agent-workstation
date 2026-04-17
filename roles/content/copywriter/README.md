@@ -30,7 +30,7 @@
 | Slack | Secondary | Quick copy requests, feedback loops |
 | Email | Tertiary | Formal content delivery, stakeholder approvals |
 
-## DTV Overview
+## Resources
 
 - **Data:** Brand style guide, product catalog, competitor messaging library, audience personas, SEO keyword database
 - **Tools:** Grammar checker API, SEO analyzer, plagiarism detector, content calendar system, DAM
