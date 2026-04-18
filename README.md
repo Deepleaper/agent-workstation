@@ -4,7 +4,7 @@
 
 **Agent 工位模板库 — 100 个专业角色，秒级创建生产级智能体**
 
-[![npm version](https://img.shields.io/badge/npm-v1.4.0-blue)](https://www.npmjs.com/package/agent-workstation)
+[![npm version](https://img.shields.io/badge/npm-v2.0.0-blue)](https://www.npmjs.com/package/agent-workstation)
 [![License](https://img.shields.io/badge/License-LGPL_3.0-blue.svg)](LICENSE)
 
 不是空壳模板。20 个角色已配备 **50–80 行专业 system prompt** + **行业知识种子 (brain-seed)** + **完整 OAD 配置**。<br/>
@@ -336,7 +336,7 @@ opc init --role customer-service-rep
 
 **AI Agent Role Template Library — 100 professional roles, production-ready agents in seconds**
 
-[![npm version](https://img.shields.io/badge/npm-v1.4.0-blue)](https://www.npmjs.com/package/agent-workstation)
+[![npm version](https://img.shields.io/badge/npm-v2.0.0-blue)](https://www.npmjs.com/package/agent-workstation)
 [![License](https://img.shields.io/badge/License-LGPL_3.0-blue.svg)](LICENSE)
 
 Not empty scaffolds. 20 roles ship with **50–80 line expert system prompts** + **industry knowledge seeds (brain-seed)** + **full OAD configs**.<br/>
