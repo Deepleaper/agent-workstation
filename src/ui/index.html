@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent Workstation — Role Browser</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0d1117;--surface:#161b22;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--accent:#58a6ff;--accent2:#3fb950;--badge:#1f6feb;--card:#1c2128;--hover:#21262d}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+a{color:var(--accent);text-decoration:none}
+.app{display:flex;min-height:100vh}
+nav{width:220px;background:var(--surface);border-right:1px solid var(--border);padding:16px;position:fixed;height:100vh;overflow-y:auto}
+nav h1{font-size:18px;margin-bottom:24px;display:flex;align-items:center;gap:8px}
+nav h1 span{font-size:24px}
+nav ul{list-style:none}
+nav li{padding:10px 12px;border-radius:8px;cursor:pointer;margin-bottom:4px;display:flex;align-items:center;gap:8px;color:var(--text2);transition:all .15s}
+nav li:hover,nav li.active{background:var(--hover);color:var(--text)}
+main{margin-left:220px;flex:1;padding:32px;max-width:1200px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;text-align:center}
+.stat .num{font-size:36px;font-weight:700;color:var(--accent)}
+.stat .label{color:var(--text2);margin-top:4px;font-size:14px}
+.search-box{width:100%;padding:12px 16px;background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:15px;margin-bottom:24px;outline:none}
+.search-box:focus{border-color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;cursor:pointer;transition:all .15s}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.card .emoji{font-size:28px;margin-bottom:8px}
+.card h3{font-size:16px;margin-bottom:6px}
+.card p{color:var(--text2);font-size:13px;line-height:1.5;margin-bottom:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.badge{display:inline-block;background:var(--badge);color:#fff;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:600}
+.card .actions{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.btn{padding:6px 14px;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--text);cursor:pointer;font-size:12px;transition:all .15s}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn-primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn-primary:hover{opacity:.85}
+.detail{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:32px}
+.detail h2{font-size:24px;margin-bottom:8px;display:flex;align-items:center;gap:12px}
+.detail .meta{color:var(--text2);margin-bottom:24px}
+.section{margin-bottom:24px}
+.section h3{font-size:16px;margin-bottom:8px;color:var(--accent)}
+.code-block{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:16px;overflow-x:auto;font-family:'Fira Code',monospace;font-size:13px;line-height:1.6;white-space:pre-wrap;max-height:500px;overflow-y:auto}
+.copy-cmd{display:flex;align-items:center;gap:8px;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:16px;font-family:monospace;font-size:14px}
+.copy-cmd code{flex:1;color:var(--accent2)}
+.industry-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.industry-item{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;cursor:pointer;transition:all .15s;display:flex;justify-content:space-between;align-items:center}
+.industry-item:hover{border-color:var(--accent)}
+.industry-item .count{background:var(--badge);color:#fff;padding:2px 10px;border-radius:12px;font-size:12px}
+.back-btn{margin-bottom:16px;cursor:pointer;color:var(--accent);font-size:14px}
+.loading{text-align:center;padding:40px;color:var(--text2)}
+.toast{position:fixed;bottom:24px;right:24px;background:var(--accent2);color:#fff;padding:12px 20px;border-radius:8px;font-size:14px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+</style>
+</head>
+<body>
+<div class="app">
+<nav>
+  <h1><span>🏗️</span> Workstation</h1>
+  <ul>
+    <li class="active" data-page="overview">📊 Overview</li>
+    <li data-page="roles">👤 Roles</li>
+    <li data-page="industries">🏭 Industries</li>
+    <li data-page="search">🔍 Search</li>
+  </ul>
+</nav>
+<main id="content"><div class="loading">Loading...</div></main>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const API='';
+let currentPage='overview';
+
+const emojiMap={engineering:'⚙️',product:'📦',design:'🎨',marketing:'📣',sales:'💰',hr:'👥',finance:'💵',legal:'⚖️',data:'📊',content:'✍️',research:'🔬',operations:'🏭',executive:'👔','customer-service':'🎧','customer-success':'🤝',security:'🔒',education:'📚',healthcare:'🏥',default:'🤖'};
+function getEmoji(name){for(const[k,v]of Object.entries(emojiMap)){if(name.toLowerCase().includes(k))return v}return emojiMap.default}
+
+async function api(path){const r=await fetch(API+path);return r.json()}
+
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2000)}
+
+function copyText(text){navigator.clipboard.writeText(text).then(()=>toast('Copied!'))}
+
+function renderCard(r){
+  const name=r.role||r.name||'';
+  const cat=r.category||'';
+  const title=r.title||name.replace(/-/g,' ');
+  const desc=r.description||'';
+  return `<div class="card" onclick="showRole('${cat}','${name}')">
+    <div class="emoji">${getEmoji(cat||name)}</div>
+    <h3>${title}</h3>
+    <p>${desc||'Agent role template'}</p>
+    <div class="actions">
+      <span class="badge">${cat}</span>
+      <button class="btn" onclick="event.stopPropagation();copyText('opc init --role ${cat}/${name}')">📋 Use</button>
+    </div>
+  </div>`;
+}
+
+async function showOverview(){
+  const[stats,popular]=await Promise.all([api('/api/stats'),api('/api/roles/popular')]);
+  document.getElementById('content').innerHTML=`
+    <h2>📊 Overview</h2>
+    <div class="stats">
+      <div class="stat"><div class="num">${stats.totalRoles}</div><div class="label">Total Roles</div></div>
+      <div class="stat"><div class="num">${stats.industries}</div><div class="label">Industries</div></div>
+      <div class="stat"><div class="num">${stats.categories}</div><div class="label">Categories</div></div>
+    </div>
+    <h3 style="margin-bottom:16px">🔥 Popular Roles</h3>
+    <div class="grid">${popular.filter(p=>p.exists).map(renderCard).join('')}</div>`;
+}
+
+async function showRoles(){
+  const roles=await api('/api/roles');
+  document.getElementById('content').innerHTML=`
+    <h2>👤 All Roles</h2>
+    <input class="search-box" placeholder="Filter roles..." oninput="filterRoles(this.value)">
+    <div class="grid" id="roles-grid">${roles.map(renderCard).join('')}</div>`;
+  window._allRolesHtml=roles.map(r=>({html:renderCard(r),text:JSON.stringify(r).toLowerCase()}));
+}
+
+function filterRoles(q){
+  if(!q){document.getElementById('roles-grid').innerHTML=window._allRolesHtml.map(r=>r.html).join('');return}
+  const lq=q.toLowerCase();
+  document.getElementById('roles-grid').innerHTML=window._allRolesHtml.filter(r=>r.text.includes(lq)).map(r=>r.html).join('');
+}
+
+async function showIndustries(){
+  const cats=await api('/api/categories');
+  document.getElementById('content').innerHTML=`
+    <h2>🏭 Industries & Categories</h2>
+    <div class="industry-list">${cats.map(c=>`
+      <div class="industry-item" onclick="showCategoryRoles('${c.name}')">
+        <span>${getEmoji(c.name)} ${c.name}</span>
+        <span class="count">${c.roles.length}</span>
+      </div>`).join('')}</div>`;
+}
+
+async function showCategoryRoles(cat){
+  const roles=await api(`/api/categories/${cat}/roles`);
+  document.getElementById('content').innerHTML=`
+    <div class="back-btn" onclick="showIndustries()">← Back to Industries</div>
+    <h2>${getEmoji(cat)} ${cat}</h2>
+    <div class="grid">${roles.map(renderCard).join('')}</div>`;
+}
+
+async function showSearch(){
+  document.getElementById('content').innerHTML=`
+    <h2>🔍 Search Roles</h2>
+    <input class="search-box" id="search-input" placeholder="Search roles..." oninput="doSearch(this.value)">
+    <div class="grid" id="search-results"></div>`;
+  document.getElementById('search-input').focus();
+}
+
+let searchTimer;
+function doSearch(q){
+  clearTimeout(searchTimer);
+  searchTimer=setTimeout(async()=>{
+    if(!q){document.getElementById('search-results').innerHTML='';return}
+    const results=await api(`/api/roles/search?q=${encodeURIComponent(q)}`);
+    document.getElementById('search-results').innerHTML=results.length?results.map(renderCard).join(''):'<p style="color:var(--text2)">No results found</p>';
+  },300);
+}
+
+async function showRole(cat,role){
+  const data=await api(`/api/roles/${cat}/${role}`);
+  if(data.error){toast('Role not found');return}
+  const cmd=`opc init --role ${cat}/${role}`;
+  document.getElementById('content').innerHTML=`
+    <div class="back-btn" onclick="navigate(currentPage)">← Back</div>
+    <div class="detail">
+      <h2>${getEmoji(cat)} ${data.title||role.replace(/-/g,' ')}</h2>
+      <div class="meta"><span class="badge">${cat}</span> &nbsp; ${data.description||''}</div>
+      <div class="copy-cmd"><code>${cmd}</code><button class="btn btn-primary" onclick="copyText('${cmd}')">📋 Copy</button></div>
+      ${data.systemPrompt?`<div class="section"><h3>System Prompt</h3><div class="code-block">${escHtml(data.systemPrompt)}</div></div>`:''}
+      ${data.brainSeed?`<div class="section"><h3>Brain Seed</h3><div class="code-block">${escHtml(data.brainSeed)}</div></div>`:''}
+      ${data.readme?`<div class="section"><h3>README</h3><div class="code-block">${escHtml(data.readme)}</div></div>`:''}
+      <div class="section"><h3>Files</h3><div class="code-block">${data.files.join('\n')}</div></div>
+    </div>`;
+}
+
+function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+
+function navigate(page){
+  currentPage=page;
+  document.querySelectorAll('nav li').forEach(li=>li.classList.toggle('active',li.dataset.page===page));
+  ({overview:showOverview,roles:showRoles,industries:showIndustries,search:showSearch})[page]();
+}
+
+document.querySelectorAll('nav li').forEach(li=>li.addEventListener('click',()=>navigate(li.dataset.page)));
+navigate('overview');
+</script>
+</body>
+</html>

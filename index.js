@@ -160,4 +160,6 @@ function getPopularRoles() {
   });
 }
 
-module.exports = { getCategories, getRole, getIndustries, searchRoles, validateRole, getPopularRoles, ROLES_DIR };
+const { WorkstationUI } = require('./src/ui/server.js');
+
+module.exports = { getCategories, getRole, getIndustries, searchRoles, validateRole, getPopularRoles, ROLES_DIR, WorkstationUI };
