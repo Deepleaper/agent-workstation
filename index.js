@@ -227,9 +227,10 @@ function getBrainSeeds(roleName) {
 }
 
 const { WorkstationUI } = require('./src/ui/server.js');
+const { WorkstationHub } = require('./src/hub/index.js');
 
 module.exports = {
   getCategories, getRole, getIndustries, searchRoles, validateRole, getPopularRoles,
   getIndustryBrainSeed, getJobBrainSeed, getWorkstationBrainSeed, getContextTemplate, getBrainSeeds,
-  ROLES_DIR, WorkstationUI,
+  ROLES_DIR, WorkstationUI, WorkstationHub,
 };
