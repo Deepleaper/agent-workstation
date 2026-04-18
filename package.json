@@ -1,6 +1,6 @@
 {
   "name": "agent-workstation",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "description": "849+ AI Agent 岗位模板库 — 覆盖 19 个职能领域的即用型 Agent 配置",
   "main": "index.js",
   "bin": {
