@@ -163,3 +163,29 @@ whether future versions of the GNU Lesser General Public License shall
 apply, that proxy's public statement of acceptance of any version is
 permanent authorization for you to choose that version for the
 Library.
+
+================================================================================
+
+ADDITIONAL TERMS — Attribution Requirement
+(Pursuant to Section 7 of LGPL-3.0)
+
+As permitted by Section 7 of the GNU Lesser General Public License v3.0,
+the following additional terms apply to this software:
+
+1. Any application, service, or product that uses Agent Workstation or its
+   role templates must include the following attribution in a reasonably
+   visible location (e.g., About page, README, documentation, footer, or
+   startup output):
+
+   "Powered by Agent Workstation — https://github.com/Deepleaper/agent-workstation"
+   "© Deepleaper (跃盟科技)"
+
+2. This attribution requirement applies to ALL deployments — open-source,
+   internal, and commercial.
+
+3. Removal of attribution is ONLY permitted under a separate commercial
+   license agreement with Deepleaper.
+
+4. For commercial licensing inquiries: licensing@deepleaper.com
+
+© 2026 Deepleaper (跃盟科技). All rights reserved.
