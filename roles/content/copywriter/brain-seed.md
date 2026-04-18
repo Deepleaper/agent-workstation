@@ -1,23 +1,42 @@
-# Copywriter — L1 Brain Seed
+﻿# 文案策划 — 知识种子
 
-## Core Knowledge
-- Copywriting frameworks: AIDA, PAS (Problem-Agitate-Solution), BAB (Before-After-Bridge)
-- Brand voice consistency: tone, vocabulary, sentence rhythm must match brand guidelines
-- SEO copywriting: keyword placement in H1/H2, meta descriptions, natural density
-- Conversion copy principles: one CTA per piece, benefit > feature, social proof placement
-- Platform-specific formats: long-form blog, social caption, email subject lines, ad copy
+## 核心概念
+- **专业定位**: 文案策划 在组织中的核心价值是提供广告文案相关的专业支持
+- **价值链**: 从需求识别 → 方案设计 → 执行落地 → 效果评估的完整闭环
+- **能力模型**: 专业技能 + 业务理解 + 沟通协作 + 持续学习
+- **成熟度模型**: 初始级 → 可重复 → 已定义 → 已管理 → 优化级
 
-## Common Scenarios
-- **Product launch copy**: Extract key benefits from product brief → craft headline variations → write body copy with proof points → CTA aligned to funnel stage
-- **Blog post / SEO content**: Keyword research → outline with H2s → draft with natural keyword integration → meta description + internal links
-- **Email campaign sequence**: Define goal per email → subject line A/B variants → body with single CTA → preview text optimization
+## 常用术语
+- **广告文案**: 该领域的核心能力模块
+ - **品牌文案**: 该领域的核心能力模块
+ - **内容营销**: 该领域的核心能力模块
+ - **SEO文案**: 该领域的核心能力模块
+- **KPI**: 关键绩效指标，衡量工作成果
+- **SOP**: 标准操作流程，确保执行一致性
+- **ROI**: 投资回报率，评估方案价值
+- **Best Practice**: 经过验证的最佳做法
+- **Benchmark**: 行业基准，用于对标分析
 
-## Learning Priorities
-- Track which headlines and CTAs drive highest click-through/conversion
-- Learn brand voice nuances from approved vs. rejected drafts
-- Monitor SEO ranking changes after content publishes
-- Pay attention to audience language in reviews and social comments
+## 最佳实践
+- 任何决策前先收集充足的数据和背景信息
+- 方案设计要考虑至少3种方案的对比
+- 实施前做小范围试点，验证可行性
+- 建立度量体系，用数据跟踪效果
+- 定期复盘，把经验沉淀为知识库
+- 跨部门协作时，先对齐目标和期望
+- 保持对行业趋势的关注和学习
+- 重要文档和决策要有版本记录
 
-## Recall Hints
-- Keywords: headline, copy, CTA, brand voice, AIDA, SEO, conversion rate, A/B test, content brief, tone of voice
-- Context signals: new campaign brief, product launch, low engagement metrics, brand refresh
+## 决策框架
+- **紧急程度评估**: 影响范围 × 严重程度 × 时间紧迫性
+- **方案对比矩阵**: 成本 vs 收益 vs 风险 vs 时间
+- **优先级排序**: ICE模型（Impact × Confidence × Ease）
+- **风险评估**: 概率 × 影响 × 可控性
+- **可行性评估**: 技术可行性 + 资源可行性 + 时间可行性
+
+## 行业认知
+- 该领域正在经历数字化和AI驱动的转型
+- 数据驱动决策已成为基本要求
+- 跨职能协作能力越来越重要
+- 自动化和效率提升是永恒主题
+- 合规和风控要求日益严格

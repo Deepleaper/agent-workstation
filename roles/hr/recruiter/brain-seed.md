@@ -1,23 +1,35 @@
-# Recruiter — L1 Brain Seed
+﻿# æ‹›è˜ä¸“å‘˜ Brain Seed
 
-## Core Knowledge
-- Full-cycle recruiting: sourcing → screening → interview coordination → offer → close
-- Boolean search and X-ray techniques for LinkedIn, GitHub, Stack Overflow
-- Candidate experience best practices: response within 24h, clear process communication, feedback loops
-- Employer branding: EVP (Employee Value Proposition), job description optimization
-- Compensation benchmarking: market data sources, total comp packaging, equity explanation
+## æ ¸å¿ƒæ¦‚å¿µ
+- **æ‹›è˜æ¼æ–—ï¼ˆRecruitment Funnelï¼‰**ï¼šä»Žç®€åŽ†ç­›é€‰åˆ°æœ€ç»ˆå½•ç”¨çš„è½¬åŒ–æµç¨‹
+- **å²—ä½ç”»åƒï¼ˆJob Profileï¼‰**ï¼šå¯¹ç†æƒ³å€™é€‰äººçš„èƒ½åŠ›ã€ç»éªŒã€ç‰¹è´¨çš„ç»¼åˆæè¿°
+- **ç»“æž„åŒ–é¢è¯•**ï¼šåŸºäºŽé¢„è®¾ç»´åº¦å’Œè¯„åˆ†æ ‡å‡†çš„æ ‡å‡†åŒ–é¢è¯•æ–¹æ³•
+- **å€™é€‰äººå…³ç³»ç®¡ç†ï¼ˆCRMï¼‰**ï¼šç³»ç»ŸåŒ–ç»´æŠ¤ä¸Žå€™é€‰äººçš„é•¿æœŸå…³ç³»
 
-## Common Scenarios
-- **New role kickoff**: Intake meeting with hiring manager → align on must-have vs. nice-to-have → define sourcing strategy → set timeline and SLAs
-- **Passive candidate outreach**: Research candidate background → craft personalized message referencing their work → value prop tied to career growth → follow-up cadence
-- **Offer negotiation**: Understand candidate priorities (comp, role, growth, flexibility) → prepare competitive package → present with enthusiasm → handle counter professionally
+## å…³é”®æœ¯è¯­
+- Screeningï¼šç®€åŽ†ç­›é€‰
+- Phone Screenï¼šç”µè¯åˆç­›
+- Panel Interviewï¼šå¤šäººé¢è¯•
+- Reference Checkï¼šèƒŒæ™¯è°ƒæŸ¥
+- Counterofferï¼šå€™é€‰äººçŽ°å…¬å¸çš„æŒ½ç•™offer
+- Ghostingï¼šå€™é€‰äººæˆ–ä¼ä¸šå•æ–¹é¢ä¸­æ–­æ²Ÿé€š
 
-## Learning Priorities
-- Track source-of-hire effectiveness (which channels yield best hires)
-- Learn time-to-fill patterns by role type and seniority
-- Monitor offer acceptance rates and decline reasons
-- Pay attention to interviewer feedback patterns that predict successful hires
+## æœ€ä½³å®žè·µ
+1. æ¯ä¸ªå²—ä½å¼€å¯å‰ä¸ŽHiring Manageråšæ·±å…¥éœ€æ±‚å¯¹é½
+2. ç®€åŽ†ç­›é€‰å»ºç«‹æ˜Žç¡®çš„Must-haveå’ŒNice-to-haveæ ‡å‡†
+3. é¢è¯•è¯„ä¼°ç”¨ç»Ÿä¸€è¯„åˆ†å¡ï¼Œå‡å°‘ä¸»è§‚åå·®
+4. å…¨æµç¨‹ä¿æŒä¸Žå€™é€‰äººçš„åŠæ—¶æ²Ÿé€šï¼ˆä¸è¶…è¿‡3ä¸ªå·¥ä½œæ—¥ï¼‰
+5. ç§¯ç´¯å²—ä½æ‹›è˜çš„åŽ†å²æ•°æ®ç”¨äºŽæœªæ¥é¢„æµ‹
+6. ä¸ŽçŒŽå¤´åˆä½œæ—¶æ˜Žç¡®äº¤ä»˜æ ‡å‡†å’Œæ—¶é—´èŠ‚ç‚¹
 
-## Recall Hints
-- Keywords: sourcing, pipeline, offer, JD, interview, candidate experience, time-to-fill, cost-per-hire, Boolean search, talent pool
-- Context signals: new headcount approved, high-priority role, candidate ghosting pattern, competing offers
+## å¸¸ç”¨çŸ¥è¯†
+- ä¸åŒå²—ä½çš„å¸‚åœºè–ªé…¬èŒƒå›´
+- é¢è¯•ä¸­çš„STARè¡Œä¸ºé¢è¯•æ³•
+- è¯†åˆ«ç®€åŽ†ç¾ŽåŒ–å’Œè™šå‡ä¿¡æ¯çš„æŠ€å·§
+- å„æ‹›è˜æ¸ é“çš„ç‰¹ç‚¹å’Œé€‚ç”¨åœºæ™¯
+
+## å†³ç­–æ¡†æž¶
+1. **å€™é€‰äººæŽ’åº**ï¼šç¡¬æ€§æ¡ä»¶è¾¾æ ‡ â†’ è½¯æ€§åŒ¹é…åº¦ â†’ è–ªé…¬å¯è¡Œæ€§ â†’ åˆ°å²—æ—¶é—´
+2. **æ¸ é“æŠ•å…¥å†³ç­–**ï¼šå²—ä½ç±»åž‹ Ã— ç´§æ€¥ç¨‹åº¦ Ã— é¢„ç®—é™åˆ¶
+3. **æ˜¯å¦æŽ¨è¿›å†³ç­–**ï¼šè‡³å°‘2ä¸ªé¢è¯•å®˜è®¤å¯ + æ— Red Flag
+4. **Offerç­–ç•¥**ï¼šå¸‚åœºå¯¹æ ‡ Ã— å†…éƒ¨å…¬å¹³æ€§ Ã— å€™é€‰äººæœŸæœ›

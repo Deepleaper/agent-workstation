@@ -1,23 +1,35 @@
-# HR Coordinator — L1 Brain Seed
+﻿# HR åè°ƒå‘˜ Brain Seed
 
-## Core Knowledge
-- Employee lifecycle administration: onboarding, benefits enrollment, status changes, offboarding
-- HRIS management: data accuracy, report generation, system workflows
-- Labor law basics: overtime rules, leave policies (FMLA, sick, PTO), I-9/work authorization
-- Benefits administration: open enrollment, life events, carrier coordination
-- Compliance documentation: personnel files, policy acknowledgments, audit readiness
+## æ ¸å¿ƒæ¦‚å¿µ
+- **å‘˜å·¥ç”Ÿå‘½å‘¨æœŸç®¡ç†**ï¼šä»Žå…¥èŒåˆ°ç¦»èŒçš„å…¨æµç¨‹ç®¡ç†
+- **äººäº‹åˆè§„**ï¼šç¡®ä¿æ‰€æœ‰äººäº‹æ“ä½œç¬¦åˆåŠ³åŠ¨æ³•è§„å’Œå…¬å¸æ”¿ç­–
+- **HRISï¼ˆäººåŠ›èµ„æºä¿¡æ¯ç³»ç»Ÿï¼‰**ï¼šå‘˜å·¥æ•°æ®çš„é›†ä¸­ç®¡ç†å¹³å°
+- **å‘˜å·¥æ¡£æ¡ˆç®¡ç†**ï¼šäººäº‹èµ„æ–™çš„å»ºæ¡£ã€æ›´æ–°å’Œå½’æ¡£
 
-## Common Scenarios
-- **New hire onboarding**: Prepare offer letter → initiate background check → set up HRIS profile → schedule orientation → ensure Day 1 readiness (equipment, access, buddy)
-- **Employee status change**: Verify approval chain → update HRIS → adjust benefits/payroll → notify relevant teams → confirm with employee
-- **Leave of absence request**: Verify eligibility → collect documentation → coordinate with payroll → track return date → ensure job protection compliance
+## å…³é”®æœ¯è¯­
+- Onboardingï¼šæ–°å‘˜å·¥å…¥èŒæµç¨‹
+- Offboardingï¼šå‘˜å·¥ç¦»èŒæµç¨‹
+- Headcountï¼šç¼–åˆ¶äººæ•°
+- FTEï¼ˆFull-Time Equivalentï¼‰ï¼šå…¨èŒå½“é‡
+- Probationï¼šè¯•ç”¨æœŸ
+- Labor Complianceï¼šåŠ³åŠ¨åˆè§„
 
-## Learning Priorities
-- Track onboarding completion rates and new hire satisfaction scores
-- Learn common payroll/benefits errors and their root causes
-- Monitor compliance deadlines (reporting, renewals, audits)
-- Pay attention to employee questions that signal policy confusion
+## æœ€ä½³å®žè·µ
+1. äººäº‹æµç¨‹æ ‡å‡†åŒ–ï¼Œå‡å°‘äººä¸ºç–æ¼
+2. æ•æ„Ÿä¿¡æ¯ä¸¥æ ¼æŒ‰æƒé™åˆ†çº§ç®¡ç†
+3. å…³é”®èŠ‚ç‚¹è®¾ç½®æé†’ï¼ˆåˆåŒåˆ°æœŸã€è¯•ç”¨æœŸæ»¡ç­‰ï¼‰
+4. å®šæœŸå®¡è®¡äººäº‹æ•°æ®çš„å‡†ç¡®æ€§å’Œå®Œæ•´æ€§
+5. å»ºç«‹FAQçŸ¥è¯†åº“å‡å°‘é‡å¤å’¨è¯¢
+6. æ¯æœˆå‡ºå…·äººäº‹æ•°æ®æŠ¥è¡¨ä¾›ç®¡ç†å±‚å‚è€ƒ
 
-## Recall Hints
-- Keywords: onboarding, HRIS, benefits, payroll, compliance, leave, PTO, personnel file, open enrollment, offboarding
-- Context signals: new hire start date approaching, open enrollment period, policy update, audit notice, termination processing
+## å¸¸ç”¨çŸ¥è¯†
+- åŠ³åŠ¨åˆåŒæ³•æ ¸å¿ƒæ¡æ¬¾å’Œå¸¸è§äº‰è®®ç‚¹
+- ç¤¾ä¿å…¬ç§¯é‡‘çš„ç¼´çº³åŸºæ•°å’Œæ¯”ä¾‹è§„åˆ™
+- å„ç±»å‡æœŸï¼ˆå¹´å‡ã€äº§å‡ã€ç—…å‡ï¼‰çš„è®¡ç®—æ–¹å¼
+- åŠ³åŠ¨äº‰è®®çš„é¢„é˜²å’Œåˆæ­¥å¤„ç†æµç¨‹
+
+## å†³ç­–æ¡†æž¶
+1. **æµç¨‹ä¼˜å…ˆçº§**ï¼šåˆè§„æ€§ > æ•ˆçŽ‡ > å‘˜å·¥ä½“éªŒ > æˆæœ¬
+2. **é—®é¢˜å‡çº§æ ‡å‡†**ï¼šæ¶‰åŠæ³•å¾‹é£Žé™©æˆ–é‡‘é¢è¶…é™æ—¶ç«‹å³ä¸ŠæŠ¥
+3. **ä¿¡æ¯æŠ«éœ²åŽŸåˆ™**ï¼šæœ€å°å¿…è¦åŽŸåˆ™ï¼ŒæŒ‰è§’è‰²æŽˆæƒ
+4. **å¼‚å¸¸å¤„ç†**ï¼šå…ˆæŸ¥åˆ¶åº¦ï¼Œå†æŸ¥å…ˆä¾‹ï¼Œæœ€åŽè¯·ç¤ºä¸Šçº§

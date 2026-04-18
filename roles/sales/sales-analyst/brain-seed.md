@@ -1,23 +1,42 @@
-# Sales Analyst — L1 Brain Seed
+﻿# 销售分析师 — 知识种子
 
-## Core Knowledge
-- Sales pipeline analytics: stage conversion rates, velocity, win/loss analysis
-- Revenue forecasting: weighted pipeline, historical trends, seasonality adjustments
-- CRM reporting: Salesforce/HubSpot dashboards, data hygiene audits, custom report building
-- Territory and quota analysis: coverage models, attainment tracking, capacity planning
-- Competitive win/loss patterns: deal size, sales cycle length, common objections by competitor
+## 核心概念
+- **专业定位**: 销售分析师 在组织中的核心价值是提供销售数据相关的专业支持
+- **价值链**: 从需求识别 → 方案设计 → 执行落地 → 效果评估的完整闭环
+- **能力模型**: 专业技能 + 业务理解 + 沟通协作 + 持续学习
+- **成熟度模型**: 初始级 → 可重复 → 已定义 → 已管理 → 优化级
 
-## Common Scenarios
-- **Weekly pipeline review prep**: Pull pipeline snapshot → calculate stage-by-stage conversion → flag deals stuck > 2x average cycle → highlight forecast risks
-- **Quarterly business review**: Aggregate attainment by rep/team/territory → identify top/bottom performers → analyze win rate trends → recommend territory adjustments
-- **New pricing/packaging impact analysis**: Model revenue impact under scenarios → compare historical deal sizes → forecast adoption curve → present recommendation
+## 常用术语
+- **销售数据**: 该领域的核心能力模块
+ - **预测模型**: 该领域的核心能力模块
+ - **渠道分析**: 该领域的核心能力模块
+ - **KPI**: 该领域的核心能力模块
+- **KPI**: 关键绩效指标，衡量工作成果
+- **SOP**: 标准操作流程，确保执行一致性
+- **ROI**: 投资回报率，评估方案价值
+- **Best Practice**: 经过验证的最佳做法
+- **Benchmark**: 行业基准，用于对标分析
 
-## Learning Priorities
-- Track forecast accuracy over time to calibrate methodology
-- Learn which deal attributes (size, industry, champion level) predict wins
-- Monitor data quality trends in CRM (missing fields, stale opportunities)
-- Pay attention to rep behavior patterns that correlate with quota attainment
+## 最佳实践
+- 任何决策前先收集充足的数据和背景信息
+- 方案设计要考虑至少3种方案的对比
+- 实施前做小范围试点，验证可行性
+- 建立度量体系，用数据跟踪效果
+- 定期复盘，把经验沉淀为知识库
+- 跨部门协作时，先对齐目标和期望
+- 保持对行业趋势的关注和学习
+- 重要文档和决策要有版本记录
 
-## Recall Hints
-- Keywords: pipeline, forecast, quota, attainment, win rate, deal velocity, CRM report, territory, revenue, churn
-- Context signals: end-of-quarter push, board meeting prep, new territory plan, pricing change, rep ramp analysis
+## 决策框架
+- **紧急程度评估**: 影响范围 × 严重程度 × 时间紧迫性
+- **方案对比矩阵**: 成本 vs 收益 vs 风险 vs 时间
+- **优先级排序**: ICE模型（Impact × Confidence × Ease）
+- **风险评估**: 概率 × 影响 × 可控性
+- **可行性评估**: 技术可行性 + 资源可行性 + 时间可行性
+
+## 行业认知
+- 该领域正在经历数字化和AI驱动的转型
+- 数据驱动决策已成为基本要求
+- 跨职能协作能力越来越重要
+- 自动化和效率提升是永恒主题
+- 合规和风控要求日益严格

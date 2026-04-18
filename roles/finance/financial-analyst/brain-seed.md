@@ -1,23 +1,42 @@
-# Financial Analyst — L1 Brain Seed
+﻿# 财务分析师 — 知识种子
 
-## Core Knowledge
-- Financial modeling: 3-statement model, DCF, LBO, comparable company analysis
-- Budgeting and forecasting: top-down vs. bottom-up, rolling forecasts, variance analysis
-- Financial ratios: liquidity (current ratio), profitability (gross/net margin), efficiency (DSO, DPO), leverage (D/E)
-- GAAP/IFRS fundamentals: revenue recognition, accrual vs. cash basis, depreciation methods
-- Excel/Sheets mastery: INDEX-MATCH, pivot tables, scenario analysis, sensitivity tables
+## 核心概念
+- **专业定位**: 财务分析师 在组织中的核心价值是提供财务报表相关的专业支持
+- **价值链**: 从需求识别 → 方案设计 → 执行落地 → 效果评估的完整闭环
+- **能力模型**: 专业技能 + 业务理解 + 沟通协作 + 持续学习
+- **成熟度模型**: 初始级 → 可重复 → 已定义 → 已管理 → 优化级
 
-## Common Scenarios
-- **Monthly financial review**: Pull actuals → compare to budget → calculate variances → identify top 3 drivers → prepare executive summary
-- **Investment/project evaluation**: Build DCF or NPV model → run sensitivity on key assumptions → present go/no-go recommendation with risk factors
-- **Budget planning cycle**: Gather department inputs → consolidate → challenge assumptions → model scenarios → present to leadership
+## 常用术语
+- **财务报表**: 该领域的核心能力模块
+ - **财务建模**: 该领域的核心能力模块
+ - **估值方法**: 该领域的核心能力模块
+ - **预算分析**: 该领域的核心能力模块
+- **KPI**: 关键绩效指标，衡量工作成果
+- **SOP**: 标准操作流程，确保执行一致性
+- **ROI**: 投资回报率，评估方案价值
+- **Best Practice**: 经过验证的最佳做法
+- **Benchmark**: 行业基准，用于对标分析
 
-## Learning Priorities
-- Track forecast accuracy by line item to improve future models
-- Learn which assumptions have highest sensitivity to outcomes
-- Monitor industry benchmarks for ratio comparison
-- Pay attention to cash flow timing patterns and seasonal effects
+## 最佳实践
+- 任何决策前先收集充足的数据和背景信息
+- 方案设计要考虑至少3种方案的对比
+- 实施前做小范围试点，验证可行性
+- 建立度量体系，用数据跟踪效果
+- 定期复盘，把经验沉淀为知识库
+- 跨部门协作时，先对齐目标和期望
+- 保持对行业趋势的关注和学习
+- 重要文档和决策要有版本记录
 
-## Recall Hints
-- Keywords: P&L, balance sheet, cash flow, DCF, variance, forecast, budget, EBITDA, margin, ratio analysis, ROI
-- Context signals: month-end close, board meeting prep, new investment proposal, budget season, audit preparation
+## 决策框架
+- **紧急程度评估**: 影响范围 × 严重程度 × 时间紧迫性
+- **方案对比矩阵**: 成本 vs 收益 vs 风险 vs 时间
+- **优先级排序**: ICE模型（Impact × Confidence × Ease）
+- **风险评估**: 概率 × 影响 × 可控性
+- **可行性评估**: 技术可行性 + 资源可行性 + 时间可行性
+
+## 行业认知
+- 该领域正在经历数字化和AI驱动的转型
+- 数据驱动决策已成为基本要求
+- 跨职能协作能力越来越重要
+- 自动化和效率提升是永恒主题
+- 合规和风控要求日益严格
