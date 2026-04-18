@@ -1,172 +1,231 @@
 <div align="center">
 
-# 🏢 Agent Workstation
+# 👤 Agent Workstation
 
-**虚拟工位模板库 — 100+ AI 岗位，拿来就跑**
+**Agent 工位模板库 — 100 个专业角色，秒级创建生产级智能体**
 
-[![npm](https://img.shields.io/npm/v/agent-workstation)](https://www.npmjs.com/package/agent-workstation)
+[![npm version](https://img.shields.io/npm/v/agent-workstation)](https://www.npmjs.com/package/agent-workstation)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
-[![Templates](https://img.shields.io/badge/Templates-100+-green)]()
 
-[快速开始](#快速开始) · [岗位分类](#三层分类体系) · [模板结构](#模板结构) · [English](#english)
+不是空壳模板。20 个角色已配备 **50–80 行专业 system prompt** + **行业知识种子 (brain-seed)** + **完整 OAD 配置**。<br/>
+其余 80 个骨架模板持续补全中。
+
+[快速开始](#-快速开始) · [角色列表](#-完整角色列表20-个生产就绪) · [API](#-api-reference) · [English](#english)
 
 </div>
 
 ---
 
-## 💡 一句话介绍
+## ⚡ 快速开始
 
-> **不用从零写 Agent。选一个工位，5 分钟上岗。**
-
-Agent Workstation 提供 100+ 开箱即用的 AI 岗位模板，覆盖 19 个职能方向。每个模板包含系统提示词、渠道配置、评分标准，以及 L1 初始记忆。
-
-## 快速开始
+### 配合 OPC Agent CLI
 
 ```bash
-npm install agent-workstation
-
-# 浏览所有模板
-npx agent-workstation list
-
-# 查看某个模板
-npx agent-workstation show customer-service-rep
-
-# 配合 opc-agent 使用
-opc init my-agent --template customer-service-rep
+npm install -g opc-agent
+opc init my-agent --role customer-service-rep
+# → 自动生成: SOUL.md + agent.yaml + CONTEXT.md + brain-seed.md
 ```
 
-## 三层分类体系
+### 编程使用
 
-```
-行业 (11)  →  职能 (19)  →  工位 (100+)
+```typescript
+import { searchRoles, getPopularRoles, getCategories } from 'agent-workstation';
 
-Technology     Engineering     Backend Developer
-               Product        Product Manager
-               Data           Data Analyst
+// 模糊搜索
+const roles = searchRoles('developer');
+console.log(roles);
+// → [{ category: 'engineering', role: 'backend-developer', score: 110 }, ...]
 
-E-commerce     Sales          Sales Dev Rep
-               Marketing      Growth Hacker
-               Customer Svc   Customer Service Rep
+// 获取热门角色
+const popular = getPopularRoles();
 
-Finance        Finance        Financial Analyst
-               Legal          Legal Counsel
-               Operations     Operations Analyst
-```
-
-### 11 个行业
-
-| 行业 | 英文 | 核心职能 |
-|------|------|---------|
-| 🖥️ 科技与软件 | Technology | Engineering, Product, Data |
-| 🛒 电商与零售 | E-commerce | Sales, Marketing, Customer Service |
-| 🏦 金融服务 | Finance | Finance, Legal, Operations |
-| 🏥 医疗健康 | Healthcare | Healthcare, Research |
-| 🎓 教育培训 | Education | Education, Content |
-| 🏭 制造业 | Manufacturing | Engineering, Operations |
-| 📋 咨询服务 | Consulting | Research, Sales |
-| 🎬 媒体娱乐 | Media | Content, Marketing, Design |
-| 🏠 房地产 | Real Estate | Sales, Finance, Legal |
-| 🚚 物流供应链 | Logistics | Operations, Sales |
-| 🏢 通用企业 | General | Executive, Admin, HR |
-
-### 19 个职能
-
-| 分类 | 示例岗位 | 模板数 |
-|------|---------|--------|
-| 💻 Engineering | 后端、前端、DevOps | 8 |
-| 📦 Product | 产品经理、需求分析 | 5 |
-| 📊 Data | 数据分析师、BI | 6 |
-| 🛒 Sales | 销售代表、客户经理 | 6 |
-| 📢 Marketing | 市场营销、增长黑客 | 6 |
-| 💬 Customer Service | 客服专员、投诉处理 | 5 |
-| 📝 Content | 文案策划、编辑 | 5 |
-| 🎨 Design | UI设计、品牌设计 | 5 |
-| 💰 Finance | 财务分析、审计 | 5 |
-| 👥 HR | 招聘、HRBP | 6 |
-| ⚖️ Legal | 法务、合规 | 4 |
-| ⚙️ Operations | 运营分析、流程优化 | 6 |
-| 🔬 Research | 研究员、行业分析 | 5 |
-| 🎓 Education | 培训师、教学设计 | 5 |
-| 🏥 Healthcare | 医疗顾问 | 4 |
-| 👔 Executive | CEO助理、战略分析 | 4 |
-| 🛡️ Admin | 行政管理 | 4 |
-| 🎯 Customer Success | 客户成功经理 | 4 |
-| 💻 Tech | 技术支持、IT运维 | 5 |
-
-## 模板结构
-
-每个完整模板包含：
-
-```
-roles/sales/sales-development-rep/
-├── oad.yaml          # Agent 配置（OAD 声明式）
-├── system-prompt.md  # 系统提示词
-├── brain-seed.md     # 🧠 L1 初始记忆
-└── README.md         # 岗位说明
+// 浏览分类
+const categories = getCategories();
 ```
 
-### oad.yaml 示例
+---
 
-```yaml
-id: sales-development-rep
-name: Sales Development Rep
-name_zh: 销售开发代表
-category: sales
-version: "2.0.0"
+## ✨ 核心特性
 
-skills:
-  - lead-qualification
-  - cold-outreach
-  - crm-management
+| | 特性 | 说明 |
+|---|---|---|
+| 👤 | **20 个生产就绪角色** | 每个含 50–80 行 rich system prompt，开箱即用 |
+| 🧠 | **Brain Seed 知识种子** | Agent 创建即有行业记忆，无冷启动 |
+| 🏭 | **三层分类体系** | 行业 → 职能 → 工位，19 个职能方向 |
+| 🔍 | **模糊搜索** | `searchRoles('customer')` 智能匹配角色名、描述 |
+| ✅ | **模板校验** | `validateRole()` 检查完整性，给出错误/警告 |
+| 🎨 | **Web UI** | 内置角色浏览器 + 模板预览（`WorkstationUI`） |
+| 📦 | **OPC Agent 深度集成** | `opc init --role` 一键生成完整 Agent 工作空间 |
 
-channels:
-  - type: web-app
-    priority: primary
-  - type: email
-    priority: secondary
+---
 
-resources:
-  data:
-    - crm-database
-    - lead-scoring-model
-  tools:
-    - email-sequencer
-    - calendar-booking
+## 📋 完整角色列表（20 个生产就绪）
 
-metrics:
-  - qualified-leads-per-week
-  - response-time
-  - conversion-rate
+| 角色 | 职能 | Prompt 行数 | Brain Seed |
+|------|------|:-----------:|:----------:|
+| customer-service-rep | Customer Service | 71 | ✅ |
+| complaint-handler | Customer Service | 71 | ✅ |
+| live-chat-agent | Customer Service | 71 | ✅ |
+| backend-developer | Engineering | 82 | ✅ |
+| product-manager | Product | 79 | ✅ |
+| content-marketer | Marketing | 78 | ✅ |
+| corporate-lawyer | Legal | 77 | ✅ |
+| financial-analyst | Finance | 73 | ✅ |
+| data-analyst | Data | 71 | ✅ |
+| operations-analyst | Operations | 71 | ✅ |
+| sales-development-rep | Sales | 71 | ✅ |
+| hr-coordinator | HR | 71 | — |
+| tax-preparer | Finance | 71 | — |
+| recruiter | HR | 69 | ✅ |
+| onboarding-specialist | HR | 69 | — |
+| copywriter | Content | 69 | ✅ |
+| accounts-payable-clerk | Finance | 69 | — |
+| social-media-manager | Marketing | 69 | — |
+| account-executive | Sales | 69 | — |
+| sales-analyst | Sales | 69 | — |
+
+> 另有 **80 个骨架模板**（含 OAD 配置，prompt 补全中），覆盖 admin、design、education、executive、healthcare、tech 等全部 19 个职能。
+
+---
+
+## 🏗️ 三层分类体系
+
+```
+行业 (11)  →  职能 (19)  →  工位 (100)
+
+Technology     Engineering     backend-developer, frontend-developer, devops-engineer ...
+               Product         product-manager, product-owner ...
+               Data            data-analyst, data-engineer ...
+
+E-commerce     Sales           sales-development-rep, account-executive ...
+               Marketing       content-marketer, social-media-manager ...
+               Customer Svc    customer-service-rep, complaint-handler ...
+
+Finance        Finance         financial-analyst, tax-preparer ...
+               Legal           corporate-lawyer, compliance-officer ...
 ```
 
-### brain-seed.md — L1 初始记忆
+<details>
+<summary><b>全部 19 个职能及模板数</b></summary>
 
-每个模板的 `brain-seed.md` 为 Agent 提供开箱即用的初始知识：
+| 职能 | 模板数 | 示例角色 |
+|------|:------:|---------|
+| 💻 Engineering | 10 | backend-developer, frontend-developer, devops-engineer, ml-engineer |
+| 📦 Product | 6 | product-manager, product-owner, ux-researcher |
+| 📊 Data | 4 | data-analyst, data-engineer, business-intelligence-analyst |
+| 🛒 Sales | 4 | sales-development-rep, account-executive, sales-analyst |
+| 📢 Marketing | 3 | content-marketer, social-media-manager, seo-specialist |
+| 💬 Customer Service | 5 | customer-service-rep, complaint-handler, live-chat-agent |
+| 🎯 Customer Success | 5 | customer-success-manager, onboarding-specialist |
+| 📝 Content | 2 | copywriter, technical-writer |
+| 🎨 Design | 5 | ui-designer, brand-designer, ux-writer |
+| 💰 Finance | 3 | financial-analyst, accounts-payable-clerk, tax-preparer |
+| 👥 HR | 4 | recruiter, hr-coordinator, onboarding-specialist |
+| ⚖️ Legal | 6 | corporate-lawyer, compliance-officer, contract-reviewer |
+| ⚙️ Operations | 12 | operations-analyst, logistics-coordinator, supply-chain-manager |
+| 🔬 Research | 5 | trend-analyst, competitive-intelligence-analyst |
+| 🎓 Education | 8 | course-designer, corporate-trainer, knowledge-manager |
+| 🏥 Healthcare | 7 | patient-coordinator, health-advisor, clinical-data-analyst |
+| 👔 Executive | 5 | chief-of-staff, strategy-director |
+| 🛡️ Admin | 3 | executive-assistant, office-manager |
+| 💻 Tech | 3 | code-reviewer, security-engineer |
 
-- **核心领域知识** — 这个岗位必须知道的
-- **常见场景** — 典型问题和处理方式
-- **学习优先级** — Agent 应该重点关注什么
-- **检索提示** — 什么关键词应触发记忆检索
+</details>
 
-配合 [DeepBrain](https://github.com/Deepleaper/deepbrain) 使用，Agent 从第一天就有基础记忆，不用从零开始。
+---
 
-## 目标
+## 📂 模板结构
+
+每个完整模板包含四个文件：
+
+```
+roles/customer-service/customer-service-rep/
+├── oad.yaml          # OAD 声明式配置（技能、渠道、指标）
+├── system-prompt.md  # 50–80 行专业 system prompt
+├── brain-seed.md     # 🧠 行业知识种子（配合 DeepBrain 使用）
+└── README.md         # 岗位说明书
+```
+
+### brain-seed.md 示例结构
+
+```markdown
+## 核心领域知识
+- 客服响应时间行业标准: 首响 < 30s, 解决 < 24h
+- NPS / CSAT / CES 三大满意度指标 ...
+
+## 常见场景与处理模式
+- 退款请求 → 确认订单 → 权限内直接处理 ...
+
+## 学习优先级
+1. 产品知识库
+2. 公司退换货政策 ...
+```
+
+---
+
+## 📖 API Reference
+
+```typescript
+import {
+  getCategories,     // () => { name, roles[] }[]
+  getRole,           // (category, role) => { category, role, files }
+  searchRoles,       // (query) => { category, role, title, score }[]
+  validateRole,      // (category, role) => { valid, errors[], warnings[] }
+  getPopularRoles,   // () => top 20 curated roles
+  getIndustries,     // () => industries/index.yaml content
+  WorkstationUI,     // Web UI server class
+} from 'agent-workstation';
+```
+
+### searchRoles(query)
+
+模糊搜索，支持多词匹配，按相关度排序：
+
+```typescript
+searchRoles('frontend');
+// → [{ category: 'engineering', role: 'frontend-developer', score: 110 }]
+```
+
+### validateRole(category, role)
+
+校验模板完整性：
+
+```typescript
+validateRole('sales', 'sales-development-rep');
+// → { valid: true, errors: [], warnings: [] }
+```
+
+---
+
+## 🔗 四件套生态
+
+Agent Workstation 是跃盟 AI Agent 基础设施的一部分：
+
+| 项目 | 定位 | 与 Workstation 的关系 |
+|------|------|----------------------|
+| **[opc-agent](https://github.com/Deepleaper/opc-agent)** | Agent OS | `opc init --role` 消费模板 |
+| **[deepbrain](https://github.com/Deepleaper/deepbrain)** | Agent 记忆引擎 | brain-seed → `learn()` 注入初始记忆 |
+| **[agentkits](https://github.com/Deepleaper/agentkits)** | 带记忆的 OpenRouter | Mock 模式测试模板效果 |
+| **agent-workstation** | 工位模板库 | ← 你在这里 |
+
+```
+opc init --role customer-service-rep
+    │
+    ├──→ agent-workstation    提供 system-prompt + oad.yaml
+    ├──→ deepbrain            brain-seed.md → learn() 初始化记忆
+    └──→ agentkits            连接 LLM + 记忆，运行 Agent
+```
+
+---
+
+## 🗺️ Roadmap
 
 | 阶段 | 目标 | 状态 |
-|------|------|------|
+|------|------|:----:|
 | v1.0 | 100 骨架模板 | ✅ |
-| v1.5 | 16 完整模板 | ✅ |
-| v2.0 | 100 完整模板（含 brain-seed） | 🚧 |
+| v1.5 | 20 完整模板（含 prompt + brain-seed） | ✅ |
+| v2.0 | 100 完整模板 | 🚧 |
 | v3.0 | 849 岗位全覆盖 | 📋 |
-
-## 🔗 生态
-
-| 项目 | 定位 | 关系 |
-|------|------|------|
-| [deepbrain](https://github.com/Deepleaper/deepbrain) | Agent 记忆引擎 | brain-seed → learn() |
-| [opc-agent](https://github.com/Deepleaper/opc-agent) | Agent OS | `opc init --template` |
-| [agentkits](https://github.com/Deepleaper/agentkits) | 带记忆的 OpenRouter | Mock 模式测试模板 |
-| **agent-workstation** | 虚拟工位模板 | ← 你在这里 |
 
 ## License
 
@@ -176,161 +235,157 @@ Apache-2.0
 
 <a name="english"></a>
 
-## English
+<div align="center">
 
-## 💡 What Is Agent Workstation?
+# 👤 Agent Workstation
 
-> **Don't build Agents from scratch. Pick a role, onboard in 5 minutes.**
+**AI Agent Role Template Library — 100 professional roles, production-ready agents in seconds**
 
-Agent Workstation provides 100+ ready-to-use AI role templates covering 19 business functions. Each template includes a system prompt, channel configuration, scoring criteria, and L1 initial memory.
+[![npm version](https://img.shields.io/npm/v/agent-workstation)](https://www.npmjs.com/package/agent-workstation)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
-## Quick Start
+Not empty scaffolds. 20 roles ship with **50–80 line expert system prompts** + **industry knowledge seeds (brain-seed)** + **full OAD configs**.<br/>
+The remaining 80 skeleton templates are being completed.
+
+[Quick Start](#-quick-start) · [Roles](#-production-ready-roles-20) · [API](#-api-reference-1) · [中文版](#)
+
+</div>
+
+---
+
+## ⚡ Quick Start
+
+### With OPC Agent CLI
 
 ```bash
-npm install agent-workstation
-
-# Browse all templates
-npx agent-workstation list
-
-# View a specific template
-npx agent-workstation show customer-service-rep
-
-# Use with opc-agent
-opc init my-agent --template customer-service-rep
+npm install -g opc-agent
+opc init my-agent --role customer-service-rep
+# → Generates: SOUL.md + agent.yaml + CONTEXT.md + brain-seed.md
 ```
 
-## 3-Tier Taxonomy
+### Programmatic Usage
 
-```
-Industry (11)  →  Function (19)  →  Role (100+)
+```typescript
+import { searchRoles, getPopularRoles, getCategories } from 'agent-workstation';
 
-Technology     Engineering     Backend Developer
-               Product        Product Manager
-               Data           Data Analyst
+const roles = searchRoles('developer');
+// → [{ category: 'engineering', role: 'backend-developer', score: 110 }, ...]
 
-E-commerce     Sales          Sales Dev Rep
-               Marketing      Growth Hacker
-               Customer Svc   Customer Service Rep
-
-Finance        Finance        Financial Analyst
-               Legal          Legal Counsel
-               Operations     Operations Analyst
+const popular = getPopularRoles(); // Top 20 curated roles
+const categories = getCategories(); // All 19 function categories
 ```
 
-### 11 Industries
+---
 
-| Industry | Core Functions |
-|----------|---------------|
-| 🖥️ Technology & Software | Engineering, Product, Data |
-| 🛒 E-commerce & Retail | Sales, Marketing, Customer Service |
-| 🏦 Financial Services | Finance, Legal, Operations |
-| 🏥 Healthcare | Healthcare, Research |
-| 🎓 Education & Training | Education, Content |
-| 🏭 Manufacturing | Engineering, Operations |
-| 📋 Consulting | Research, Sales |
-| 🎬 Media & Entertainment | Content, Marketing, Design |
-| 🏠 Real Estate | Sales, Finance, Legal |
-| 🚚 Logistics & Supply Chain | Operations, Sales |
-| 🏢 General Enterprise | Executive, Admin, HR |
+## ✨ Key Features
 
-### 19 Functions
+| | Feature | Description |
+|---|---|---|
+| 👤 | **20 Production-Ready Roles** | Each with 50–80 line rich system prompts |
+| 🧠 | **Brain Seed** | Industry knowledge seeds — no cold start |
+| 🏭 | **3-Tier Taxonomy** | Industry → Function → Role, 19 functions |
+| 🔍 | **Fuzzy Search** | `searchRoles('customer')` matches names & descriptions |
+| ✅ | **Validation** | `validateRole()` checks completeness with errors/warnings |
+| 🎨 | **Web UI** | Built-in role browser + template preview |
+| 📦 | **OPC Agent Integration** | `opc init --role` generates a full agent workspace |
 
-| Function | Example Roles | Templates |
-|----------|--------------|-----------|
-| 💻 Engineering | Backend, Frontend, DevOps | 8 |
-| 📦 Product | Product Manager, Requirements Analyst | 5 |
-| 📊 Data | Data Analyst, BI | 6 |
-| 🛒 Sales | Sales Rep, Account Manager | 6 |
-| 📢 Marketing | Marketing, Growth Hacker | 6 |
-| 💬 Customer Service | Service Rep, Complaints Handler | 5 |
-| 📝 Content | Copywriter, Editor | 5 |
-| 🎨 Design | UI Design, Brand Design | 5 |
-| 💰 Finance | Financial Analyst, Auditor | 5 |
-| 👥 HR | Recruiter, HRBP | 6 |
-| ⚖️ Legal | Legal Counsel, Compliance | 4 |
-| ⚙️ Operations | Operations Analyst, Process Optimization | 6 |
-| 🔬 Research | Researcher, Industry Analyst | 5 |
-| 🎓 Education | Trainer, Instructional Designer | 5 |
-| 🏥 Healthcare | Medical Consultant | 4 |
-| 👔 Executive | CEO Assistant, Strategy Analyst | 4 |
-| 🛡️ Admin | Administrative Management | 4 |
-| 🎯 Customer Success | Customer Success Manager | 4 |
-| 💻 Tech | Tech Support, IT Operations | 5 |
+---
 
-## Template Structure
+## 📋 Production-Ready Roles (20)
 
-Each complete template contains:
+| Role | Function | Prompt Lines | Brain Seed |
+|------|----------|:-----------:|:----------:|
+| customer-service-rep | Customer Service | 71 | ✅ |
+| complaint-handler | Customer Service | 71 | ✅ |
+| live-chat-agent | Customer Service | 71 | ✅ |
+| backend-developer | Engineering | 82 | ✅ |
+| product-manager | Product | 79 | ✅ |
+| content-marketer | Marketing | 78 | ✅ |
+| corporate-lawyer | Legal | 77 | ✅ |
+| financial-analyst | Finance | 73 | ✅ |
+| data-analyst | Data | 71 | ✅ |
+| operations-analyst | Operations | 71 | ✅ |
+| sales-development-rep | Sales | 71 | ✅ |
+| hr-coordinator | HR | 71 | — |
+| tax-preparer | Finance | 71 | — |
+| recruiter | HR | 69 | ✅ |
+| onboarding-specialist | HR | 69 | — |
+| copywriter | Content | 69 | ✅ |
+| accounts-payable-clerk | Finance | 69 | — |
+| social-media-manager | Marketing | 69 | — |
+| account-executive | Sales | 69 | — |
+| sales-analyst | Sales | 69 | — |
+
+> Plus **80 skeleton templates** (OAD config included, prompts in progress) across all 19 functions.
+
+---
+
+## 🏗️ 3-Tier Taxonomy
 
 ```
-roles/sales/sales-development-rep/
-├── oad.yaml          # Agent config (OAD declarative)
-├── system-prompt.md  # System prompt
-├── brain-seed.md     # 🧠 L1 initial memory
+Industry (11)  →  Function (19)  →  Role (100)
+
+Technology     Engineering     backend-developer, frontend-developer, devops-engineer ...
+               Product         product-manager, product-owner ...
+               Data            data-analyst, data-engineer ...
+
+E-commerce     Sales           sales-development-rep, account-executive ...
+               Marketing       content-marketer, social-media-manager ...
+               Customer Svc    customer-service-rep, complaint-handler ...
+
+Finance        Finance         financial-analyst, tax-preparer ...
+               Legal           corporate-lawyer, compliance-officer ...
+```
+
+---
+
+## 📂 Template Structure
+
+```
+roles/customer-service/customer-service-rep/
+├── oad.yaml          # Declarative config (skills, channels, metrics)
+├── system-prompt.md  # 50–80 line expert system prompt
+├── brain-seed.md     # 🧠 Industry knowledge seed (works with DeepBrain)
 └── README.md         # Role description
 ```
 
-### oad.yaml Example
+---
 
-```yaml
-id: sales-development-rep
-name: Sales Development Rep
-name_zh: 销售开发代表
-category: sales
-version: "2.0.0"
+## 📖 API Reference
 
-skills:
-  - lead-qualification
-  - cold-outreach
-  - crm-management
-
-channels:
-  - type: web-app
-    priority: primary
-  - type: email
-    priority: secondary
-
-resources:
-  data:
-    - crm-database
-    - lead-scoring-model
-  tools:
-    - email-sequencer
-    - calendar-booking
-
-metrics:
-  - qualified-leads-per-week
-  - response-time
-  - conversion-rate
+```typescript
+import {
+  getCategories,     // () => { name, roles[] }[]
+  getRole,           // (category, role) => { category, role, files }
+  searchRoles,       // (query) => { category, role, title, score }[]
+  validateRole,      // (category, role) => { valid, errors[], warnings[] }
+  getPopularRoles,   // () => top 20 curated roles
+  getIndustries,     // () => industries/index.yaml content
+  WorkstationUI,     // Web UI server class
+} from 'agent-workstation';
 ```
 
-### brain-seed.md — L1 Initial Memory
-
-Each template's `brain-seed.md` provides the Agent with ready-to-use initial knowledge:
-
-- **Core domain knowledge** — What this role must know
-- **Common scenarios** — Typical problems and how to handle them
-- **Learning priorities** — What the Agent should focus on
-- **Retrieval hints** — Keywords that should trigger memory recall
-
-Works with [DeepBrain](https://github.com/Deepleaper/deepbrain) so the Agent has baseline memory from day one — no cold start.
-
-## Roadmap
-
-| Phase | Goal | Status |
-|-------|------|--------|
-| v1.0 | 100 skeleton templates | ✅ |
-| v1.5 | 16 complete templates | ✅ |
-| v2.0 | 100 complete templates (with brain-seed) | 🚧 |
-| v3.0 | 849 roles full coverage | 📋 |
+---
 
 ## 🔗 Ecosystem
 
-| Project | Role | Relationship |
-|---------|------|-------------|
-| [deepbrain](https://github.com/Deepleaper/deepbrain) | Agent Memory Engine | brain-seed → learn() |
-| [opc-agent](https://github.com/Deepleaper/opc-agent) | Agent OS | `opc init --template` |
-| [agentkits](https://github.com/Deepleaper/agentkits) | OpenRouter with Memory | Mock mode for template testing |
-| **agent-workstation** | Virtual Role Templates | ← You are here |
+| Project | Purpose | Relationship |
+|---------|---------|-------------|
+| **[opc-agent](https://github.com/Deepleaper/opc-agent)** | Agent OS | `opc init --role` consumes templates |
+| **[deepbrain](https://github.com/Deepleaper/deepbrain)** | Agent Memory Engine | brain-seed → `learn()` |
+| **[agentkits](https://github.com/Deepleaper/agentkits)** | OpenRouter + Memory | Mock mode for testing |
+| **agent-workstation** | Role Template Library | ← You are here |
+
+---
+
+## 🗺️ Roadmap
+
+| Phase | Goal | Status |
+|-------|------|:------:|
+| v1.0 | 100 skeleton templates | ✅ |
+| v1.5 | 20 complete templates (prompt + brain-seed) | ✅ |
+| v2.0 | 100 complete templates | 🚧 |
+| v3.0 | 849 roles full coverage | 📋 |
 
 ## License
 
