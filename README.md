@@ -134,31 +134,81 @@ Finance        Finance         financial-analyst, tax-preparer ...
 
 ---
 
+## 🧠 三层知识架构 (3-Tier Brain Seeds)
+
+每个角色拥有三层知识种子，从通用到具体层层递进：
+
+```
+roles/
+├── tech/                              ← 行业分类
+│   ├── brain-seed.md                  ← 🏭 行业级知识 (Industry)
+│   ├── frontend-developer/
+│   │   ├── brain-seed.md              ← 💼 岗位级知识 (Job)
+│   │   ├── workstation-seed.md        ← 🔧 工位级知识 (Workstation)
+│   │   └── system-prompt.md
+```
+
+| 层级 | 文件 | 内容 | 示例 |
+|------|------|------|------|
+| 🏭 行业级 | `roles/{category}/brain-seed.md` | 行业概览、核心概念、最佳实践、KPI、法规、趋势 | 软件工程行业的 CI/CD、云原生、DORA 指标 |
+| 💼 岗位级 | `roles/{category}/{role}/brain-seed.md` | 岗位专业知识、技能框架、方法论 | 前端开发的 React/Vue、性能优化、可访问性 |
+| 🔧 工位级 | `roles/{category}/{role}/workstation-seed.md` | 典型场景、SOP、常见问题、质量标准、新人指南 | 前端工位的 Code Review 流程、Lighthouse 标准 |
+
+当 `opc init --role frontend-developer` 时，自动生成：
+
+```
+my-agent/
+├── brain-seeds/
+│   ├── industry.md         ← 来自 tech/brain-seed.md
+│   ├── job.md              ← 来自 tech/frontend-developer/brain-seed.md
+│   └── workstation.md      ← 来自 tech/frontend-developer/workstation-seed.md
+├── context.md              ← 空模板，填写公司特定知识
+├── SOUL.md
+└── agent.yaml
+```
+
+### API 使用
+
+```typescript
+import { getBrainSeeds, getIndustryBrainSeed, getWorkstationBrainSeed, getContextTemplate } from 'agent-workstation';
+
+// 获取某角色的全部三层知识
+const seeds = getBrainSeeds('frontend-developer');
+// → { industry, job, workstation, contextTemplate }
+
+// 单独获取行业级知识
+const techSeed = getIndustryBrainSeed('tech');
+
+// 获取企业上下文模板
+const template = getContextTemplate();
+```
+
+---
+
 ## 📂 模板结构
 
-每个完整模板包含四个文件：
+每个完整模板包含五个文件：
 
 ```
 roles/customer-service/customer-service-rep/
-├── oad.yaml          # OAD 声明式配置（技能、渠道、指标）
-├── system-prompt.md  # 50–80 行专业 system prompt
-├── brain-seed.md     # 🧠 行业知识种子（配合 DeepBrain 使用）
-└── README.md         # 岗位说明书
+├── oad.yaml              # OAD 声明式配置（技能、渠道、指标）
+├── system-prompt.md      # 50–80 行专业 system prompt
+├── brain-seed.md         # 💼 岗位知识种子
+├── workstation-seed.md   # 🔧 工位知识种子（SOP、场景、标准）
+└── README.md             # 岗位说明书
 ```
 
-### brain-seed.md 示例结构
+### workstation-seed.md 结构
 
 ```markdown
-## 核心领域知识
-- 客服响应时间行业标准: 首响 < 30s, 解决 < 24h
-- NPS / CSAT / CES 三大满意度指标 ...
+# {角色}工位 — 工位知识库
 
-## 常见场景与处理模式
-- 退款请求 → 确认订单 → 权限内直接处理 ...
-
-## 学习优先级
-1. 产品知识库
-2. 公司退换货政策 ...
+## 典型工作场景 (3-5个)
+## 标准操作流程 (SOP)
+## 常见问题处理方案
+## 质量标准/检查清单
+## 新人上手指南
+## 跨部门协作要点
 ```
 
 ---
@@ -167,13 +217,18 @@ roles/customer-service/customer-service-rep/
 
 ```typescript
 import {
-  getCategories,     // () => { name, roles[] }[]
-  getRole,           // (category, role) => { category, role, files }
-  searchRoles,       // (query) => { category, role, title, score }[]
-  validateRole,      // (category, role) => { valid, errors[], warnings[] }
-  getPopularRoles,   // () => top 20 curated roles
-  getIndustries,     // () => industries/index.yaml content
-  WorkstationUI,     // Web UI server class
+  getCategories,            // () => { name, roles[] }[]
+  getRole,                  // (category, role) => { category, role, files }
+  searchRoles,              // (query) => { category, role, title, score }[]
+  validateRole,             // (category, role) => { valid, errors[], warnings[] }
+  getPopularRoles,          // () => top 20 curated roles
+  getIndustries,            // () => industries/index.yaml content
+  getIndustryBrainSeed,     // (category) => string | null
+  getJobBrainSeed,          // (category, role) => string | null
+  getWorkstationBrainSeed,  // (category, role) => string | null
+  getContextTemplate,       // () => string
+  getBrainSeeds,            // (role) => { industry, job, workstation, contextTemplate } | null
+  WorkstationUI,            // Web UI server class
 } from 'agent-workstation';
 ```
 

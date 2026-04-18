@@ -160,6 +160,76 @@ function getPopularRoles() {
   });
 }
 
+const TEMPLATES_DIR = join(__dirname, 'templates');
+
+/**
+ * Get industry-level brain seed for a category.
+ * @param {string} category - Category name (e.g., 'tech', 'engineering')
+ * @returns {string|null} Brain seed content or null if not found
+ */
+function getIndustryBrainSeed(category) {
+  const seedPath = join(ROLES_DIR, category, 'brain-seed.md');
+  if (!existsSync(seedPath)) return null;
+  return readFileSync(seedPath, 'utf8');
+}
+
+/**
+ * Get job-level brain seed for a specific role.
+ * @param {string} category - Category name
+ * @param {string} roleName - Role name
+ * @returns {string|null} Brain seed content or null if not found
+ */
+function getJobBrainSeed(category, roleName) {
+  const seedPath = join(ROLES_DIR, category, roleName, 'brain-seed.md');
+  if (!existsSync(seedPath)) return null;
+  return readFileSync(seedPath, 'utf8');
+}
+
+/**
+ * Get workstation-level brain seed for a specific role.
+ * @param {string} category - Category name
+ * @param {string} roleName - Role name
+ * @returns {string|null} Workstation seed content or null if not found
+ */
+function getWorkstationBrainSeed(category, roleName) {
+  const seedPath = join(ROLES_DIR, category, roleName, 'workstation-seed.md');
+  if (!existsSync(seedPath)) return null;
+  return readFileSync(seedPath, 'utf8');
+}
+
+/**
+ * Get the context template for company-specific knowledge.
+ * @returns {string} Context template content
+ */
+function getContextTemplate() {
+  const templatePath = join(TEMPLATES_DIR, 'context-template.md');
+  return readFileSync(templatePath, 'utf8');
+}
+
+/**
+ * Get all 3 tiers of brain seeds for a role.
+ * @param {string} roleName - Role name to search for
+ * @returns {{ industry: string|null, job: string|null, workstation: string|null, contextTemplate: string }|null}
+ */
+function getBrainSeeds(roleName) {
+  // Find the role's category
+  for (const cat of getCategories()) {
+    if (cat.roles.includes(roleName)) {
+      return {
+        industry: getIndustryBrainSeed(cat.name),
+        job: getJobBrainSeed(cat.name, roleName),
+        workstation: getWorkstationBrainSeed(cat.name, roleName),
+        contextTemplate: getContextTemplate(),
+      };
+    }
+  }
+  return null;
+}
+
 const { WorkstationUI } = require('./src/ui/server.js');
 
-module.exports = { getCategories, getRole, getIndustries, searchRoles, validateRole, getPopularRoles, ROLES_DIR, WorkstationUI };
+module.exports = {
+  getCategories, getRole, getIndustries, searchRoles, validateRole, getPopularRoles,
+  getIndustryBrainSeed, getJobBrainSeed, getWorkstationBrainSeed, getContextTemplate, getBrainSeeds,
+  ROLES_DIR, WorkstationUI,
+};
