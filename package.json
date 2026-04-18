@@ -29,5 +29,8 @@
     "url": "https://github.com/Deepleaper/agent-workstation"
   },
   "author": "Deepleaper <dev@deepleaper.com>",
-  "license": "Apache-2.0"
+  "scripts": { "test": "vitest run" }, "license": "Apache-2.0",
+  "devDependencies": {
+    "vitest": "^4.1.4"
+  }
 }
