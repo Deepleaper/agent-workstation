@@ -22,7 +22,9 @@
     "index.js",
     "README.md",
     "README.zh-CN.md",
-    "LICENSE"
+    "LICENSE",
+    "LICENSE-APACHE",
+    "LICENSE-CC-BY-SA"
   ],
   "repository": {
     "type": "git",
@@ -32,7 +34,7 @@
   "scripts": {
     "test": "vitest run"
   },
-  "license": "Apache-2.0",
+  "license": "Apache-2.0 AND CC-BY-SA-4.0",
   "devDependencies": {
     "vitest": "^4.1.4"
   }

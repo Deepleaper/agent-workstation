@@ -229,7 +229,11 @@ opc init --role customer-service-rep
 
 ## License
 
-Apache-2.0
+**双许可证 (Dual License)**：
+- 📝 代码：[Apache-2.0](LICENSE-APACHE)
+- 🧠 角色知识内容（`roles/` 目录）：[CC BY-SA 4.0](LICENSE-CC-BY-SA) — 可商用，须署名 + 相同方式共享
+
+详见 [LICENSE](LICENSE)。
 
 ---
 
@@ -242,7 +246,7 @@ Apache-2.0
 **AI Agent Role Template Library — 100 professional roles, production-ready agents in seconds**
 
 [![npm version](https://img.shields.io/npm/v/agent-workstation)](https://www.npmjs.com/package/agent-workstation)
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/Code-Apache_2.0-blue.svg)](LICENSE-APACHE) [![License](https://img.shields.io/badge/Content-CC_BY--SA_4.0-lightgrey.svg)](LICENSE-CC-BY-SA)
 
 Not empty scaffolds. 20 roles ship with **50–80 line expert system prompts** + **industry knowledge seeds (brain-seed)** + **full OAD configs**.<br/>
 The remaining 80 skeleton templates are being completed.
@@ -389,4 +393,8 @@ import {
 
 ## License
 
-Apache-2.0
+**Dual License**:
+- 📝 Code: [Apache-2.0](LICENSE-APACHE)
+- 🧠 Role knowledge content (`roles/` directory): [CC BY-SA 4.0](LICENSE-CC-BY-SA) — commercial use OK, attribution + share-alike required
+
+See [LICENSE](LICENSE) for details.
