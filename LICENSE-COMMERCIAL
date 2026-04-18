@@ -1,0 +1,28 @@
+# Commercial License
+
+Agent Workstation is available under a commercial license for organizations that:
+- Want to use workstation templates in closed-source proprietary products
+- Want to modify role knowledge without open-sourcing changes
+- Need dedicated technical support and SLA guarantees
+- Want priority access to new role templates and industry knowledge
+- Want custom workstation template development
+
+For commercial licensing inquiries:
+- Email: licensing@deepleaper.com
+- Website: https://www.deepleaper.com
+
+## FAQ
+
+Q: Can I use Agent Workstation templates in my open-source project?
+A: Yes, under LGPL-3.0 terms.
+
+Q: Can I use the templates in my commercial application?
+A: Yes, as long as you don't modify the templates themselves. If you modify template content, those modifications must be open-sourced under LGPL-3.0.
+
+Q: Can I create new role templates inspired by these?
+A: Yes, original new templates you create are yours. Only modifications to existing templates must be shared.
+
+Q: When do I need a commercial license?
+A: When you want to modify existing templates and keep modifications proprietary, or embed templates in a closed-source product for redistribution.
+
+© 2026 Deepleaper (跃盟科技). All rights reserved.

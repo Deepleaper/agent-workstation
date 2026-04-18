@@ -5,7 +5,7 @@
 **Agent 工位模板库 — 100 个专业角色，秒级创建生产级智能体**
 
 [![npm version](https://img.shields.io/npm/v/agent-workstation)](https://www.npmjs.com/package/agent-workstation)
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-LGPL_3.0-blue.svg)](LICENSE)
 
 不是空壳模板。20 个角色已配备 **50–80 行专业 system prompt** + **行业知识种子 (brain-seed)** + **完整 OAD 配置**。<br/>
 其余 80 个骨架模板持续补全中。
@@ -230,10 +230,16 @@ opc init --role customer-service-rep
 ## License
 
 **双许可证 (Dual License)**：
-- 📝 代码：[Apache-2.0](LICENSE-APACHE)
-- 🧠 角色知识内容（`roles/` 目录）：[CC BY-SA 4.0](LICENSE-CC-BY-SA) — 可商用，须署名 + 相同方式共享
 
-详见 [LICENSE](LICENSE)。
+| 许可证 | 适用场景 | 文件 |
+|--------|---------|------|
+| [LGPL-3.0](LICENSE) | 开源使用、二次开发（修改需开源） | `LICENSE` + `LICENSE-GPL3` |
+| [Commercial](LICENSE-COMMERCIAL) | 闭源修改、专有产品嵌入、企业支持 | `LICENSE-COMMERCIAL` |
+
+- ✅ 直接使用模板（不修改）：无需开源你的项目
+- ✅ 修改模板内容：修改部分需以 LGPL-3.0 开源
+- ✅ 创建全新模板：完全属于你
+- 💼 需要闭源修改或专有分发？请联系 licensing@deepleaper.com
 
 ---
 
@@ -246,7 +252,7 @@ opc init --role customer-service-rep
 **AI Agent Role Template Library — 100 professional roles, production-ready agents in seconds**
 
 [![npm version](https://img.shields.io/npm/v/agent-workstation)](https://www.npmjs.com/package/agent-workstation)
-[![License](https://img.shields.io/badge/Code-Apache_2.0-blue.svg)](LICENSE-APACHE) [![License](https://img.shields.io/badge/Content-CC_BY--SA_4.0-lightgrey.svg)](LICENSE-CC-BY-SA)
+[![License](https://img.shields.io/badge/License-LGPL_3.0-blue.svg)](LICENSE)
 
 Not empty scaffolds. 20 roles ship with **50–80 line expert system prompts** + **industry knowledge seeds (brain-seed)** + **full OAD configs**.<br/>
 The remaining 80 skeleton templates are being completed.
@@ -394,7 +400,13 @@ import {
 ## License
 
 **Dual License**:
-- 📝 Code: [Apache-2.0](LICENSE-APACHE)
-- 🧠 Role knowledge content (`roles/` directory): [CC BY-SA 4.0](LICENSE-CC-BY-SA) — commercial use OK, attribution + share-alike required
 
-See [LICENSE](LICENSE) for details.
+| License | Use Case | File |
+|---------|----------|------|
+| [LGPL-3.0](LICENSE) | Open-source use, modifications must be open-sourced | `LICENSE` + `LICENSE-GPL3` |
+| [Commercial](LICENSE-COMMERCIAL) | Closed-source modifications, proprietary embedding, enterprise support | `LICENSE-COMMERCIAL` |
+
+- ✅ Use templates as-is (unmodified): no need to open-source your project
+- ✅ Modify template content: modifications must be shared under LGPL-3.0
+- ✅ Create brand-new templates: fully yours
+- 💼 Need closed-source modifications or proprietary distribution? Contact licensing@deepleaper.com
