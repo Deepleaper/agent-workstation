@@ -4,7 +4,7 @@
 
 **Agent 工位模板库 — 100 个专业角色，秒级创建生产级智能体**
 
-[![npm version](https://img.shields.io/npm/v/agent-workstation)](https://www.npmjs.com/package/agent-workstation)
+[![npm version](https://img.shields.io/badge/npm-v1.4.0-blue)](https://www.npmjs.com/package/agent-workstation)
 [![License](https://img.shields.io/badge/License-LGPL_3.0-blue.svg)](LICENSE)
 
 不是空壳模板。20 个角色已配备 **50–80 行专业 system prompt** + **行业知识种子 (brain-seed)** + **完整 OAD 配置**。<br/>
@@ -13,6 +13,36 @@
 [快速开始](#-快速开始) · [角色列表](#-完整角色列表20-个生产就绪) · [API](#-api-reference) · [English](#english)
 
 </div>
+
+---
+
+## 🏗️ 三层知识架构 (3-Tier Knowledge Architecture)
+
+Agent Workstation v1.4.0 的核心能力——三层知识种子体系，让每个 Agent 创建即有行业记忆：
+
+```
+🏭 行业知识 (Industry)    → 19 个行业分类
+💼 岗位知识 (Job)         → 100 个岗位角色
+🔧 工位知识 (Workstation) → 100 个工位场景
+```
+
+### 🔄 自下而上知识进化飞轮 (Bottom-Up Evolution Flywheel)
+
+```
+┌─────────────────────────────────────────────────┐
+│  Agent 日常使用产生工位经验                        │
+│       ↓                                          │
+│  KnowledgeEvolver 自动提炼为岗位知识               │
+│       ↓                                          │
+│  岗位知识进一步沉淀为行业最佳实践                    │
+│       ↓                                          │
+│  新 Agent 创建时自动获得更优的知识种子               │
+│       ↓                                          │
+│  → 回到顶部，越转越快 🔄                           │
+└─────────────────────────────────────────────────┘
+```
+
+越多 Agent 使用 → 知识越丰富 → 新 Agent 起步越高 → 整个生态越智能。
 
 ---
 
@@ -306,7 +336,7 @@ opc init --role customer-service-rep
 
 **AI Agent Role Template Library — 100 professional roles, production-ready agents in seconds**
 
-[![npm version](https://img.shields.io/npm/v/agent-workstation)](https://www.npmjs.com/package/agent-workstation)
+[![npm version](https://img.shields.io/badge/npm-v1.4.0-blue)](https://www.npmjs.com/package/agent-workstation)
 [![License](https://img.shields.io/badge/License-LGPL_3.0-blue.svg)](LICENSE)
 
 Not empty scaffolds. 20 roles ship with **50–80 line expert system prompts** + **industry knowledge seeds (brain-seed)** + **full OAD configs**.<br/>
@@ -426,6 +456,11 @@ import {
   validateRole,      // (category, role) => { valid, errors[], warnings[] }
   getPopularRoles,   // () => top 20 curated roles
   getIndustries,     // () => industries/index.yaml content
+  getIndustryBrainSeed,     // (category) => string | null
+  getJobBrainSeed,          // (category, role) => string | null
+  getWorkstationBrainSeed,  // (category, role) => string | null
+  getContextTemplate,       // () => string
+  getBrainSeeds,            // (role) => { industry, job, workstation, contextTemplate } | null
   WorkstationUI,     // Web UI server class
 } from 'agent-workstation';
 ```
