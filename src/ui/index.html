@@ -3,191 +3,563 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agent Workstation — Role Browser</title>
+<title>Agent Workstation — Template Market</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0d1117;--surface:#161b22;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--accent:#58a6ff;--accent2:#3fb950;--badge:#1f6feb;--card:#1c2128;--hover:#21262d}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+:root{
+  --bg:#0a0a0a;--bg-card:#141414;--bg-surface:#1a1a1a;--bg-hover:#1f1f1f;
+  --border:#2a2a2a;--border-hover:#3b82f6;
+  --text:#e5e5e5;--text2:#888;--text3:#555;
+  --accent:#3b82f6;--accent2:#22c55e;--accent-dim:rgba(59,130,246,0.15);
+  --radius:12px;--radius-sm:8px;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.5}
 a{color:var(--accent);text-decoration:none}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:#333;border-radius:3px}
+
+/* Layout */
 .app{display:flex;min-height:100vh}
-nav{width:220px;background:var(--surface);border-right:1px solid var(--border);padding:16px;position:fixed;height:100vh;overflow-y:auto}
-nav h1{font-size:18px;margin-bottom:24px;display:flex;align-items:center;gap:8px}
-nav h1 span{font-size:24px}
-nav ul{list-style:none}
-nav li{padding:10px 12px;border-radius:8px;cursor:pointer;margin-bottom:4px;display:flex;align-items:center;gap:8px;color:var(--text2);transition:all .15s}
-nav li:hover,nav li.active{background:var(--hover);color:var(--text)}
-main{margin-left:220px;flex:1;padding:32px;max-width:1200px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
-.stat{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;text-align:center}
-.stat .num{font-size:36px;font-weight:700;color:var(--accent)}
-.stat .label{color:var(--text2);margin-top:4px;font-size:14px}
-.search-box{width:100%;padding:12px 16px;background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:15px;margin-bottom:24px;outline:none}
-.search-box:focus{border-color:var(--accent)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;cursor:pointer;transition:all .15s}
-.card:hover{border-color:var(--accent);transform:translateY(-2px)}
-.card .emoji{font-size:28px;margin-bottom:8px}
-.card h3{font-size:16px;margin-bottom:6px}
-.card p{color:var(--text2);font-size:13px;line-height:1.5;margin-bottom:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.badge{display:inline-block;background:var(--badge);color:#fff;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:600}
-.card .actions{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
-.btn{padding:6px 14px;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--text);cursor:pointer;font-size:12px;transition:all .15s}
+.sidebar{width:240px;background:var(--bg-surface);border-right:1px solid var(--border);padding:20px 16px;position:fixed;height:100vh;overflow-y:auto;z-index:10}
+.sidebar .logo{font-size:18px;font-weight:700;margin-bottom:28px;display:flex;align-items:center;gap:10px;color:var(--text)}
+.sidebar .logo span{font-size:24px}
+.sidebar ul{list-style:none}
+.sidebar li{padding:10px 14px;border-radius:var(--radius-sm);cursor:pointer;margin-bottom:2px;display:flex;align-items:center;gap:10px;color:var(--text2);font-size:14px;transition:all .15s}
+.sidebar li:hover{background:var(--bg-hover);color:var(--text)}
+.sidebar li.active{background:var(--accent-dim);color:var(--accent);font-weight:600}
+.sidebar .lang-switch{position:absolute;bottom:20px;left:16px;right:16px}
+.sidebar .lang-switch button{width:100%;padding:8px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--bg-card);color:var(--text2);cursor:pointer;font-size:12px}
+.sidebar .lang-switch button:hover{border-color:var(--accent);color:var(--accent)}
+.main{margin-left:240px;flex:1;padding:28px 32px;max-width:1200px}
+
+/* Mobile */
+@media(max-width:768px){
+  .sidebar{display:none}.main{margin-left:0;padding:16px}
+  .mobile-nav{display:flex!important}
+  .stats-grid{grid-template-columns:1fr!important}
+  .card-grid{grid-template-columns:1fr!important}
+  .editor-layout{flex-direction:column!important}
+  .editor-preview{width:100%!important}
+}
+.mobile-nav{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--bg-surface);border-top:1px solid var(--border);z-index:20;padding:8px 0}
+.mobile-nav button{flex:1;background:none;border:none;color:var(--text2);font-size:10px;padding:6px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px}
+.mobile-nav button.active{color:var(--accent)}
+.mobile-nav button .icon{font-size:18px}
+
+/* Components */
+.page-title{font-size:24px;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px}
+.stat-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;text-align:center}
+.stat-card .num{font-size:40px;font-weight:800;background:linear-gradient(135deg,var(--accent),#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.stat-card .label{color:var(--text2);font-size:13px;margin-top:4px}
+
+.section-title{font-size:16px;font-weight:600;margin:24px 0 14px;display:flex;align-items:center;gap:8px}
+
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;cursor:pointer;transition:all .2s;position:relative}
+.card:hover{border-color:var(--border-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.3)}
+.card .emoji{font-size:32px;margin-bottom:10px}
+.card h3{font-size:15px;font-weight:600;margin-bottom:4px}
+.card .subtitle{color:var(--text2);font-size:12px;margin-bottom:8px}
+.card p{color:var(--text2);font-size:13px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:12px}
+.card .tags{display:flex;gap:6px;flex-wrap:wrap}
+.badge{display:inline-block;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:600}
+.badge-blue{background:var(--accent-dim);color:var(--accent)}
+.badge-green{background:rgba(34,197,94,0.15);color:var(--accent2)}
+.badge-purple{background:rgba(139,92,246,0.15);color:#8b5cf6}
+.card .seed-indicator{position:absolute;top:12px;right:12px;font-size:10px;color:var(--accent2)}
+
+.filter-bar{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
+.filter-bar select,.filter-bar input{padding:10px 14px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:14px;outline:none;min-width:160px}
+.filter-bar select:focus,.filter-bar input:focus{border-color:var(--accent)}
+.filter-bar input{flex:1;min-width:200px}
+
+.back-btn{display:inline-flex;align-items:center;gap:6px;color:var(--accent);font-size:14px;cursor:pointer;margin-bottom:16px;padding:6px 0}
+.back-btn:hover{text-decoration:underline}
+
+.detail-panel{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:28px}
+.detail-panel h2{font-size:22px;margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.detail-panel .meta{color:var(--text2);margin-bottom:20px;font-size:14px}
+.detail-section{margin-bottom:24px}
+.detail-section h3{font-size:14px;font-weight:600;color:var(--accent);margin-bottom:8px;cursor:pointer;display:flex;align-items:center;gap:6px}
+.detail-section h3::before{content:'▸';transition:transform .2s}
+.detail-section.open h3::before{transform:rotate(90deg)}
+.detail-section .content{display:none;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;font-family:'Fira Code',monospace;font-size:13px;line-height:1.6;white-space:pre-wrap;max-height:500px;overflow-y:auto;color:var(--text2)}
+.detail-section.open .content{display:block}
+.use-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:var(--accent);color:#fff;border:none;border-radius:var(--radius-sm);font-size:14px;font-weight:600;cursor:pointer;transition:opacity .15s}
+.use-btn:hover{opacity:.85}
+
+/* Editor */
+.editor-layout{display:flex;gap:24px}
+.editor-form{flex:1}
+.editor-preview{width:340px;position:sticky;top:28px;align-self:flex-start}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:13px;font-weight:600;color:var(--text2);margin-bottom:6px}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:14px;outline:none;font-family:inherit}
+.form-group textarea{min-height:120px;resize:vertical;font-family:'Fira Code',monospace;font-size:13px}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--accent)}
+.form-hint{font-size:11px;color:var(--text3);margin-top:4px}
+.tag-input{display:flex;flex-wrap:wrap;gap:6px;padding:8px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);min-height:42px;align-items:center}
+.tag-input .tag{display:flex;align-items:center;gap:4px;background:var(--accent-dim);color:var(--accent);padding:2px 10px;border-radius:12px;font-size:12px}
+.tag-input .tag .remove{cursor:pointer;font-size:14px;line-height:1}
+.tag-input input{border:none;background:none;color:var(--text);outline:none;flex:1;min-width:80px;font-size:13px}
+.btn-row{display:flex;gap:10px;margin-top:24px}
+.btn{padding:10px 20px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--bg-card);color:var(--text);cursor:pointer;font-size:14px;transition:all .15s}
 .btn:hover{border-color:var(--accent);color:var(--accent)}
 .btn-primary{background:var(--accent);color:#fff;border-color:var(--accent)}
-.btn-primary:hover{opacity:.85}
-.detail{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:32px}
-.detail h2{font-size:24px;margin-bottom:8px;display:flex;align-items:center;gap:12px}
-.detail .meta{color:var(--text2);margin-bottom:24px}
-.section{margin-bottom:24px}
-.section h3{font-size:16px;margin-bottom:8px;color:var(--accent)}
-.code-block{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:16px;overflow-x:auto;font-family:'Fira Code',monospace;font-size:13px;line-height:1.6;white-space:pre-wrap;max-height:500px;overflow-y:auto}
-.copy-cmd{display:flex;align-items:center;gap:8px;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:16px;font-family:monospace;font-size:14px}
-.copy-cmd code{flex:1;color:var(--accent2)}
-.industry-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
-.industry-item{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;cursor:pointer;transition:all .15s;display:flex;justify-content:space-between;align-items:center}
-.industry-item:hover{border-color:var(--accent)}
-.industry-item .count{background:var(--badge);color:#fff;padding:2px 10px;border-radius:12px;font-size:12px}
-.back-btn{margin-bottom:16px;cursor:pointer;color:var(--accent);font-size:14px}
-.loading{text-align:center;padding:40px;color:var(--text2)}
-.toast{position:fixed;bottom:24px;right:24px;background:var(--accent2);color:#fff;padding:12px 20px;border-radius:8px;font-size:14px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999}
+.btn-primary:hover{opacity:.85;color:#fff}
+
+/* Brain Seed viewer */
+.seed-tree{display:flex;flex-direction:column;gap:8px}
+.seed-item{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px;cursor:pointer;transition:all .15s}
+.seed-item:hover{border-color:var(--border-hover)}
+.seed-item .seed-type{font-size:10px;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.seed-item .seed-type.industry{color:#f59e0b}
+.seed-item .seed-type.job{color:var(--accent)}
+.seed-item .seed-type.workstation{color:var(--accent2)}
+.seed-item h4{font-size:14px;margin-bottom:4px}
+.seed-item p{color:var(--text2);font-size:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+.toast{position:fixed;bottom:80px;right:24px;background:var(--accent2);color:#fff;padding:10px 20px;border-radius:var(--radius-sm);font-size:13px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:99}
 .toast.show{opacity:1}
+
+.loading{text-align:center;padding:60px;color:var(--text2)}
+.empty{text-align:center;padding:40px;color:var(--text3);font-size:14px}
 </style>
 </head>
 <body>
 <div class="app">
-<nav>
-  <h1><span>🏗️</span> Workstation</h1>
+
+<nav class="sidebar">
+  <div class="logo"><span>🏗️</span> Workstation</div>
   <ul>
-    <li class="active" data-page="overview">📊 Overview</li>
-    <li data-page="roles">👤 Roles</li>
-    <li data-page="industries">🏭 Industries</li>
-    <li data-page="search">🔍 Search</li>
+    <li class="active" data-page="home">🏠 <span data-i18n="nav.home">Home</span></li>
+    <li data-page="templates">📋 <span data-i18n="nav.templates">Templates</span></li>
+    <li data-page="industries">🏭 <span data-i18n="nav.industries">Industries</span></li>
+    <li data-page="editor">✏️ <span data-i18n="nav.editor">Editor</span></li>
+    <li data-page="brain-seeds">🧠 <span data-i18n="nav.brainSeeds">Brain Seeds</span></li>
   </ul>
+  <div class="lang-switch"><button onclick="toggleLang()" id="lang-btn">中文 / EN</button></div>
 </nav>
-<main id="content"><div class="loading">Loading...</div></main>
+
+<div class="mobile-nav">
+  <button data-page="home" class="active"><span class="icon">🏠</span>Home</button>
+  <button data-page="templates"><span class="icon">📋</span>Templates</button>
+  <button data-page="industries"><span class="icon">🏭</span>Industries</button>
+  <button data-page="editor"><span class="icon">✏️</span>Editor</button>
+  <button data-page="brain-seeds"><span class="icon">🧠</span>Seeds</button>
+</div>
+
+<div class="main" id="content"><div class="loading">Loading...</div></div>
 </div>
 <div class="toast" id="toast"></div>
+
 <script>
-const API='';
-let currentPage='overview';
+// ---- State ----
+let lang = 'en';
+let currentPage = 'home';
+let allTemplates = [];
+let allIndustries = [];
+let allBrainSeeds = [];
+let editorState = { name:'', description:'', category:'', systemPrompt:'', skills:[], language:'en' };
 
-const emojiMap={engineering:'⚙️',product:'📦',design:'🎨',marketing:'📣',sales:'💰',hr:'👥',finance:'💵',legal:'⚖️',data:'📊',content:'✍️',research:'🔬',operations:'🏭',executive:'👔','customer-service':'🎧','customer-success':'🤝',security:'🔒',education:'📚',healthcare:'🏥',default:'🤖'};
-function getEmoji(name){for(const[k,v]of Object.entries(emojiMap)){if(name.toLowerCase().includes(k))return v}return emojiMap.default}
+const i18n = {
+  en: {
+    'nav.home':'Home','nav.templates':'Templates','nav.industries':'Industries','nav.editor':'Editor','nav.brainSeeds':'Brain Seeds',
+    'home.title':'Template Market','home.total':'Total Templates','home.industries':'Industries','home.functions':'Functions',
+    'home.popular':'🔥 Popular Templates','home.byIndustry':'Browse by Industry',
+    'templates.title':'Browse Templates','templates.search':'Search templates...','templates.allIndustries':'All Industries','templates.allFunctions':'All Functions',
+    'industries.title':'Industries Overview',
+    'editor.title':'Role Editor','editor.name':'Role Name','editor.desc':'Description','editor.category':'Category','editor.prompt':'System Prompt',
+    'editor.promptHint':'Define the role personality, capabilities, and behavior...','editor.skills':'Skills','editor.skillHint':'Press Enter to add',
+    'editor.lang':'Language','editor.preview':'Preview','editor.save':'Save as JSON','editor.fromTemplate':'From Template',
+    'editor.createNew':'Create from Scratch',
+    'seeds.title':'Brain Seeds','seeds.filter':'Filter by industry...',
+    'detail.systemPrompt':'System Prompt','detail.brainSeed':'Brain Seed','detail.workstationSeed':'Workstation Seed',
+    'detail.industrySeed':'Industry Knowledge','detail.readme':'README','detail.files':'Files','detail.useTemplate':'Use This Template',
+    'back':'← Back','noResults':'No results found','roles':'roles',
+  },
+  zh: {
+    'nav.home':'首页','nav.templates':'模板浏览','nav.industries':'行业总览','nav.editor':'角色编辑','nav.brainSeeds':'知识查看',
+    'home.title':'模板市场','home.total':'模板总数','home.industries':'行业覆盖','home.functions':'职能覆盖',
+    'home.popular':'🔥 热门模板','home.byIndustry':'按行业浏览',
+    'templates.title':'浏览模板','templates.search':'搜索模板...','templates.allIndustries':'所有行业','templates.allFunctions':'所有职能',
+    'industries.title':'行业总览',
+    'editor.title':'角色编辑器','editor.name':'角色名称','editor.desc':'描述','editor.category':'分类','editor.prompt':'System Prompt',
+    'editor.promptHint':'定义角色的性格、能力和行为方式...','editor.skills':'技能','editor.skillHint':'按 Enter 添加',
+    'editor.lang':'语言偏好','editor.preview':'预览','editor.save':'保存为 JSON','editor.fromTemplate':'从模板创建',
+    'editor.createNew':'从零创建',
+    'seeds.title':'Brain Seeds 知识库','seeds.filter':'按行业筛选...',
+    'detail.systemPrompt':'System Prompt','detail.brainSeed':'角色知识','detail.workstationSeed':'工位知识',
+    'detail.industrySeed':'行业知识','detail.readme':'说明文档','detail.files':'文件列表','detail.useTemplate':'使用此模板',
+    'back':'← 返回','noResults':'未找到结果','roles':'个角色',
+  }
+};
 
-async function api(path){const r=await fetch(API+path);return r.json()}
+function t(key) { return i18n[lang][key] || key; }
+function toggleLang() { lang = lang === 'en' ? 'zh' : 'en'; document.getElementById('lang-btn').textContent = lang === 'en' ? '中文 / EN' : 'EN / 中文'; navigate(currentPage); }
 
-function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2000)}
+const emojiMap = {
+  engineering:'⚙️',product:'📦',design:'🎨',marketing:'📣',sales:'💰',hr:'👥',
+  finance:'💵',legal:'⚖️',data:'📊',content:'✍️',research:'🔬',operations:'🏭',
+  executive:'👔','customer-service':'🎧','customer-success':'🤝',security:'🔒',
+  education:'📚',healthcare:'🏥',admin:'📎',tech:'💻'
+};
+function getEmoji(name) { for (const [k,v] of Object.entries(emojiMap)) { if (name.includes(k)) return v; } return '🤖'; }
 
-function copyText(text){navigator.clipboard.writeText(text).then(()=>toast('Copied!'))}
+async function api(path) { const r = await fetch(path); return r.json(); }
+function toast(msg) { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 2000); }
+function escHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
-function renderCard(r){
-  const name=r.role||r.name||'';
-  const cat=r.category||'';
-  const title=r.title||name.replace(/-/g,' ');
-  const desc=r.description||'';
-  return `<div class="card" onclick="showRole('${cat}','${name}')">
-    <div class="emoji">${getEmoji(cat||name)}</div>
+// ---- Navigation ----
+function navigate(page, data) {
+  currentPage = page;
+  document.querySelectorAll('.sidebar li').forEach(li => li.classList.toggle('active', li.dataset.page === page));
+  document.querySelectorAll('.mobile-nav button').forEach(b => b.classList.toggle('active', b.dataset.page === page));
+  const handlers = { home: showHome, templates: showTemplates, industries: showIndustries, editor: showEditor, 'brain-seeds': showBrainSeeds, 'template-detail': () => showTemplateDetail(data), 'industry-detail': () => showIndustryDetail(data) };
+  (handlers[page] || showHome)();
+}
+
+document.querySelectorAll('.sidebar li').forEach(li => li.addEventListener('click', () => navigate(li.dataset.page)));
+document.querySelectorAll('.mobile-nav button').forEach(b => b.addEventListener('click', () => navigate(b.dataset.page)));
+
+// ---- Pages ----
+
+async function showHome() {
+  const [stats, templates] = await Promise.all([api('/api/stats'), api('/api/templates?limit=8')]);
+  const industries = await api('/api/industries');
+  const $ = document.getElementById('content');
+  $.innerHTML = `
+    <h1 class="page-title">🏗️ ${t('home.title')}</h1>
+    <div class="stats-grid">
+      <div class="stat-card"><div class="num">${stats.totalRoles}</div><div class="label">${t('home.total')}</div></div>
+      <div class="stat-card"><div class="num">${stats.industries}</div><div class="label">${t('home.industries')}</div></div>
+      <div class="stat-card"><div class="num">${stats.functions}</div><div class="label">${t('home.functions')}</div></div>
+    </div>
+    <div class="section-title">${t('home.popular')}</div>
+    <div class="card-grid">${templates.items.map(renderTemplateCard).join('')}</div>
+    <div class="section-title">${t('home.byIndustry')}</div>
+    <div class="card-grid">${industries.map(renderIndustryCard).join('')}</div>
+  `;
+}
+
+function renderTemplateCard(t) {
+  const title = lang === 'zh' && t.titleZh ? t.titleZh : t.title;
+  const desc = lang === 'zh' && t.descZh ? t.descZh : (t.description || '');
+  return `<div class="card" onclick="navigate('template-detail',{category:'${t.category}',name:'${t.name}'})">
+    ${t.hasBrainSeed ? '<div class="seed-indicator">🧠</div>' : ''}
+    <div class="emoji">${getEmoji(t.category)}</div>
     <h3>${title}</h3>
-    <p>${desc||'Agent role template'}</p>
-    <div class="actions">
-      <span class="badge">${cat}</span>
-      <button class="btn" onclick="event.stopPropagation();copyText('opc init --role ${cat}/${name}')">📋 Use</button>
+    ${t.titleZh && lang === 'en' ? `<div class="subtitle">${t.titleZh}</div>` : ''}
+    <p>${desc || 'Agent role template'}</p>
+    <div class="tags">
+      <span class="badge badge-blue">${t.category}</span>
+      ${t.hasBrainSeed ? '<span class="badge badge-green">Brain Seed</span>' : ''}
+      ${t.hasWorkstationSeed ? '<span class="badge badge-purple">Workstation</span>' : ''}
     </div>
   </div>`;
 }
 
-async function showOverview(){
-  const[stats,popular]=await Promise.all([api('/api/stats'),api('/api/roles/popular')]);
-  document.getElementById('content').innerHTML=`
-    <h2>📊 Overview</h2>
-    <div class="stats">
-      <div class="stat"><div class="num">${stats.totalRoles}</div><div class="label">Total Roles</div></div>
-      <div class="stat"><div class="num">${stats.industries}</div><div class="label">Industries</div></div>
-      <div class="stat"><div class="num">${stats.categories}</div><div class="label">Categories</div></div>
+function renderIndustryCard(ind) {
+  return `<div class="card" onclick="navigate('industry-detail',{id:'${ind.id}'})">
+    <div class="emoji">${getEmoji(ind.id)}</div>
+    <h3>${ind.name.replace(/(^|\s)\w/g, c => c.toUpperCase())}</h3>
+    <p>${ind.roleCount} ${t('roles')}</p>
+  </div>`;
+}
+
+async function showTemplates() {
+  const industries = await api('/api/industries');
+  const $ = document.getElementById('content');
+  $.innerHTML = `
+    <h1 class="page-title">📋 ${t('templates.title')}</h1>
+    <div class="filter-bar">
+      <select id="filter-industry" onchange="filterTemplates()">
+        <option value="">${t('templates.allIndustries')}</option>
+        ${industries.map(i => `<option value="${i.id}">${getEmoji(i.id)} ${i.name}</option>`).join('')}
+      </select>
+      <input type="text" id="filter-search" placeholder="${t('templates.search')}" oninput="filterTemplates()">
     </div>
-    <h3 style="margin-bottom:16px">🔥 Popular Roles</h3>
-    <div class="grid">${popular.filter(p=>p.exists).map(renderCard).join('')}</div>`;
+    <div class="card-grid" id="templates-grid"><div class="loading">Loading...</div></div>
+  `;
+  filterTemplates();
 }
 
-async function showRoles(){
-  const roles=await api('/api/roles');
-  document.getElementById('content').innerHTML=`
-    <h2>👤 All Roles</h2>
-    <input class="search-box" placeholder="Filter roles..." oninput="filterRoles(this.value)">
-    <div class="grid" id="roles-grid">${roles.map(renderCard).join('')}</div>`;
-  window._allRolesHtml=roles.map(r=>({html:renderCard(r),text:JSON.stringify(r).toLowerCase()}));
+let filterTimer;
+async function filterTemplates() {
+  clearTimeout(filterTimer);
+  filterTimer = setTimeout(async () => {
+    const industry = document.getElementById('filter-industry')?.value || '';
+    const q = document.getElementById('filter-search')?.value || '';
+    let url = '/api/templates?limit=100';
+    if (industry) url += `&industry=${industry}`;
+    if (q) url += `&q=${encodeURIComponent(q)}`;
+    const data = await api(url);
+    const grid = document.getElementById('templates-grid');
+    if (!grid) return;
+    grid.innerHTML = data.items.length ? data.items.map(renderTemplateCard).join('') : `<div class="empty">${t('noResults')}</div>`;
+  }, 200);
 }
 
-function filterRoles(q){
-  if(!q){document.getElementById('roles-grid').innerHTML=window._allRolesHtml.map(r=>r.html).join('');return}
-  const lq=q.toLowerCase();
-  document.getElementById('roles-grid').innerHTML=window._allRolesHtml.filter(r=>r.text.includes(lq)).map(r=>r.html).join('');
+async function showTemplateDetail(data) {
+  const $ = document.getElementById('content');
+  $.innerHTML = '<div class="loading">Loading...</div>';
+  const detail = await api(`/api/templates/${data.category}/${data.name}`);
+  if (detail.error) { toast(detail.error); return navigate('templates'); }
+  const title = lang === 'zh' && detail.titleZh ? detail.titleZh : detail.title;
+
+  const sections = [];
+  if (detail.systemPrompt) sections.push({ key:'detail.systemPrompt', content: detail.systemPrompt, open: false });
+  if (detail.brainSeed) sections.push({ key:'detail.brainSeed', content: detail.brainSeed, open: false });
+  if (detail.workstationSeed) sections.push({ key:'detail.workstationSeed', content: detail.workstationSeed, open: false });
+  if (detail.industrySeed) sections.push({ key:'detail.industrySeed', content: detail.industrySeed, open: false });
+  if (detail.readme) sections.push({ key:'detail.readme', content: detail.readme, open: false });
+
+  $.innerHTML = `
+    <div class="back-btn" onclick="navigate('templates')">${t('back')}</div>
+    <div class="detail-panel">
+      <h2>${getEmoji(detail.category)} ${title}</h2>
+      ${detail.titleZh && lang === 'en' ? `<div style="color:var(--text2);margin-bottom:4px">${detail.titleZh}</div>` : ''}
+      <div class="meta">
+        <span class="badge badge-blue">${detail.category}</span>
+        ${detail.tags.map(t => `<span class="badge badge-purple" style="margin-left:4px">${t}</span>`).join('')}
+      </div>
+      <p style="color:var(--text2);margin-bottom:20px">${detail.description || ''}</p>
+
+      ${sections.map((s, i) => `
+        <div class="detail-section${i === 0 ? ' open' : ''}" onclick="this.classList.toggle('open')">
+          <h3>${t(s.key)}</h3>
+          <div class="content" onclick="event.stopPropagation()">${escHtml(s.content)}</div>
+        </div>
+      `).join('')}
+
+      <div class="detail-section">
+        <h3>${t('detail.files')}</h3>
+        <div class="content" style="display:block">${detail.files.join('\n')}</div>
+      </div>
+
+      <div class="btn-row" style="margin-top:20px">
+        <button class="use-btn" onclick="useTemplate('${data.category}','${data.name}')">🚀 ${t('detail.useTemplate')}</button>
+        <button class="btn" onclick="loadIntoEditor('${data.category}','${data.name}')">✏️ ${t('editor.fromTemplate')}</button>
+      </div>
+    </div>
+  `;
 }
 
-async function showIndustries(){
-  const cats=await api('/api/categories');
-  document.getElementById('content').innerHTML=`
-    <h2>🏭 Industries & Categories</h2>
-    <div class="industry-list">${cats.map(c=>`
-      <div class="industry-item" onclick="showCategoryRoles('${c.name}')">
-        <span>${getEmoji(c.name)} ${c.name}</span>
-        <span class="count">${c.roles.length}</span>
-      </div>`).join('')}</div>`;
+function useTemplate(cat, role) {
+  // Try to message parent (OPC Studio iframe)
+  try { window.parent.postMessage({ type: 'workstation:use-template', category: cat, role: role }, '*'); } catch {}
+  toast('Template selected: ' + cat + '/' + role);
 }
 
-async function showCategoryRoles(cat){
-  const roles=await api(`/api/categories/${cat}/roles`);
-  document.getElementById('content').innerHTML=`
-    <div class="back-btn" onclick="showIndustries()">← Back to Industries</div>
-    <h2>${getEmoji(cat)} ${cat}</h2>
-    <div class="grid">${roles.map(renderCard).join('')}</div>`;
+async function loadIntoEditor(cat, name) {
+  const detail = await api(`/api/templates/${cat}/${name}`);
+  editorState = {
+    name: detail.title || name,
+    description: detail.description || '',
+    category: detail.category,
+    systemPrompt: detail.systemPrompt || '',
+    skills: detail.tags || [],
+    language: 'en',
+  };
+  navigate('editor');
 }
 
-async function showSearch(){
-  document.getElementById('content').innerHTML=`
-    <h2>🔍 Search Roles</h2>
-    <input class="search-box" id="search-input" placeholder="Search roles..." oninput="doSearch(this.value)">
-    <div class="grid" id="search-results"></div>`;
-  document.getElementById('search-input').focus();
+async function showIndustries() {
+  const industries = await api('/api/industries');
+  document.getElementById('content').innerHTML = `
+    <h1 class="page-title">🏭 ${t('industries.title')}</h1>
+    <div class="card-grid">${industries.map(renderIndustryCard).join('')}</div>
+  `;
 }
 
-let searchTimer;
-function doSearch(q){
-  clearTimeout(searchTimer);
-  searchTimer=setTimeout(async()=>{
-    if(!q){document.getElementById('search-results').innerHTML='';return}
-    const results=await api(`/api/roles/search?q=${encodeURIComponent(q)}`);
-    document.getElementById('search-results').innerHTML=results.length?results.map(renderCard).join(''):'<p style="color:var(--text2)">No results found</p>';
-  },300);
+async function showIndustryDetail(data) {
+  const $ = document.getElementById('content');
+  $.innerHTML = '<div class="loading">Loading...</div>';
+  const detail = await api(`/api/industries/${data.id}`);
+  if (detail.error) { toast(detail.error); return navigate('industries'); }
+  $.innerHTML = `
+    <div class="back-btn" onclick="navigate('industries')">${t('back')}</div>
+    <h1 class="page-title">${getEmoji(data.id)} ${detail.name.replace(/(^|\s)\w/g,c=>c.toUpperCase())}</h1>
+    <p style="color:var(--text2);margin-bottom:20px">${detail.roleCount} ${t('roles')}</p>
+    ${detail.industrySeed ? `<div class="detail-section open" onclick="this.classList.toggle('open')"><h3>${t('detail.industrySeed')}</h3><div class="content" onclick="event.stopPropagation()">${escHtml(detail.industrySeed)}</div></div>` : ''}
+    <div class="card-grid" style="margin-top:16px">${detail.roles.map(renderTemplateCard).join('')}</div>
+  `;
 }
 
-async function showRole(cat,role){
-  const data=await api(`/api/roles/${cat}/${role}`);
-  if(data.error){toast('Role not found');return}
-  const cmd=`opc init --role ${cat}/${role}`;
-  document.getElementById('content').innerHTML=`
-    <div class="back-btn" onclick="navigate(currentPage)">← Back</div>
-    <div class="detail">
-      <h2>${getEmoji(cat)} ${data.title||role.replace(/-/g,' ')}</h2>
-      <div class="meta"><span class="badge">${cat}</span> &nbsp; ${data.description||''}</div>
-      <div class="copy-cmd"><code>${cmd}</code><button class="btn btn-primary" onclick="copyText('${cmd}')">📋 Copy</button></div>
-      ${data.systemPrompt?`<div class="section"><h3>System Prompt</h3><div class="code-block">${escHtml(data.systemPrompt)}</div></div>`:''}
-      ${data.brainSeed?`<div class="section"><h3>Brain Seed</h3><div class="code-block">${escHtml(data.brainSeed)}</div></div>`:''}
-      ${data.readme?`<div class="section"><h3>README</h3><div class="code-block">${escHtml(data.readme)}</div></div>`:''}
-      <div class="section"><h3>Files</h3><div class="code-block">${data.files.join('\n')}</div></div>
+async function showEditor() {
+  const cats = await api('/api/industries');
+  const s = editorState;
+  const $ = document.getElementById('content');
+  $.innerHTML = `
+    <h1 class="page-title">✏️ ${t('editor.title')}</h1>
+    <div class="editor-layout">
+      <div class="editor-form">
+        <div class="form-group">
+          <label>${t('editor.name')}</label>
+          <input id="ed-name" value="${escHtml(s.name)}" oninput="updateEditor()">
+        </div>
+        <div class="form-group">
+          <label>${t('editor.desc')}</label>
+          <input id="ed-desc" value="${escHtml(s.description)}" oninput="updateEditor()">
+        </div>
+        <div class="form-group">
+          <label>${t('editor.category')}</label>
+          <select id="ed-cat" onchange="updateEditor()">
+            <option value="">--</option>
+            ${cats.map(c => `<option value="${c.id}" ${c.id===s.category?'selected':''}>${getEmoji(c.id)} ${c.name}</option>`).join('')}
+          </select>
+        </div>
+        <div class="form-group">
+          <label>${t('editor.prompt')}</label>
+          <textarea id="ed-prompt" rows="10" oninput="updateEditor()" placeholder="${t('editor.promptHint')}">${escHtml(s.systemPrompt)}</textarea>
+        </div>
+        <div class="form-group">
+          <label>${t('editor.skills')}</label>
+          <div class="tag-input" id="skills-input">
+            ${s.skills.map(sk => `<span class="tag">${sk}<span class="remove" onclick="removeSkill('${sk}')">×</span></span>`).join('')}
+            <input placeholder="${t('editor.skillHint')}" onkeydown="addSkill(event)">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>${t('editor.lang')}</label>
+          <select id="ed-lang" onchange="updateEditor()">
+            <option value="en" ${s.language==='en'?'selected':''}>English</option>
+            <option value="zh" ${s.language==='zh'?'selected':''}>中文</option>
+            <option value="both" ${s.language==='both'?'selected':''}>Both / 双语</option>
+          </select>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-primary" onclick="saveRole()">💾 ${t('editor.save')}</button>
+          <button class="btn" onclick="exportRole()">📥 Export JSON</button>
+        </div>
+      </div>
+      <div class="editor-preview">
+        <div class="section-title">${t('editor.preview')}</div>
+        <div id="preview-card"></div>
+      </div>
+    </div>
+  `;
+  updateEditor();
+}
+
+function updateEditor() {
+  const name = document.getElementById('ed-name')?.value || '';
+  const desc = document.getElementById('ed-desc')?.value || '';
+  const cat = document.getElementById('ed-cat')?.value || '';
+  const prompt = document.getElementById('ed-prompt')?.value || '';
+  const lng = document.getElementById('ed-lang')?.value || 'en';
+  editorState = { ...editorState, name, description: desc, category: cat, systemPrompt: prompt, language: lng };
+
+  const preview = document.getElementById('preview-card');
+  if (preview) {
+    preview.innerHTML = `<div class="card" style="cursor:default">
+      <div class="emoji">${getEmoji(cat)}</div>
+      <h3>${escHtml(name) || 'Role Name'}</h3>
+      <p>${escHtml(desc) || 'Description...'}</p>
+      <div class="tags">
+        ${cat ? `<span class="badge badge-blue">${cat}</span>` : ''}
+        ${editorState.skills.map(s => `<span class="badge badge-purple">${s}</span>`).join('')}
+      </div>
     </div>`;
+  }
 }
 
-function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
-
-function navigate(page){
-  currentPage=page;
-  document.querySelectorAll('nav li').forEach(li=>li.classList.toggle('active',li.dataset.page===page));
-  ({overview:showOverview,roles:showRoles,industries:showIndustries,search:showSearch})[page]();
+function addSkill(e) {
+  if (e.key !== 'Enter') return;
+  const v = e.target.value.trim();
+  if (!v || editorState.skills.includes(v)) return;
+  editorState.skills.push(v);
+  e.target.value = '';
+  showEditor();
 }
 
-document.querySelectorAll('nav li').forEach(li=>li.addEventListener('click',()=>navigate(li.dataset.page)));
-navigate('overview');
+function removeSkill(sk) {
+  editorState.skills = editorState.skills.filter(s => s !== sk);
+  showEditor();
+}
+
+async function saveRole() {
+  const s = editorState;
+  if (!s.name) { toast('Name is required'); return; }
+  try {
+    const res = await fetch('/api/roles', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(s) });
+    const data = await res.json();
+    if (data.error) toast('Error: ' + data.error);
+    else toast('Role saved: ' + data.id);
+  } catch (e) { toast('Save failed'); }
+}
+
+function exportRole() {
+  const s = editorState;
+  const json = JSON.stringify(s, null, 2);
+  const blob = new Blob([json], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = (s.name || 'role').replace(/[^a-z0-9]/gi, '-').toLowerCase() + '.json';
+  a.click();
+}
+
+async function showBrainSeeds() {
+  const industries = await api('/api/industries');
+  const $ = document.getElementById('content');
+  $.innerHTML = `
+    <h1 class="page-title">🧠 ${t('seeds.title')}</h1>
+    <div class="filter-bar">
+      <select id="seed-filter" onchange="loadBrainSeeds()">
+        <option value="">${t('seeds.filter')}</option>
+        ${industries.map(i => `<option value="${i.id}">${getEmoji(i.id)} ${i.name}</option>`).join('')}
+      </select>
+    </div>
+    <div class="seed-tree" id="seeds-list"><div class="loading">Loading...</div></div>
+  `;
+  loadBrainSeeds();
+}
+
+async function loadBrainSeeds() {
+  const filter = document.getElementById('seed-filter')?.value || '';
+  let url = '/api/brain-seeds';
+  if (filter) url += `?industry=${filter}`;
+  const seeds = await api(url);
+  const list = document.getElementById('seeds-list');
+  if (!list) return;
+  if (!seeds.length) { list.innerHTML = `<div class="empty">${t('noResults')}</div>`; return; }
+  list.innerHTML = seeds.map(s => `
+    <div class="seed-item" onclick="showSeedDetail('${s.category}','${s.role || '_industry'}')">
+      <div class="seed-type ${s.type}">${s.type}</div>
+      <h4>${getEmoji(s.category)} ${s.title}</h4>
+      <p>${escHtml(s.preview)}</p>
+      <div class="tags" style="margin-top:6px">
+        <span class="badge badge-blue">${s.category}</span>
+        ${s.applicableRoles.slice(0,3).map(r => `<span class="badge badge-green">${r}</span>`).join('')}
+        ${s.applicableRoles.length > 3 ? `<span class="badge badge-purple">+${s.applicableRoles.length-3}</span>` : ''}
+      </div>
+    </div>
+  `).join('');
+}
+
+async function showSeedDetail(category, role) {
+  if (role === '_industry') {
+    // Show industry detail
+    navigate('industry-detail', { id: category });
+    return;
+  }
+  const detail = await api(`/api/brain-seeds/${category}/${role}`);
+  if (detail.error) { toast(detail.error); return; }
+  const $ = document.getElementById('content');
+  $.innerHTML = `
+    <div class="back-btn" onclick="navigate('brain-seeds')">${t('back')}</div>
+    <div class="detail-panel">
+      <h2>${getEmoji(category)} ${role.replace(/-/g,' ')}</h2>
+      <div class="meta"><span class="badge badge-blue">${category}</span></div>
+      ${detail.industrySeed ? `<div class="detail-section" onclick="this.classList.toggle('open')"><h3>${t('detail.industrySeed')}</h3><div class="content" onclick="event.stopPropagation()">${escHtml(detail.industrySeed)}</div></div>` : ''}
+      ${detail.jobSeed ? `<div class="detail-section open" onclick="this.classList.toggle('open')"><h3>${t('detail.brainSeed')}</h3><div class="content" onclick="event.stopPropagation()">${escHtml(detail.jobSeed)}</div></div>` : ''}
+      ${detail.workstationSeed ? `<div class="detail-section" onclick="this.classList.toggle('open')"><h3>${t('detail.workstationSeed')}</h3><div class="content" onclick="event.stopPropagation()">${escHtml(detail.workstationSeed)}</div></div>` : ''}
+    </div>
+  `;
+}
+
+// Init
+navigate('home');
 </script>
 </body>
 </html>
