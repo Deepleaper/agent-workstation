@@ -34,7 +34,9 @@
   },
   "author": "Deepleaper <dev@deepleaper.com>",
   "scripts": {
-    "test": "vitest run"
+    "test": "vitest run",
+    "hub:index": "cd hub && npx ts-node src/indexer.ts",
+    "hub:start": "cd hub && npx ts-node src/index.ts"
   },
   "license": "LGPL-3.0-or-later",
   "devDependencies": {

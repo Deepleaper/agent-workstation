@@ -1,0 +1,20 @@
+{
+  "name": "workstation-hub",
+  "version": "1.0.0",
+  "description": "Workstation Hub API - Template marketplace for AI agents",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "npx ts-node src/index.ts",
+    "index": "npx ts-node src/indexer.ts"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.11.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}

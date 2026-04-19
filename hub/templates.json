@@ -1,0 +1,1956 @@
+{
+  "generatedAt": "2026-04-19T05:17:41.200Z",
+  "total": 100,
+  "templates": [
+    {
+      "id": "admin/executive-assistant",
+      "category": "admin",
+      "title": "Executive Assistant",
+      "titleZh": "行政助理",
+      "description": "行政助理 - admin",
+      "emoji": "📋",
+      "industry": "admin",
+      "skills": [
+        "calendar-management",
+        "communication-drafting",
+        "meeting-coordination",
+        "task-prioritization",
+        "travel-planning"
+      ],
+      "metrics": [
+        "meetings_coordinated",
+        "response_time",
+        "schedule_efficiency",
+        "task_completion_rate"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "admin/office-manager",
+      "category": "admin",
+      "title": "office-manager",
+      "titleZh": "",
+      "description": "undefined - admin",
+      "emoji": "",
+      "industry": "admin",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "admin/travel-coordinator",
+      "category": "admin",
+      "title": "Travel Coordinator",
+      "titleZh": "差旅协调员",
+      "description": "差旅协调员 - admin",
+      "emoji": "✈️",
+      "industry": "admin",
+      "skills": [
+        "itinerary-planning",
+        "budget-optimization",
+        "policy-compliance",
+        "expense-tracking"
+      ],
+      "metrics": [
+        "trips_coordinated",
+        "cost_savings",
+        "policy_compliance_rate",
+        "traveler_satisfaction"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "content/copywriter",
+      "category": "content",
+      "title": "copywriter",
+      "titleZh": "",
+      "description": "undefined - content",
+      "emoji": "",
+      "industry": "content",
+      "skills": [
+        "brand-voice-writing",
+        "seo-content-optimization",
+        "multi-format-adaptation",
+        "audience-persona-targeting",
+        "a-b-copy-variant-generation"
+      ],
+      "metrics": [
+        "content-output-volume",
+        "engagement-rate",
+        "conversion-rate-lift",
+        "brand-consistency-score",
+        "seo-ranking-improvement"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "content/technical-writer",
+      "category": "content",
+      "title": "technical-writer",
+      "titleZh": "",
+      "description": "undefined - content",
+      "emoji": "",
+      "industry": "content",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "customer-service/complaint-handler",
+      "category": "customer-service",
+      "title": "complaint-handler",
+      "titleZh": "",
+      "description": "undefined - customer-service",
+      "emoji": "",
+      "industry": "customer-service",
+      "skills": [
+        "root-cause-analysis",
+        "compensation-calculation",
+        "regulatory-compliance-check",
+        "escalation-workflow",
+        "customer-sentiment-tracking"
+      ],
+      "metrics": [
+        "resolution-time",
+        "complaint-recurrence-rate",
+        "customer-retention-after-complaint",
+        "regulatory-compliance-rate"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "faq.md",
+        "workflow.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "customer-service/customer-service-rep",
+      "category": "customer-service",
+      "title": "customer-service-rep",
+      "titleZh": "",
+      "description": "undefined - customer-service",
+      "emoji": "",
+      "industry": "customer-service",
+      "skills": [
+        "ticket-triage-and-routing",
+        "knowledge-base-retrieval",
+        "sentiment-detection-and-de-escalation",
+        "multi-channel-response-generation",
+        "customer-history-lookup"
+      ],
+      "metrics": [
+        "first-response-time",
+        "customer-satisfaction-score",
+        "resolution-rate",
+        "ticket-volume-handled"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "customer-service/escalation-manager",
+      "category": "customer-service",
+      "title": "escalation-manager",
+      "titleZh": "",
+      "description": "undefined - customer-service",
+      "emoji": "",
+      "industry": "customer-service",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "customer-service/live-chat-agent",
+      "category": "customer-service",
+      "title": "live-chat-agent",
+      "titleZh": "",
+      "description": "undefined - customer-service",
+      "emoji": "",
+      "industry": "customer-service",
+      "skills": [
+        "real-time-intent-detection",
+        "concurrent-session-management",
+        "quick-reply-template-selection",
+        "proactive-engagement-trigger",
+        "handoff-to-human"
+      ],
+      "metrics": [
+        "concurrent-chats-handled",
+        "average-response-time",
+        "chat-satisfaction-score",
+        "conversion-rate"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "customer-service/vip-account-manager",
+      "category": "customer-service",
+      "title": "VIP Account Manager",
+      "titleZh": "VIP客户经理",
+      "description": "VIP客户经理 - customer-service",
+      "emoji": "👑",
+      "industry": "customer-service",
+      "skills": [
+        "relationship-management",
+        "personalized-service",
+        "issue-escalation",
+        "retention-strategy",
+        "upselling"
+      ],
+      "metrics": [
+        "client_retention_rate",
+        "satisfaction_score",
+        "revenue_per_account",
+        "response_time",
+        "nps_score"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "customer-success/community-manager",
+      "category": "customer-success",
+      "title": "community-manager",
+      "titleZh": "",
+      "description": "undefined - customer-success",
+      "emoji": "",
+      "industry": "customer-success",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "customer-success/customer-success-manager",
+      "category": "customer-success",
+      "title": "customer-success-manager",
+      "titleZh": "",
+      "description": "undefined - customer-success",
+      "emoji": "",
+      "industry": "customer-success",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "customer-success/onboarding-specialist",
+      "category": "customer-success",
+      "title": "onboarding-specialist",
+      "titleZh": "",
+      "description": "undefined - customer-success",
+      "emoji": "",
+      "industry": "customer-success",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "customer-success/renewals-manager",
+      "category": "customer-success",
+      "title": "renewals-manager",
+      "titleZh": "",
+      "description": "undefined - customer-success",
+      "emoji": "",
+      "industry": "customer-success",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "customer-success/voice-of-customer-analyst",
+      "category": "customer-success",
+      "title": "voice-of-customer-analyst",
+      "titleZh": "",
+      "description": "undefined - customer-success",
+      "emoji": "",
+      "industry": "customer-success",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "data/business-intelligence-analyst",
+      "category": "data",
+      "title": "business-intelligence-analyst",
+      "titleZh": "",
+      "description": "undefined - data",
+      "emoji": "",
+      "industry": "data",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "data/data-analyst",
+      "category": "data",
+      "title": "data-analyst",
+      "titleZh": "",
+      "description": "undefined - data",
+      "emoji": "",
+      "industry": "data",
+      "skills": [
+        "sql-query-generation",
+        "data-visualization",
+        "statistical-analysis",
+        "etl-pipeline-monitoring",
+        "insight-narrative-generation"
+      ],
+      "metrics": [
+        "query-accuracy",
+        "insight-actionability-score",
+        "report-turnaround-time",
+        "data-request-completion-rate"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "analysis-framework.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "data/data-engineer",
+      "category": "data",
+      "title": "data-engineer",
+      "titleZh": "",
+      "description": "undefined - data",
+      "emoji": "",
+      "industry": "data",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "data/report-generator",
+      "category": "data",
+      "title": "report-generator",
+      "titleZh": "",
+      "description": "undefined - data",
+      "emoji": "",
+      "industry": "data",
+      "skills": [
+        "report-templating",
+        "data-aggregation",
+        "scheduled-reporting",
+        "cross-system-integration",
+        "format-conversion"
+      ],
+      "metrics": [
+        "report-delivery-timeliness",
+        "data-accuracy-rate",
+        "report-automation-rate"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "design/brand-designer",
+      "category": "design",
+      "title": "brand-designer",
+      "titleZh": "",
+      "description": "undefined - design",
+      "emoji": "",
+      "industry": "design",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "design/design-system-lead",
+      "category": "design",
+      "title": "design-system-lead",
+      "titleZh": "",
+      "description": "undefined - design",
+      "emoji": "",
+      "industry": "design",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "design/motion-designer",
+      "category": "design",
+      "title": "motion-designer",
+      "titleZh": "",
+      "description": "undefined - design",
+      "emoji": "",
+      "industry": "design",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "design/ui-designer",
+      "category": "design",
+      "title": "ui-designer",
+      "titleZh": "",
+      "description": "undefined - design",
+      "emoji": "",
+      "industry": "design",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "design/ux-writer",
+      "category": "design",
+      "title": "ux-writer",
+      "titleZh": "",
+      "description": "undefined - design",
+      "emoji": "",
+      "industry": "design",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "education/corporate-trainer",
+      "category": "education",
+      "title": "corporate-trainer",
+      "titleZh": "",
+      "description": "undefined - education",
+      "emoji": "",
+      "industry": "education",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "education/course-designer",
+      "category": "education",
+      "title": "Course Designer",
+      "titleZh": "课程设计师",
+      "description": "课程设计师 - education",
+      "emoji": "📚",
+      "industry": "education",
+      "skills": [
+        "instructional-design",
+        "curriculum-mapping",
+        "content-creation",
+        "assessment-design",
+        "learning-objectives"
+      ],
+      "metrics": [
+        "courses_designed",
+        "learning_objective_alignment",
+        "completion_rate",
+        "learner_satisfaction"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "education/knowledge-manager",
+      "category": "education",
+      "title": "knowledge-manager",
+      "titleZh": "",
+      "description": "undefined - education",
+      "emoji": "",
+      "industry": "education",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "education/learning-designer",
+      "category": "education",
+      "title": "learning-designer",
+      "titleZh": "",
+      "description": "undefined - education",
+      "emoji": "",
+      "industry": "education",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "education/mentorship-coordinator",
+      "category": "education",
+      "title": "mentorship-coordinator",
+      "titleZh": "",
+      "description": "undefined - education",
+      "emoji": "",
+      "industry": "education",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "education/online-tutor",
+      "category": "education",
+      "title": "Online Tutor",
+      "titleZh": "在线辅导教师",
+      "description": "在线辅导教师 - education",
+      "emoji": "👩‍🏫",
+      "industry": "education",
+      "skills": [
+        "concept-explanation",
+        "adaptive-teaching",
+        "assessment-design",
+        "learning-path-creation"
+      ],
+      "metrics": [
+        "student_comprehension_rate",
+        "concepts_taught",
+        "engagement_score",
+        "learning_goal_completion"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "education/skills-assessor",
+      "category": "education",
+      "title": "skills-assessor",
+      "titleZh": "",
+      "description": "undefined - education",
+      "emoji": "",
+      "industry": "education",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "education/training-coordinator",
+      "category": "education",
+      "title": "Training Coordinator",
+      "titleZh": "培训协调员",
+      "description": "培训协调员 - education",
+      "emoji": "🎓",
+      "industry": "education",
+      "skills": [
+        "program-planning",
+        "schedule-management",
+        "progress-tracking",
+        "effectiveness-measurement"
+      ],
+      "metrics": [
+        "training_completion_rate",
+        "programs_coordinated",
+        "participant_satisfaction",
+        "skill_gap_closure"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "engineering/backend-developer",
+      "category": "engineering",
+      "title": "backend-developer",
+      "titleZh": "",
+      "description": "undefined - engineering",
+      "emoji": "",
+      "industry": "engineering",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "engineering/devops-engineer",
+      "category": "engineering",
+      "title": "devops-engineer",
+      "titleZh": "",
+      "description": "undefined - engineering",
+      "emoji": "",
+      "industry": "engineering",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "engineering/engineering-manager",
+      "category": "engineering",
+      "title": "engineering-manager",
+      "titleZh": "",
+      "description": "undefined - engineering",
+      "emoji": "",
+      "industry": "engineering",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "engineering/frontend-developer",
+      "category": "engineering",
+      "title": "frontend-developer",
+      "titleZh": "",
+      "description": "undefined - engineering",
+      "emoji": "",
+      "industry": "engineering",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "engineering/ml-engineer",
+      "category": "engineering",
+      "title": "ml-engineer",
+      "titleZh": "",
+      "description": "undefined - engineering",
+      "emoji": "",
+      "industry": "engineering",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "engineering/mobile-developer",
+      "category": "engineering",
+      "title": "mobile-developer",
+      "titleZh": "",
+      "description": "undefined - engineering",
+      "emoji": "",
+      "industry": "engineering",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "engineering/platform-engineer",
+      "category": "engineering",
+      "title": "platform-engineer",
+      "titleZh": "",
+      "description": "undefined - engineering",
+      "emoji": "",
+      "industry": "engineering",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "engineering/release-manager",
+      "category": "engineering",
+      "title": "release-manager",
+      "titleZh": "",
+      "description": "undefined - engineering",
+      "emoji": "",
+      "industry": "engineering",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "engineering/site-reliability-engineer",
+      "category": "engineering",
+      "title": "site-reliability-engineer",
+      "titleZh": "",
+      "description": "undefined - engineering",
+      "emoji": "",
+      "industry": "engineering",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "engineering/test-automation-engineer",
+      "category": "engineering",
+      "title": "test-automation-engineer",
+      "titleZh": "",
+      "description": "undefined - engineering",
+      "emoji": "",
+      "industry": "engineering",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "executive/board-secretary",
+      "category": "executive",
+      "title": "board-secretary",
+      "titleZh": "",
+      "description": "undefined - executive",
+      "emoji": "",
+      "industry": "executive",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "executive/chief-of-staff",
+      "category": "executive",
+      "title": "chief-of-staff",
+      "titleZh": "",
+      "description": "undefined - executive",
+      "emoji": "",
+      "industry": "executive",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "executive/executive-assistant",
+      "category": "executive",
+      "title": "executive-assistant",
+      "titleZh": "",
+      "description": "undefined - executive",
+      "emoji": "",
+      "industry": "executive",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "executive/strategy-director",
+      "category": "executive",
+      "title": "strategy-director",
+      "titleZh": "",
+      "description": "undefined - executive",
+      "emoji": "",
+      "industry": "executive",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "executive/transformation-lead",
+      "category": "executive",
+      "title": "transformation-lead",
+      "titleZh": "",
+      "description": "undefined - executive",
+      "emoji": "",
+      "industry": "executive",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "finance/accounts-payable-clerk",
+      "category": "finance",
+      "title": "accounts-payable-clerk",
+      "titleZh": "",
+      "description": "undefined - finance",
+      "emoji": "",
+      "industry": "finance",
+      "skills": [
+        "invoice-processing-and-matching",
+        "payment-scheduling",
+        "vendor-reconciliation",
+        "expense-policy-enforcement",
+        "tax-withholding-calculation"
+      ],
+      "metrics": [
+        "invoice-processing-time",
+        "payment-accuracy-rate",
+        "early-payment-discount-capture",
+        "aging-report-health"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "finance/financial-analyst",
+      "category": "finance",
+      "title": "financial-analyst",
+      "titleZh": "",
+      "description": "undefined - finance",
+      "emoji": "",
+      "industry": "finance",
+      "skills": [
+        "financial-statement-analysis",
+        "budget-variance-reporting",
+        "forecasting-and-modeling",
+        "kpi-dashboard-generation",
+        "cost-benefit-analysis"
+      ],
+      "metrics": [
+        "forecast-accuracy",
+        "budget-variance-percentage",
+        "report-delivery-timeliness",
+        "cost-savings-identified"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "finance/tax-preparer",
+      "category": "finance",
+      "title": "tax-preparer",
+      "titleZh": "",
+      "description": "undefined - finance",
+      "emoji": "",
+      "industry": "finance",
+      "skills": [
+        "tax-return-preparation",
+        "tax-law-research",
+        "deduction-optimization",
+        "cross-border-tax-planning",
+        "audit-support-documentation"
+      ],
+      "metrics": [
+        "filing-accuracy-rate",
+        "deadline-compliance",
+        "tax-savings-identified",
+        "audit-defense-success-rate"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "healthcare/clinical-data-analyst",
+      "category": "healthcare",
+      "title": "clinical-data-analyst",
+      "titleZh": "",
+      "description": "undefined - healthcare",
+      "emoji": "",
+      "industry": "healthcare",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "healthcare/health-advisor",
+      "category": "healthcare",
+      "title": "Health Advisor",
+      "titleZh": "健康顾问",
+      "description": "健康顾问 - healthcare",
+      "emoji": "💊",
+      "industry": "healthcare",
+      "skills": [
+        "health-education",
+        "wellness-planning",
+        "lifestyle-coaching",
+        "health-screening-guidance"
+      ],
+      "metrics": [
+        "consultations_provided",
+        "health_goal_adherence",
+        "education_materials_created",
+        "wellness_score_improvement"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "healthcare/health-compliance-officer",
+      "category": "healthcare",
+      "title": "health-compliance-officer",
+      "titleZh": "",
+      "description": "undefined - healthcare",
+      "emoji": "",
+      "industry": "healthcare",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "healthcare/medical-records-manager",
+      "category": "healthcare",
+      "title": "medical-records-manager",
+      "titleZh": "",
+      "description": "undefined - healthcare",
+      "emoji": "",
+      "industry": "healthcare",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "healthcare/patient-coordinator",
+      "category": "healthcare",
+      "title": "Patient Coordinator",
+      "titleZh": "患者协调员",
+      "description": "患者协调员 - healthcare",
+      "emoji": "🏥",
+      "industry": "healthcare",
+      "skills": [
+        "appointment-management",
+        "care-pathway-design",
+        "patient-communication",
+        "resource-scheduling"
+      ],
+      "metrics": [
+        "appointment_adherence",
+        "patient_satisfaction",
+        "wait_time_reduction",
+        "care_pathway_completion"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "healthcare/patient-experience-manager",
+      "category": "healthcare",
+      "title": "patient-experience-manager",
+      "titleZh": "",
+      "description": "undefined - healthcare",
+      "emoji": "",
+      "industry": "healthcare",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "healthcare/telemedicine-coordinator",
+      "category": "healthcare",
+      "title": "telemedicine-coordinator",
+      "titleZh": "",
+      "description": "undefined - healthcare",
+      "emoji": "",
+      "industry": "healthcare",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "hr/hr-coordinator",
+      "category": "hr",
+      "title": "hr-coordinator",
+      "titleZh": "",
+      "description": "undefined - hr",
+      "emoji": "",
+      "industry": "hr",
+      "skills": [
+        "employee-onboarding-workflow",
+        "leave-and-attendance-management",
+        "policy-lookup-and-qa",
+        "employee-records-management",
+        "compliance-checklist-tracking"
+      ],
+      "metrics": [
+        "onboarding-completion-rate",
+        "employee-query-resolution-time",
+        "compliance-task-completion",
+        "data-accuracy-rate"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "hr/onboarding-specialist",
+      "category": "hr",
+      "title": "onboarding-specialist",
+      "titleZh": "",
+      "description": "undefined - hr",
+      "emoji": "",
+      "industry": "hr",
+      "skills": [
+        "onboarding-workflow-orchestration",
+        "document-collection-and-verification",
+        "orientation-scheduling",
+        "buddy-system-matching",
+        "30-60-90-day-check-in"
+      ],
+      "metrics": [
+        "time-to-productivity",
+        "onboarding-satisfaction-score",
+        "document-completion-rate",
+        "90-day-retention-rate"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "hr/recruiter",
+      "category": "hr",
+      "title": "recruiter",
+      "titleZh": "",
+      "description": "undefined - hr",
+      "emoji": "",
+      "industry": "hr",
+      "skills": [
+        "resume-screening-and-ranking",
+        "job-description-generation",
+        "candidate-sourcing",
+        "interview-scheduling",
+        "talent-pipeline-management"
+      ],
+      "metrics": [
+        "time-to-fill",
+        "offer-acceptance-rate",
+        "candidate-pipeline-velocity",
+        "source-of-hire-mix",
+        "quality-of-hire-score"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "hr/talent-acquisition-specialist",
+      "category": "hr",
+      "title": "talent-acquisition-specialist",
+      "titleZh": "",
+      "description": "undefined - hr",
+      "emoji": "",
+      "industry": "hr",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "legal/compliance-officer",
+      "category": "legal",
+      "title": "compliance-officer",
+      "titleZh": "",
+      "description": "undefined - legal",
+      "emoji": "",
+      "industry": "legal",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "legal/contract-reviewer",
+      "category": "legal",
+      "title": "contract-reviewer",
+      "titleZh": "",
+      "description": "undefined - legal",
+      "emoji": "",
+      "industry": "legal",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "legal/corporate-lawyer",
+      "category": "legal",
+      "title": "corporate-lawyer",
+      "titleZh": "",
+      "description": "undefined - legal",
+      "emoji": "",
+      "industry": "legal",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "contract-review.md",
+        "legal-terms.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "legal/ip-attorney",
+      "category": "legal",
+      "title": "ip-attorney",
+      "titleZh": "",
+      "description": "undefined - legal",
+      "emoji": "",
+      "industry": "legal",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "legal/legal-researcher",
+      "category": "legal",
+      "title": "Legal Researcher",
+      "titleZh": "法律研究员",
+      "description": "法律研究员 - legal",
+      "emoji": "🔍",
+      "industry": "legal",
+      "skills": [
+        "case-law-research",
+        "statutory-analysis",
+        "legal-writing",
+        "precedent-mapping"
+      ],
+      "metrics": [
+        "research_queries_handled",
+        "sources_cited",
+        "avg_research_time",
+        "relevance_score"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "legal/privacy-officer",
+      "category": "legal",
+      "title": "privacy-officer",
+      "titleZh": "",
+      "description": "undefined - legal",
+      "emoji": "",
+      "industry": "legal",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "marketing/content-marketer",
+      "category": "marketing",
+      "title": "content-marketer",
+      "titleZh": "",
+      "description": "undefined - marketing",
+      "emoji": "",
+      "industry": "marketing",
+      "skills": [
+        "content-strategy",
+        "blog-writing",
+        "lead-magnet-creation",
+        "content-distribution",
+        "performance-analytics"
+      ],
+      "metrics": [
+        "content-leads-generated",
+        "organic-traffic-from-content",
+        "content-engagement-rate"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "campaign-template.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "marketing/seo-specialist",
+      "category": "marketing",
+      "title": "seo-specialist",
+      "titleZh": "",
+      "description": "undefined - marketing",
+      "emoji": "",
+      "industry": "marketing",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "marketing/social-media-manager",
+      "category": "marketing",
+      "title": "social-media-manager",
+      "titleZh": "",
+      "description": "undefined - marketing",
+      "emoji": "",
+      "industry": "marketing",
+      "skills": [
+        "content-calendar-planning",
+        "platform-specific-content-creation",
+        "community-engagement",
+        "social-listening-and-sentiment",
+        "paid-social-campaign-management"
+      ],
+      "metrics": [
+        "engagement-rate",
+        "follower-growth",
+        "content-reach",
+        "social-share-of-voice",
+        "social-roi"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "operations/capacity-planner",
+      "category": "operations",
+      "title": "capacity-planner",
+      "titleZh": "",
+      "description": "undefined - operations",
+      "emoji": "",
+      "industry": "operations",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "operations/fleet-manager",
+      "category": "operations",
+      "title": "fleet-manager",
+      "titleZh": "",
+      "description": "undefined - operations",
+      "emoji": "",
+      "industry": "operations",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "operations/inventory-analyst",
+      "category": "operations",
+      "title": "inventory-analyst",
+      "titleZh": "",
+      "description": "undefined - operations",
+      "emoji": "",
+      "industry": "operations",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "operations/inventory-manager",
+      "category": "operations",
+      "title": "Inventory Manager",
+      "titleZh": "库存管理专员",
+      "description": "库存管理专员 - operations",
+      "emoji": "📦",
+      "industry": "operations",
+      "skills": [
+        "demand-forecasting",
+        "stock-optimization",
+        "supply-chain-analysis",
+        "reporting"
+      ],
+      "metrics": [
+        "stockout_rate",
+        "inventory_turnover",
+        "forecast_accuracy",
+        "carrying_cost_reduction"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "operations/logistics-coordinator",
+      "category": "operations",
+      "title": "logistics-coordinator",
+      "titleZh": "",
+      "description": "undefined - operations",
+      "emoji": "",
+      "industry": "operations",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "operations/operations-analyst",
+      "category": "operations",
+      "title": "operations-analyst",
+      "titleZh": "",
+      "description": "undefined - operations",
+      "emoji": "",
+      "industry": "operations",
+      "skills": [
+        "process-mapping-and-optimization",
+        "operational-kpi-tracking",
+        "capacity-planning",
+        "bottleneck-identification",
+        "sop-documentation"
+      ],
+      "metrics": [
+        "process-cycle-time",
+        "operational-efficiency-ratio",
+        "cost-per-unit",
+        "sla-compliance-rate"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "operations/process-improvement-specialist",
+      "category": "operations",
+      "title": "process-improvement-specialist",
+      "titleZh": "",
+      "description": "undefined - operations",
+      "emoji": "",
+      "industry": "operations",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "operations/procurement-specialist",
+      "category": "operations",
+      "title": "procurement-specialist",
+      "titleZh": "",
+      "description": "undefined - operations",
+      "emoji": "",
+      "industry": "operations",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "operations/quality-inspector",
+      "category": "operations",
+      "title": "Quality Inspector",
+      "titleZh": "质量检验员",
+      "description": "质量检验员 - operations",
+      "emoji": "🔬",
+      "industry": "operations",
+      "skills": [
+        "quality-standards",
+        "defect-analysis",
+        "process-improvement",
+        "statistical-analysis",
+        "audit-management"
+      ],
+      "metrics": [
+        "defect_rate",
+        "first_pass_yield",
+        "customer_complaints",
+        "audit_compliance_rate",
+        "capa_closure_rate"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "operations/supply-chain-manager",
+      "category": "operations",
+      "title": "supply-chain-manager",
+      "titleZh": "",
+      "description": "undefined - operations",
+      "emoji": "",
+      "industry": "operations",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "operations/vendor-manager",
+      "category": "operations",
+      "title": "vendor-manager",
+      "titleZh": "",
+      "description": "undefined - operations",
+      "emoji": "",
+      "industry": "operations",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "operations/warehouse-manager",
+      "category": "operations",
+      "title": "warehouse-manager",
+      "titleZh": "",
+      "description": "undefined - operations",
+      "emoji": "",
+      "industry": "operations",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "product/growth-product-manager",
+      "category": "product",
+      "title": "growth-product-manager",
+      "titleZh": "",
+      "description": "undefined - product",
+      "emoji": "",
+      "industry": "product",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "product/product-analyst",
+      "category": "product",
+      "title": "product-analyst",
+      "titleZh": "",
+      "description": "undefined - product",
+      "emoji": "",
+      "industry": "product",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "product/product-manager",
+      "category": "product",
+      "title": "Product Manager",
+      "titleZh": "产品经理",
+      "description": "产品经理 - product",
+      "emoji": "🎯",
+      "industry": "product",
+      "skills": [
+        "roadmap-planning",
+        "feature-prioritization",
+        "user-story-writing",
+        "stakeholder-management",
+        "market-analysis"
+      ],
+      "metrics": [
+        "features_shipped",
+        "user_satisfaction",
+        "roadmap_adherence",
+        "stakeholder_alignment_score"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "prd-template.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "product/product-owner",
+      "category": "product",
+      "title": "product-owner",
+      "titleZh": "",
+      "description": "undefined - product",
+      "emoji": "",
+      "industry": "product",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "product/technical-product-manager",
+      "category": "product",
+      "title": "technical-product-manager",
+      "titleZh": "",
+      "description": "undefined - product",
+      "emoji": "",
+      "industry": "product",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "product/ux-researcher",
+      "category": "product",
+      "title": "ux-researcher",
+      "titleZh": "",
+      "description": "undefined - product",
+      "emoji": "",
+      "industry": "product",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "research/competitive-intelligence-analyst",
+      "category": "research",
+      "title": "competitive-intelligence-analyst",
+      "titleZh": "",
+      "description": "undefined - research",
+      "emoji": "",
+      "industry": "research",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "research/innovation-strategist",
+      "category": "research",
+      "title": "innovation-strategist",
+      "titleZh": "",
+      "description": "undefined - research",
+      "emoji": "",
+      "industry": "research",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "research/technology-scout",
+      "category": "research",
+      "title": "technology-scout",
+      "titleZh": "",
+      "description": "undefined - research",
+      "emoji": "",
+      "industry": "research",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "research/trend-analyst",
+      "category": "research",
+      "title": "trend-analyst",
+      "titleZh": "",
+      "description": "undefined - research",
+      "emoji": "",
+      "industry": "research",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "research/user-researcher",
+      "category": "research",
+      "title": "user-researcher",
+      "titleZh": "",
+      "description": "undefined - research",
+      "emoji": "",
+      "industry": "research",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "sales/account-executive",
+      "category": "sales",
+      "title": "account-executive",
+      "titleZh": "",
+      "description": "undefined - sales",
+      "emoji": "",
+      "industry": "sales",
+      "skills": [
+        "consultative-selling",
+        "proposal-and-sow-generation",
+        "stakeholder-mapping-and-influence",
+        "competitive-displacement",
+        "contract-negotiation"
+      ],
+      "metrics": [
+        "quota-attainment",
+        "average-deal-size",
+        "win-rate",
+        "sales-cycle-length",
+        "pipeline-velocity"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "sales/sales-analyst",
+      "category": "sales",
+      "title": "sales-analyst",
+      "titleZh": "",
+      "description": "undefined - sales",
+      "emoji": "",
+      "industry": "sales",
+      "skills": [
+        "pipeline-forecasting",
+        "win-loss-analysis",
+        "territory-performance-modeling",
+        "sales-kpi-dashboard-creation",
+        "compensation-plan-modeling"
+      ],
+      "metrics": [
+        "forecast-accuracy",
+        "report-turnaround-time",
+        "insight-adoption-rate",
+        "data-quality-score"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "sales/sales-development-rep",
+      "category": "sales",
+      "title": "sales-development-rep",
+      "titleZh": "",
+      "description": "undefined - sales",
+      "emoji": "",
+      "industry": "sales",
+      "skills": [
+        "lead-qualification-and-scoring",
+        "outbound-prospecting",
+        "email-sequence-generation",
+        "crm-pipeline-management",
+        "meeting-booking-and-handoff"
+      ],
+      "metrics": [
+        "meetings-booked-per-week",
+        "lead-to-opportunity-conversion",
+        "outbound-activity-volume",
+        "response-rate",
+        "pipeline-value-generated"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "sales/sales-enablement-manager",
+      "category": "sales",
+      "title": "sales-enablement-manager",
+      "titleZh": "",
+      "description": "undefined - sales",
+      "emoji": "",
+      "industry": "sales",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "tech/code-reviewer",
+      "category": "tech",
+      "title": "code-reviewer",
+      "titleZh": "",
+      "description": "undefined - tech",
+      "emoji": "",
+      "industry": "tech",
+      "skills": [
+        "static-analysis",
+        "security-scanning",
+        "best-practice-enforcement",
+        "performance-review",
+        "documentation-review"
+      ],
+      "metrics": [
+        "review-turnaround-time",
+        "defect-detection-rate",
+        "review-thoroughness-score"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "tech/devops-engineer",
+      "category": "tech",
+      "title": "devops-engineer",
+      "titleZh": "",
+      "description": "undefined - tech",
+      "emoji": "",
+      "industry": "tech",
+      "skills": [
+        "ci-cd-pipeline",
+        "infrastructure-as-code",
+        "monitoring-alerting",
+        "container-orchestration",
+        "incident-response"
+      ],
+      "metrics": [
+        "deployment-frequency",
+        "mean-time-to-recovery",
+        "change-failure-rate"
+      ],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    },
+    {
+      "id": "tech/security-engineer",
+      "category": "tech",
+      "title": "security-engineer",
+      "titleZh": "",
+      "description": "undefined - tech",
+      "emoji": "",
+      "industry": "tech",
+      "skills": [],
+      "metrics": [],
+      "hasBrainSeed": true,
+      "brainSeedFiles": [
+        "brain-seed.md"
+      ],
+      "downloads": 0
+    }
+  ]
+}
