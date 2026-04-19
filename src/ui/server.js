@@ -1,8 +1,21 @@
 const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
-const { getCategories, getRole, searchRoles, getPopularRoles, ROLES_DIR,
-        getIndustryBrainSeed, getJobBrainSeed, getWorkstationBrainSeed } = require('../../index.js');
+
+// Lazy-load to break circular dependency (index.js → server.js → index.js)
+let _root;
+function root() {
+  if (!_root) _root = require('../../index.js');
+  return _root;
+}
+function getCategories() { return root().getCategories(); }
+function getRole(c, r) { return root().getRole(c, r); }
+function searchRoles(q) { return root().searchRoles(q); }
+function getPopularRoles() { return root().getPopularRoles(); }
+function getIndustryBrainSeed(c) { return root().getIndustryBrainSeed(c); }
+function getJobBrainSeed(c, r) { return root().getJobBrainSeed(c, r); }
+function getWorkstationBrainSeed(c, r) { return root().getWorkstationBrainSeed(c, r); }
+const ROLES_DIR = path.join(__dirname, '..', '..', 'roles');
 const { WorkstationHub } = require('../hub/index.js');
 
 const CUSTOM_ROLES_DIR = path.join(__dirname, '..', '..', '.custom-roles');

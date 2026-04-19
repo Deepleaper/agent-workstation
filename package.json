@@ -1,6 +1,6 @@
 {
   "name": "agent-workstation",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Agent Templates — 100+ ready-to-use professional roles with built-in knowledge seeds",
   "main": "index.js",
   "bin": {
