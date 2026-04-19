@@ -304,6 +304,57 @@ opc init --role customer-service-rep
 
 ---
 
+## 📊 完成度仪表盘 / Progress Dashboard
+
+### 总览 Overview
+
+| 指标 | 数据 |
+|------|------|
+| 行业分类 (Industry) | 11 个 |
+| 职能方向 (Function) | 19 个 |
+| 角色总数 (Total Roles) | **100** |
+| 生产就绪 (Production-Ready) | **20** (含 rich prompt + brain-seed + OAD) |
+| 骨架模板 (Skeleton) | 80 (含 OAD，prompt 补全中) |
+| Brain Seed 覆盖 | 14/20 生产就绪角色 (70%) |
+| 行业级种子 (Industry Seeds) | 19 个行业 |
+
+### 各职能完成度
+
+| 职能 Function | 角色数 | 生产就绪 | 完成率 |
+|---|:-:|:-:|:-:|
+| 💻 Engineering | 10 | 1 (backend-developer) | 10% |
+| 📦 Product | 6 | 1 (product-manager) | 17% |
+| 📊 Data | 4 | 1 (data-analyst) | 25% |
+| 🛒 Sales | 4 | 3 (SDR, account-exec, sales-analyst) | 75% |
+| 📢 Marketing | 3 | 1 (content-marketer) | 33% |
+| 💬 Customer Service | 5 | 3 (rep, complaint, live-chat) | 60% |
+| 🎯 Customer Success | 5 | 0 | 0% |
+| 📝 Content | 2 | 1 (copywriter) | 50% |
+| 🎨 Design | 5 | 0 | 0% |
+| 💰 Finance | 3 | 2 (financial-analyst, tax-preparer) | 67% |
+| 👥 HR | 4 | 2 (recruiter, hr-coordinator) | 50% |
+| ⚖️ Legal | 6 | 1 (corporate-lawyer) | 17% |
+| ⚙️ Operations | 12 | 1 (operations-analyst) | 8% |
+| 🔬 Research | 5 | 0 | 0% |
+| 🎓 Education | 8 | 0 | 0% |
+| 🏥 Healthcare | 7 | 0 | 0% |
+| 👔 Executive | 5 | 0 | 0% |
+| 🛡️ Admin | 3 | 0 | 0% |
+| 💻 Tech | 3 | 0 | 0% |
+
+### 最近更新 Recent Updates
+
+| 日期 | 更新内容 |
+|------|---------|
+| 2026-04 | v2.1.0: 三层知识种子 (Industry/Job/Workstation) 架构完成 |
+| 2026-04 | 新增 `WorkstationUI` Web 浏览器组件 |
+| 2026-03 | 20 个角色补齐 brain-seed + workstation-seed |
+| 2026-03 | `BrainSeedLoader` + `KnowledgeEvolver` API 上线 |
+| 2026-02 | v1.5: 首批 20 个生产就绪角色完成 |
+| 2026-01 | v1.0: 100 个骨架模板 + 19 职能分类 |
+
+---
+
 ## 🗺️ Roadmap
 
 | 阶段 | 目标 | 状态 |
@@ -480,9 +531,32 @@ import {
 
 ---
 
-## 🗺️ Roadmap
+## 📊 Progress Dashboard
 
-| Phase | Goal | Status |
+| Metric | Data |
+|--------|------|
+| Industries | 11 |
+| Functions | 19 |
+| Total Roles | **100** |
+| Production-Ready | **20** (rich prompt + brain-seed + OAD) |
+| Skeleton | 80 (OAD included, prompts in progress) |
+| Brain Seed Coverage | 14/20 production roles (70%) |
+| Industry Seeds | 19 industries |
+
+### Recent Updates
+
+| Date | Update |
+|------|--------|
+| 2026-04 | v2.1.0: 3-tier knowledge seed architecture complete |
+| 2026-04 | Added `WorkstationUI` web browser component |
+| 2026-03 | 20 roles completed with brain-seed + workstation-seed |
+| 2026-03 | `BrainSeedLoader` + `KnowledgeEvolver` API launched |
+| 2026-02 | v1.5: First 20 production-ready roles |
+| 2026-01 | v1.0: 100 skeleton templates + 19 functions |
+
+---
+
+## 🗺️ Roadmap
 |-------|------|:------:|
 | v1.0 | 100 skeleton templates | ✅ |
 | v1.5 | 20 complete templates (prompt + brain-seed) | ✅ |
